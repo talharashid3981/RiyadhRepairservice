@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import Testi_Sec from "../assets/images/testi_Sec.jpg";
+import Testi_Sec from "../assets/images/testi_sec.jpg";
 
 const ClientReview = () => {
   const { t } = useTranslation();
