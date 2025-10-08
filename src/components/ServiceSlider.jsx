@@ -8,7 +8,12 @@ import { TbAirConditioning } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import service_box_1 from "../assets/images/service_box_1.jpg";
 import service_box_2 from "../assets/images/service_box_2.jpg";
-import service_box_3 from "../assets/images/service_box_3.jpg";
+import fridge_installation from "../assets/images/fridge_installation.jpg";
+import Fridge_Repair_1 from "../assets/images/Fridge_Repair_1.jpg"
+import emergency_services from "../assets/images/emergency_services.png"
+import washing_machine_2 from "../assets/images/washing_machine_2.jpg"
+import maintenance_services_1 from "../assets/images/maintenance_services_1.jpeg"
+import frdge2 from "../assets/images/frdge2.jpg"
 import service_box_4 from "../assets/images/service_box_4.jpg";
 import service_box_5 from "../assets/images/service_box_5.jpg";
 import service_box_6 from "../assets/images/service_box_6.jpg";
@@ -22,37 +27,37 @@ const ServiceSlider = () => {
     {
       title: t("serviceSlider.services.airConditioning.title"),
       description: t("serviceSlider.services.airConditioning.description"),
-      image: service_box_1,
+      image: washing_machine_2,
       icon: <TbAirConditioning className="text-3xl text-white" />,
     },
     {
       title: t("serviceSlider.services.heatPump.title"),
       description: t("serviceSlider.services.heatPump.description"),
-      image: service_box_2,
+      image: Fridge_Repair_1,
       icon: <FiTool className="text-3xl text-white" />,
     },
     {
       title: t("serviceSlider.services.ventilation.title"),
       description: t("serviceSlider.services.ventilation.description"),
-      image: service_box_3,
+      image: maintenance_services_1,
       icon: <FiWind className="text-3xl text-white" />,
     },
     {
       title: t("serviceSlider.services.installation.title"),
       description: t("serviceSlider.services.installation.description"),
-      image: service_box_4,
+      image: fridge_installation,
       icon: <FiWind className="text-3xl text-white" />,
     },
     {
       title: t("serviceSlider.services.maintenance.title"),
       description: t("serviceSlider.services.maintenance.description"),
-      image: service_box_5,
+      image: frdge2,
       icon: <FiWind className="text-3xl text-white" />,
     },
     {
       title: t("serviceSlider.services.repair.title"),
       description: t("serviceSlider.services.repair.description"),
-      image: service_box_6,
+      image: emergency_services,
       icon: <FiWind className="text-3xl text-white" />,
     },
   ];

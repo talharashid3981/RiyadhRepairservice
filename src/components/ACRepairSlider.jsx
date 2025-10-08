@@ -3,8 +3,11 @@ import { Wrench, Snowflake, Settings } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import washing_machine_repear_bannerimg from "../assets/images/washing_machine_repear_bannerimg.jpg"
+import Refrigerator_banner from "../assets/images/Refrigerator_banner.jpg"
+import slider_3 from "../assets/images/slider_3.png"
 
-import sliderImg1 from "../assets/images/sliderImg1.jpeg";
+
 import hero_arrow2 from "../assets/images/hero_arrow2.png";
 
 const ACRepairSlider = () => {
@@ -15,32 +18,32 @@ const ACRepairSlider = () => {
   const slides = [
     {
       icon: <Wrench className="w-5 h-5 sm:w-6 sm:h-6" />,
-      welcomeText: t("acRepairSlider.slides.0.welcomeText"),
-      title: t("acRepairSlider.slides.0.title"),
-      highlightText: t("acRepairSlider.slides.0.highlightText"),
-      titleEnd: t("acRepairSlider.slides.0.titleEnd"),
-      description: t("acRepairSlider.slides.0.description"),
-      image: sliderImg1,
+      welcomeText: "Welcome to Riyadh Appliance Services",
+      title: "Expert Washing Machine",
+      highlightText: "Repair & Maintenance",
+      titleEnd: "Services in Riyadh",
+      description: "Professional washing machine repair services for all brands - automatic and semi-automatic. Our certified technicians provide fast, reliable solutions to get your appliance working like new.",
+      image: washing_machine_repear_bannerimg,
       alt: "Washing Machine Repair Technician in Riyadh",
     },
     {
       icon: <Snowflake className="w-5 h-5 sm:w-6 sm:h-6" />,
-      welcomeText: t("acRepairSlider.slides.1.welcomeText"),
-      title: t("acRepairSlider.slides.1.title"),
-      highlightText: t("acRepairSlider.slides.1.highlightText"),
-      titleEnd: t("acRepairSlider.slides.1.titleEnd"),
-      description: t("acRepairSlider.slides.1.description"),
-      image: sliderImg1,
+      welcomeText: "Professional Cooling Solutions",
+      title: "Refrigerator",
+      highlightText: "Repair Specialists",
+      titleEnd: "In Riyadh",
+      description: "Keep your food fresh with our expert refrigerator repair services. We handle all brands and models with guaranteed quality repairs and affordable rates.",
+      image: Refrigerator_banner,
       alt: "Professional Refrigerator Repair Services in Riyadh",
     },
     {
       icon: <Settings className="w-5 h-5 sm:w-6 sm:h-6" />,
-      welcomeText: t("acRepairSlider.slides.2.welcomeText"),
-      title: t("acRepairSlider.slides.2.title"),
-      highlightText: t("acRepairSlider.slides.2.highlightText"),
-      titleEnd: t("acRepairSlider.slides.2.titleEnd"),
-      description: t("acRepairSlider.slides.2.description"),
-      image: sliderImg1,
+      welcomeText: "Complete Appliance Care",
+      title: "Reliable",
+      highlightText: "Maintenance",
+      titleEnd: "Programs",
+      description: "Regular maintenance plans to keep your washing machines and refrigerators running efficiently. Prevent costly repairs with our preventive care services.",
+      image: slider_3,
       alt: "Appliance Maintenance Programs in Riyadh",
     },
   ];
@@ -79,8 +82,8 @@ const ACRepairSlider = () => {
               : "opacity-0 translate-x-full"
           }`}
         >
-          <div className="flex flex-col gap-8 lg:flex-row items-center justify-between h-auto  px-4 sm:px-6 lg:px-12 py-10 sm:py-12 lg:py-16">
-            <div className="  z-10 text-center lg:text-left ">
+          <div className="flex flex-col gap-8 lg:flex-row items-center justify-between h-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 lg:py-16">
+            <div className="z-10 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#14b8a6] to-[#0d9488] rounded-lg flex items-center justify-center text-white shadow-lg">
                   {slide.icon}
@@ -105,19 +108,19 @@ const ACRepairSlider = () => {
                   to="/services"
                   className="w-full sm:w-auto px-2 sm:px-8 py-3 sm:py-4 bg-blue-950 text-white rounded-full font-semibold hover:bg-blue-900 transition-all duration-300 hover:shadow-md flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  {t("acRepairSlider.buttons.allServices")} <FaArrowRightLong />
+                  All Services <FaArrowRightLong />
                 </Link>
 
                 <Link
                   to="/contact"
                   className="w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-4 bg-[#14b8a6] text-white rounded-full font-semibold hover:bg-[#0f9a8a] transition-all duration-300 hover:shadow-md flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  {t("acRepairSlider.buttons.contactUs")} <FaArrowRightLong />
+                  Contact Us <FaArrowRightLong />
                 </Link>
 
                 <img
                   src={hero_arrow2}
-                  className="absolute bottom-[15px] right-25 w-16 h-14 sm:w-20 sm:h-16 lg:w-24 lg:h-20 hidden xl:block"
+                  className="absolute bottom-[15px] right-48 w-16 h-14 sm:w-20 sm:h-16 lg:w-24 lg:h-20 hidden xl:block"
                   alt="Arrow decorative graphic"
                   loading="lazy"
                 />

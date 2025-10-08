@@ -22,16 +22,16 @@ const Footer = () => {
 
       <div className="border-b border-gray-700 py-6 sm:py-8 text-center px-4">
         <p className="mb-3 sm:mb-4 text-gray-200 font-medium text-base sm:text-lg">
-          {t("footer.subscribe.title")}
+          Subscribe for service updates and special offers.
         </p>
         <div className="flex justify-center flex-wrap gap-2">
           <input
             type="email"
-            placeholder={t("footer.subscribe.placeholder")}
+            placeholder="info@example.com"
             className="px-3 sm:px-4 py-2 w-full max-w-xs sm:w-64 rounded-l bg-white focus:outline-none text-black text-sm sm:text-base"
           />
           <button className="bg-[#14b8a6] hover:bg-[#0f9a8a] px-3 sm:px-4 py-2 rounded-r text-white font-semibold text-sm sm:text-base transition-colors">
-            {t("footer.subscribe.button")}
+            Subscribe
           </button>
         </div>
       </div>
@@ -60,7 +60,7 @@ const Footer = () => {
                 REPAIR SERVICES
               </h2>
               <h3 className="hidden sm:block text-[12px] text-gray-400 italic leading-tight">
-                {t("footer.tagline")}
+                Don't Replace – Repair with Experts
               </h3>
             </div>
           </NavLink>
@@ -68,27 +68,27 @@ const Footer = () => {
 
         <div className="text-center sm:text-left">
           <h3 className="text-white text-lg sm:text-[22px] font-semibold mb-3">
-            {t("footer.company.title")}
+            Company
           </h3>
           <ul className="space-y-2">
             <li>
               <NavLink to="/" className="hover:text-[#14b8a6] transition-colors">
-                {t("nav.home")}
+                Home
               </NavLink>
             </li>
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("nav.services")}
+                Our Services
               </NavLink>
             </li>
             <li>
               <NavLink to="/about" className="hover:text-[#14b8a6] transition-colors">
-                {t("nav.about")}
+                About Us
               </NavLink>
             </li>
             <li>
               <NavLink to="/contact" className="hover:text-[#14b8a6] transition-colors">
-                {t("nav.contact")}
+                Contact Us
               </NavLink>
             </li>
           </ul>
@@ -96,37 +96,32 @@ const Footer = () => {
 
         <div className="text-center sm:text-left">
           <h3 className="text-white text-lg sm:text-[22px] font-semibold mb-3">
-            {t("footer.ourServices.title")}
+            Our Services
           </h3>
           <ul className="space-y-2">
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.refrigerator")}
+                Refrigerator Repair
               </NavLink>
             </li>
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.washing")}
+                Automatic Washing Machine
               </NavLink>
             </li>
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.dishwasher")}
+                Semi-Automatic Washing Machine
               </NavLink>
             </li>
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.dryer")}
+                Installation Service
               </NavLink>
             </li>
             <li>
               <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.installation")}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourServices.items.maintenance")}
+                Maintenance Plans
               </NavLink>
             </li>
           </ul>
@@ -134,27 +129,27 @@ const Footer = () => {
 
         <div className="text-center sm:text-left">
           <h3 className="text-white text-lg sm:text-[22px] font-semibold mb-3">
-            {t("footer.ourBlogs.title")}
+            Our Blogs
           </h3>
           <ul className="space-y-2">
             <li>
               <NavLink to="/blog" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourBlogs.items.careTips")}
+                Appliance Care Tips
               </NavLink>
             </li>
             <li>
               <NavLink to="/blog" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourBlogs.items.maintenanceGuide")}
+                Maintenance Guide
               </NavLink>
             </li>
             <li>
               <NavLink to="/blog" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourBlogs.items.energyEfficiency")}
+                Energy Efficiency
               </NavLink>
             </li>
             <li>
               <NavLink to="/blog" className="hover:text-[#14b8a6] transition-colors">
-                {t("footer.ourBlogs.items.viewAll")}
+                View All Blogs
               </NavLink>
             </li>
           </ul>
@@ -162,29 +157,29 @@ const Footer = () => {
 
         <div className="text-center sm:text-left">
           <h3 className="text-white text-lg sm:text-[22px] font-semibold mb-3">
-            {t("footer.contactUs.title")}
+            Contact Us
           </h3>
           <ul className="space-y-3">
             <li className="flex items-start sm:items-center justify-center sm:justify-start gap-2">
               <MapPin className="w-5 h-5 text-[#14b8a6] flex-shrink-0 mt-1 sm:mt-0" />
-              <span className="text-sm sm:text-base">{t("footer.contactUs.location")}</span>
+              <span className="text-sm sm:text-base">Rakar Service Center, Riyadh, KSA</span>
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-2">
               <Phone className="w-5 h-5 text-[#14b8a6] flex-shrink-0" />
               <a 
-                href={`tel:${t("footer.contactUs.phone").replace(/\s/g, '')}`}
+                href="tel:+966557236549"
                 className="hover:text-[#14b8a6] transition-colors text-sm sm:text-base"
               >
-                {t("footer.contactUs.phone")}
+                +966 557 236 549
               </a>
             </li>
             <li className="flex items-start sm:items-center justify-center sm:justify-start gap-2">
               <Mail className="w-5 h-5 text-[#14b8a6] flex-shrink-0 mt-1 sm:mt-0" />
               <a
-                href={`mailto:${t("footer.contactUs.email")}`}
+                href="mailto:contact@riyadhrepairingservices.com"
                 className="hover:text-[#14b8a6] transition-colors text-sm sm:text-base break-all"
               >
-                {t("footer.contactUs.email")}
+                contact@riyadhrepairingservices.com
               </a>
             </li>
           </ul>
@@ -193,15 +188,15 @@ const Footer = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-16 py-4 text-gray-400 text-xs space-y-3 sm:space-y-0 gap-4">
         <p className="text-center sm:text-left">
-          {t("footer.copyright")}
+          © 2024 Rakar Appliance Services. All Rights Reserved.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
           <NavLink to="/terms" className="hover:text-[#14b8a6] transition-colors">
-            {t("footer.terms")}
+            Terms of Service
           </NavLink>
           <NavLink to="/privacy" className="hover:text-[#14b8a6] transition-colors">
-            {t("footer.privacy")}
+            Privacy Policy
           </NavLink>
         </div>
 

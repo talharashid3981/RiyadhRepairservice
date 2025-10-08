@@ -16,7 +16,11 @@ import counter_card_5 from "../assets/images/counter_card_5.png";
 import project_3_1 from "../assets/images/project_3_1.jpg";
 import project_3_2 from "../assets/images/project_3_2.jpg";
 import project_3_3 from "../assets/images/project_3_3.jpg";
-import Washing_Machine_Repair_1 from "../assets/images/Washing-Machine-Repair-1.jpg";
+import fridge_installation from "../assets/images/fridge_installation.jpg"
+import commercial_laundry from "../assets/images/commercial_laundry.jpg"
+// import Washing_Machine_Repair_1 from "../assets/images/Washing-Machine-Repair-1.jpg";
+import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.jpg";
+import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_1.jpg"
 import ServiceSlider from "../components/ServiceSlider";
 import ContactQuote from "../components/ContactQuote";
 import ClientRevew from "../components/ClientRevew";
@@ -45,7 +49,7 @@ const Home = () => {
     commercial: t("projectsData.commercial", { returnObjects: true }).map(
       (service, index) => ({
         ...service,
-        image: [project_3_1, project_3_2, project_3_3][index],
+        image: [commercial_laundry, Commercial_Refrigeraion_1, fridge_installation][index],
       })
     ),
     residential: t("projectsData.residential", { returnObjects: true }).map(
@@ -149,7 +153,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <div className="rounded-3xl sm:rounded-[50px] p-3 sm:p-5 overflow-hidden w-full">
               <img
-                src={Washing_Machine_Repair_1}
+                src={washing_machine_repear_1}
                 alt="Technician repairing washing machine"
                 className="w-full h-auto object-cover rounded-3xl"
               />
@@ -222,34 +226,33 @@ const Home = () => {
 
         {/* Heading + Buttons Row */}
         <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4 sm:gap-6 mb-6">
-  {/* Heading Section */}
-  <div className="text-center mt-4 lg:text-left">
-    <h1 className="text-2xl sm:text-4xl font-extrabold text-black">
-      {t("home.projectsSection.heading")}
-    </h1>
-    <h2 className="text-xl sm:text-3xl font-semibold text-gray-800">
-      {t("home.projectsSection.headingLine2")}
-    </h2>
-  </div>
+          {/* Heading Section */}
+          <div className="text-center mt-4 lg:text-left">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-black">
+              {t("home.projectsSection.heading")}
+            </h1>
+            <h2 className="text-xl sm:text-3xl font-semibold text-gray-800">
+              {t("home.projectsSection.headingLine2")}
+            </h2>
+          </div>
 
-  {/* Category Buttons Section */}
-  <div className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4">
-    {["commercial", "residential", "industrial"].map((cat) => (
-      <button
-        key={cat}
-        onClick={() => setSelectedCategory(cat)}
-        className={`px-4 py-2 rounded-md font-medium border transition-colors ${
-          selectedCategory === cat
-            ? "bg-[#14b8a6] text-white border-[#14b8a6]"
-            : "bg-transparent text-gray-700 border-gray-300 hover:bg-[#14b8a6] hover:text-white"
-        }`}
-      >
-        {t(`home.projectsSection.categories.${cat}`)}
-      </button>
-    ))}
-  </div>
-</div>
-
+          {/* Category Buttons Section */}
+          <div className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4">
+            {["commercial", "residential", "industrial"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-4 py-2 rounded-md font-medium border transition-colors ${
+                  selectedCategory === cat
+                    ? "bg-[#14b8a6] text-white border-[#14b8a6]"
+                    : "bg-transparent text-gray-700 border-gray-300 hover:bg-[#14b8a6] hover:text-white"
+                }`}
+              >
+                {t(`home.projectsSection.categories.${cat}`)}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Service Cards */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

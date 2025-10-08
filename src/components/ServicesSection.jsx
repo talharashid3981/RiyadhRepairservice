@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import title_icon2 from "../assets/images/title_icon2.png";
 import about_3 from "../assets/images/about_3.jpg";
+import Trusted_Appliance_Repair from "../assets/images/Trusted_Appliance_Repair.png"
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -93,9 +94,9 @@ const ServicesSection = () => {
 
           <div className="order-2 lg:order-2 p-3 sm:p-5 overflow-hidden w-full h-full">
             <img
-              src={about_3}
+              src={Trusted_Appliance_Repair }
               alt="Appliance repair technician"
-              className="w-full h-auto object-cover rounded-3xl sm:rounded-[50%/25%]"
+              className="w-full h-full object-cover rounded-3xl sm:rounded-[50%/25%]"
             />
           </div>
 

@@ -1,83 +1,83 @@
 {
   "nav": {
     "home": "Home",
-    "services": "Our Services",
-    "about": "About Us",
-    "contact": "Contact Us",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
     "blog": "Blog"
   },
   "home": {
     "aboutSection": {
       "title": "About Us",
-      "heading": "Professional Washing Machine",
-      "headingLine2": "Repair Services In Riyadh",
-      "description": "Looking for reliable washing machine and refrigerator repair services in Riyadh? We provide expert maintenance and repair solutions for all major brands. Our certified technicians ensure your appliances run efficiently at competitive prices. Contact us today to schedule your service appointment.",
+      "heading": "Professional Appliance",
+      "headingLine2": "Repair Services in Riyadh",
+      "description": "Expert washing machine and refrigerator repair services in Riyadh. Our certified technicians provide reliable maintenance solutions for all major brands at competitive prices. Schedule your service appointment today.",
       "features": {
-        "quality": "Guaranteed quality repairs",
+        "quality": "Quality guaranteed repairs",
         "licensed": "Certified technicians",
-        "pricing": "Affordable service rates"
+        "pricing": "Affordable rates"
       },
       "buttons": {
         "findMore": "Learn More",
-        "contact": "Contact us 24/7"
+        "contact": "Contact Us 24/7"
       }
     },
     "secondSection": {
       "title": "Why Choose Us",
-      "heading": "Expert Appliance Repair",
-      "headingLine2": "Services You Can Trust",
-      "description": "We specialize in professional washing machine and refrigerator repair services in Riyadh. With years of experience and certified technicians, we deliver reliable solutions to keep your home appliances running smoothly.",
+      "heading": "Trusted Appliance Repair",
+      "headingLine2": "Experts in Riyadh",
+      "description": "Specializing in washing machine and refrigerator repairs with experienced, certified technicians. We deliver reliable solutions to keep your home appliances running smoothly.",
       "features": {
-        "quality": "Guaranteed quality repairs",
-        "licensed": "Certified technicians",
-        "pricing": "Affordable service rates"
+        "quality": "Quality guaranteed",
+        "licensed": "Licensed professionals",
+        "pricing": "Fair pricing"
       },
       "buttons": {
-        "findMore": "Learn More",
-        "contact": "Contact us 24/7"
+        "findMore": "Discover More",
+        "contact": "Get Help Now"
       }
     },
     "processSection": {
       "step1": {
         "number": "01",
-        "title": "Book Your Service",
-        "description": "Schedule your washing machine or refrigerator repair online or by phone. We offer flexible appointment times to fit your schedule."
+        "title": "Schedule Service",
+        "description": "Book your appliance repair online or by phone. We offer flexible appointments that fit your schedule."
       },
       "step2": {
         "number": "02",
-        "title": "Expert Diagnosis",
-        "description": "Our certified technicians will thoroughly inspect your appliance and provide you with a detailed estimate before starting any work."
+        "title": "Professional Diagnosis",
+        "description": "Our technicians inspect your appliance thoroughly and provide a detailed estimate before starting repairs."
       },
       "step3": {
         "number": "03",
-        "title": "Quality Repair",
-        "description": "We complete repairs using genuine parts and provide warranty coverage. Your satisfaction is our priority."
+        "title": "Complete Repair",
+        "description": "We use genuine parts and provide warranty coverage. Your satisfaction is guaranteed."
       }
     },
     "servicesSection": {
       "title": "Our Services",
-      "heading": "Professional Washing Machine & Refrigerator Repair Solutions",
+      "heading": "Complete Appliance Repair Solutions",
       "viewAll": "View All Services"
     },
     "projectsSection": {
-      "title": "Recent Projects",
+      "title": "Recent Work",
       "heading": "Successfully Completed",
-      "headingLine2": "Service Projects",
+      "headingLine2": "Projects",
       "categories": {
         "commercial": "Commercial",
         "residential": "Residential",
         "industrial": "Industrial"
       },
-      "exploreCaseStudy": "View Project Details"
+      "exploreCaseStudy": "View Details"
     },
     "videoSection": {
       "heading1": "15+ Years",
-      "heading2": "Of Excellence In Washing Machine & Refrigerator Repair Services",
-      "description": "Trust our experienced team to handle all your appliance repair needs. We provide comprehensive maintenance and repair solutions for washing machines and refrigerators.",
-      "downloadCatalog": "Download Service Catalog",
+      "heading2": "Experience in Appliance Repair",
+      "description": "Trust our experienced team for all your appliance repair needs. Comprehensive maintenance and repair solutions for washing machines and refrigerators.",
+      "downloadCatalog": "Download Service Guide",
       "stats": {
         "projects": "Repairs Completed",
-        "clients": "Satisfied Customers",
+        "clients": "Happy Customers",
         "team": "Expert Technicians",
         "awards": "Service Awards"
       }
@@ -87,35 +87,35 @@
     "services": {
       "airConditioning": {
         "title": "Washing Machine Repair",
-        "description": "Expert repair and maintenance services for all washing machine brands and models."
+        "description": "Expert repair and maintenance for all washing machine brands and models."
       },
       "heatPump": {
         "title": "Refrigerator Repair",
-        "description": "Professional refrigerator repair services to keep your food fresh and appliances running efficiently."
+        "description": "Professional refrigerator services to keep your food fresh and appliances efficient."
       },
       "ventilation": {
-        "title": "Appliance Maintenance",
-        "description": "Regular maintenance services to extend the life of your washing machines and refrigerators."
+        "title": "Maintenance Services",
+        "description": "Regular maintenance to extend appliance life and prevent breakdowns."
       },
       "installation": {
-        "title": "Installation Services",
-        "description": "Professional installation services for new washing machines and refrigerators."
+        "title": "Installation",
+        "description": "Professional installation for new washing machines and refrigerators."
       },
       "maintenance": {
-        "title": "Preventive Maintenance",
-        "description": "Scheduled maintenance plans to keep your appliances in optimal condition."
+        "title": "Preventive Care",
+        "description": "Scheduled maintenance plans for optimal appliance performance."
       },
       "repair": {
-        "title": "Emergency Repair",
-        "description": "24/7 emergency repair services for urgent washing machine and refrigerator issues."
+        "title": "Emergency Service",
+        "description": "24/7 emergency repairs for urgent appliance issues."
       }
     }
   },
   "pricingPlans": {
     "header": {
-      "badge": "Service Packages",
+      "badge": "Service Plans",
       "title": "Choose Your Plan",
-      "subtitle": "Select the perfect maintenance package for your needs."
+      "subtitle": "Select the maintenance package that fits your needs."
     },
     "popularBadge": "Most Popular",
     "plans": {
@@ -125,18 +125,18 @@
         "billing": "/Visit"
       },
       "standard": {
-        "title": "Standard Package",
+        "title": "Standard Plan",
         "price": "SAR 280",
-        "billing": "/Monthly"
+        "billing": "/Month"
       },
       "premium": {
         "title": "Premium Care",
         "price": "SAR 500",
-        "billing": "/Monthly"
+        "billing": "/Month"
       }
     },
     "features": {
-      "monthlyInspection": "Regular Inspection",
+      "monthlyInspection": "Regular Inspections",
       "generalRepair": "General Repairs",
       "maintenance": "Preventive Maintenance",
       "faultyWiring": "Electrical Repairs",
@@ -144,76 +144,76 @@
     },
     "button": "Get Started",
     "footer": {
-      "text": "Need a custom service plan?",
+      "text": "Need a custom plan?",
       "linkText": "Contact us"
     }
   },
   "contactQuote": {
     "location": {
-      "title": "Our Location",
-      "address": "Riyadh, KSA"
+      "title": "Location",
+      "address": "Riyadh, Saudi Arabia"
     },
     "quickContact": {
-      "title": "Quick Contact",
-      "callUs": "Call Us:",
-      "emailUs": "Email Us:"
+      "title": "Contact Info",
+      "callUs": "Phone:",
+      "emailUs": "Email:"
     },
     "businessHours": {
-      "message": "We respond within 24 hours. Call us anytime:",
-      "time": "09:00AM - 04:00PM"
+      "message": "We respond within 24 hours. Available:",
+      "time": "9:00 AM - 4:00 PM"
     },
     "form": {
-      "badge": "Schedule Service",
-      "title": "Request A Quote",
+      "badge": "Get Service",
+      "title": "Request Quote",
       "namePlaceholder": "Your Name",
       "emailPlaceholder": "Email Address",
       "phonePlaceholder": "Phone Number",
-      "subjectPlaceholder": "Select Service Type",
+      "subjectPlaceholder": "Service Type",
       "subjects": {
         "general": "General Inquiry",
-        "repair": "Washing Machine Repair",
-        "maintenance": "Refrigerator Repair",
-        "installation": "Installation Service"
+        "repair": "Washing Machine Service",
+        "maintenance": "Refrigerator Service",
+        "installation": "Installation"
       },
-      "messagePlaceholder": "Describe your issue",
+      "messagePlaceholder": "Describe your needs",
       "button": "Send Request",
-      "successMessage": "Request sent successfully! We'll contact you soon.",
-      "errorMessage": "Failed to send request. Please try again."
+      "successMessage": "Request sent! We'll contact you soon.",
+      "errorMessage": "Error sending request. Please try again."
     }
   },
   "clientReview": {
-    "badge": "Testimonials",
-    "heading": "What Our Customers Say",
+    "badge": "Reviews",
+    "heading": "Customer Testimonials",
     "testimonials": [
       {
         "name": "Ahmad Al-Saudi",
         "role": "Homeowner",
-        "review": "Excellent washing machine repair service! The technician was professional, arrived on time, and fixed my machine quickly. Very satisfied with the quality of work and reasonable pricing."
+        "review": "Excellent service! Professional technician arrived on time and repaired my washing machine quickly. Great quality work at reasonable prices."
       },
       {
         "name": "Fatima Khan",
         "role": "Property Manager",
-        "review": "Very reliable service for our rental properties. They maintain all our refrigerators and washing machines efficiently. Highly recommend their maintenance packages."
+        "review": "Reliable maintenance service for our properties. They handle all our appliances efficiently. Highly recommend their service packages."
       },
       {
         "name": "Mohammed Ali",
         "role": "Business Owner",
-        "review": "Professional team that knows their work. Fixed my commercial refrigerator the same day I called. Great emergency service!"
+        "review": "Professional team with excellent knowledge. Same-day commercial refrigerator repair. Outstanding emergency service!"
       },
       {
         "name": "Sara Abdullah",
         "role": "Resident",
-        "review": "Best appliance repair service in Riyadh. They repaired my washing machine perfectly and the price was very fair. Will definitely use again."
+        "review": "Best appliance repair in Riyadh. Perfect washing machine repair at fair prices. Will definitely use again."
       },
       {
         "name": "Khalid Rahman",
         "role": "Villa Owner",
-        "review": "Outstanding service quality! They maintain both my washing machines and refrigerators. Very knowledgeable technicians and excellent customer support."
+        "review": "Outstanding service quality! They maintain all our appliances. Knowledgeable technicians and excellent support."
       },
       {
         "name": "Noura Hassan",
         "role": "Apartment Owner",
-        "review": "Quick response and professional service. My refrigerator was not cooling and they fixed it within hours. Very impressed with their expertise."
+        "review": "Quick response and professional service. Fixed cooling issues within hours. Very impressed with their expertise."
       }
     ]
   },
@@ -223,22 +223,22 @@
         "welcomeText": "Welcome to Riyadh Appliance Services",
         "title": "Expert Washing Machine",
         "highlightText": "Repair & Maintenance",
-        "titleEnd": "Services in Riyadh",
-        "description": "Professional washing machine repair services for all brands. Our certified technicians provide fast, reliable solutions to get your appliance working like new."
+        "titleEnd": "Services",
+        "description": "Professional washing machine repair for all brands. Certified technicians provide fast, reliable solutions."
       },
       {
         "welcomeText": "Professional Cooling Solutions",
         "title": "Refrigerator",
         "highlightText": "Repair Specialists",
-        "titleEnd": "In Riyadh",
-        "description": "Keep your food fresh with our expert refrigerator repair services. We handle all brands and models with guaranteed quality repairs and affordable rates."
+        "titleEnd": "in Riyadh",
+        "description": "Keep food fresh with expert refrigerator repair. All brands serviced with quality guaranteed."
       },
       {
         "welcomeText": "Complete Appliance Care",
         "title": "Reliable",
         "highlightText": "Maintenance",
         "titleEnd": "Programs",
-        "description": "Regular maintenance plans to keep your washing machines and refrigerators running efficiently. Prevent costly repairs with our preventive care services."
+        "description": "Regular maintenance prevents costly repairs. Keep appliances running efficiently with preventive care."
       }
     ],
     "buttons": {
@@ -248,74 +248,74 @@
   },
   "services": {
     "header": {
-      "title": "Our Services",
+      "title": "Services",
       "home": "Home",
       "current": "Services"
     },
     "section": {
       "title": "What We Offer",
-      "subtitle": "Professional Appliance Repair Services",
-      "description": "We provide expert washing machine and refrigerator repair services in Riyadh. Our experienced technicians ensure reliability, efficiency, and complete customer satisfaction with every service call."
+      "subtitle": "Professional Appliance Services",
+      "description": "Expert washing machine and refrigerator repair in Riyadh. Experienced technicians ensure reliability and customer satisfaction."
     },
     "cards": {
       "washing": {
-        "title": "Washing Machine Repair in Riyadh",
-        "description": "Complete washing machine repair and maintenance services in Riyadh. Fast, reliable, and affordable solutions for all major brands and models."
+        "title": "Washing Machine Repair",
+        "description": "Complete repair and maintenance services in Riyadh. Fast, reliable, affordable solutions for all brands."
       },
       "ac": {
-        "title": "Refrigerator Repair in Riyadh",
-        "description": "Expert refrigerator repair services to keep your appliances running efficiently. Professional diagnosis and repair for all refrigerator brands."
+        "title": "Refrigerator Repair",
+        "description": "Expert refrigerator services for efficient operation. Professional diagnosis and repair for all brands."
       },
       "fridge": {
-        "title": "Appliance Maintenance Plans",
-        "description": "Regular maintenance services to prevent breakdowns and extend the life of your washing machines and refrigerators. Affordable monthly plans available."
+        "title": "Maintenance Plans",
+        "description": "Regular maintenance prevents breakdowns and extends appliance life. Affordable monthly plans available."
       }
     },
     "gallery": {
       "badge": "Our Work",
       "title": "Service",
       "highlight": "Gallery",
-      "description": "Explore our completed projects and see the quality of our workmanship. We take pride in every repair and maintenance service we provide.",
+      "description": "See our quality workmanship. We take pride in every repair and maintenance service.",
       "view": "View"
     }
   },
   "projectsData": {
     "commercial": [
       {
-        "title": "Commercial Washing Machine Repair",
-        "description": "Professional repair services for commercial laundry equipment. We handle high-capacity machines for laundromats and hotels."
+        "title": "Commercial Laundry Services",
+        "description": "Professional repair for commercial laundry equipment. High-capacity machines for businesses."
       },
       {
         "title": "Commercial Refrigeration",
-        "description": "Expert repair and maintenance of commercial refrigerators and freezers for restaurants and businesses."
+        "description": "Expert commercial refrigerator and freezer repair for restaurants and businesses."
       },
       {
-        "title": "Bulk Installation Services",
-        "description": "Professional installation services for multiple washing machines and refrigerators in commercial properties."
+        "title": "Bulk Installation",
+        "description": "Professional installation for multiple appliances in commercial properties."
       }
     ],
     "residential": [
       {
-        "title": "Home Washing Machine Repair",
-        "description": "Reliable residential washing machine repair to keep your laundry routine uninterrupted. Same-day service available."
+        "title": "Home Appliance Repair",
+        "description": "Reliable residential repair services. Same-day service available for urgent needs."
       },
       {
-        "title": "Refrigerator Maintenance",
-        "description": "Complete refrigerator repair and maintenance services for homes. All brands serviced with genuine parts."
+        "title": "Refrigerator Services",
+        "description": "Complete refrigerator repair and maintenance. All brands serviced with genuine parts."
       },
       {
-        "title": "Appliance Care Plans",
-        "description": "Comprehensive maintenance packages for all your home washing machines and refrigerators."
+        "title": "Home Care Plans",
+        "description": "Comprehensive maintenance packages for all home appliances."
       }
     ],
     "industrial": [
       {
-        "title": "Industrial Laundry Equipment",
-        "description": "Specialized repair services for industrial washing machines and laundry systems in factories and facilities."
+        "title": "Industrial Equipment",
+        "description": "Specialized repair for industrial washing systems in factories and facilities."
       },
       {
-        "title": "Cold Storage Solutions",
-        "description": "Expert maintenance and repair of industrial refrigeration systems and cold storage units."
+        "title": "Cold Storage",
+        "description": "Expert maintenance of industrial refrigeration and cold storage units."
       }
     ]
   },
@@ -326,82 +326,82 @@
       "about": "About"
     },
     "whyChooseUs": {
-      "badge": "Why Choose Us?",
+      "badge": "Why Us?",
       "heading": "Why Choose Our Services?",
-      "description": "Years of experience in washing machine and refrigerator repair services. We continuously improve to meet our customers' appliance service needs.",
+      "description": "Years of experience in appliance repair. We continuously improve to meet customer needs.",
       "features": {
-        "certifiedWorkers": "Certified expert technicians",
-        "fastQualityService": "Fast and reliable service",
+        "certifiedWorkers": "Certified technicians",
+        "fastQualityService": "Fast, reliable service",
         "bestPrices": "Competitive pricing",
         "wonAwards": "Award-winning service"
       },
-      "button": "Schedule Service Now"
+      "button": "Schedule Service"
     }
   },
   "contact": {
     "header": {
-      "title": "Contact Us",
+      "title": "Contact",
       "home": "Home",
       "current": "Contact"
     },
     "getInTouch": "Get In Touch",
-    "contactInfo": "Our Contact Information",
+    "contactInfo": "Contact Information",
     "location": {
-      "title": "Riyadh, KSA"
+      "title": "Riyadh, Saudi Arabia"
     },
     "phone": {
-      "title": "Phone Number",
-      "number": "+966557236549"
+      "title": "Phone",
+      "number": "+966 557 236 549"
     },
     "email": {
-      "title": "Email Us:",
+      "title": "Email",
       "address": "contact@riyadhrepairingservices.com"
     }
   },
   "footer": {
     "subscribe": {
-      "title": "Subscribe for service updates and special offers.",
-      "placeholder": "info@example.com",
+      "title": "Subscribe for updates and special offers",
+      "placeholder": "Enter your email",
       "button": "Subscribe"
     },
     "company": {
       "title": "Company"
     },
     "ourServices": {
-      "title": "Our Services",
+      "title": "Services",
       "items": {
         "refrigerator": "Refrigerator Repair",
         "washing": "Washing Machine",
-        "dishwasher": "Dishwasher Repair",
-        "dryer": "Dryer Services",
-        "installation": "Installation Service",
+        "dishwasher": "Dishwasher Service",
+        "dryer": "Dryer Repair",
+        "installation": "Installation",
         "maintenance": "Maintenance Plans"
       }
     },
     "ourBlogs": {
-      "title": "Our Blogs",
+      "title": "Resources",
       "items": {
-        "careTips": "Appliance Care Tips",
+        "careTips": "Care Tips",
         "maintenanceGuide": "Maintenance Guide",
-        "energyEfficiency": "Energy Efficiency",
-        "viewAll": "View All Blogs"
+        "energyEfficiency": "Energy Saving",
+        "viewAll": "All Articles"
       }
     },
     "contactUs": {
-      "title": "Contact Us",
-      "location": "Rakar Service Center, Riyadh, KSA",
+      "title": "Contact",
+      "location": "Rakar Service Center, Riyadh, Saudi Arabia",
       "phone": "+966 557 236 549",
       "email": "contact@riyadhrepairingservices.com"
     },
-    "tagline": "Don't Replace – Repair with Experts",
+    "tagline": "Professional Repair Solutions",
     "copyright": "© 2024 Rakar Appliance Services. All Rights Reserved.",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy"
+    "terms": "Terms",
+    "privacy": "Privacy"
   },
   "blog": {
     "header": {
-      "title": "Latest Tips & Updates",
-      "subtitle": "Expert advice on washing machine and refrigerator maintenance from",
+      "title": "Expert Tips & Guides",
+      "subtitle": "Appliance maintenance advice from",
       "company": "Riyadh Appliance Services"
     },
     "readMore": "Read More",

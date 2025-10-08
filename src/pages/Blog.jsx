@@ -5,36 +5,91 @@ import { useTranslation } from "react-i18next";
 const blogs = [
   {
     id: 1,
-    title: "Why Regular AC Maintenance is Important in Riyadh",
+    title: "7 Warning Signs Your Washing Machine Needs Professional Repair",
     date: "October 2025",
-    author: "AC Services Riyadh",
+    author: "Riyadh Appliance Services",
     image:
-      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=60",
-    keywords: ["AC maintenance Riyadh", "AC service Riyadh", "best AC technician Riyadh"],
+      "https://images.unsplash.com/photo-1581578731548-207f3b6ccab0?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["washing machine repair", "appliance maintenance", "Riyadh services"],
     description:
-      "Regular AC maintenance in Riyadh improves cooling performance and reduces energy bills. Our technicians ensure your unit runs efficiently all year, keeping your home comfortable in every season.",
+      "Discover the early warning signs of washing machine problems. Learn about unusual noises, water leaks, and other symptoms that require professional attention to prevent costly damage.",
   },
   {
     id: 2,
-    title: "Top 5 Signs You Need AC Repair in Riyadh",
+    title: "Essential Refrigerator Maintenance Tips for Saudi Homes",
     date: "October 2025",
-    author: "AC Services Riyadh",
+    author: "Riyadh Appliance Services",
     image:
-      "https://images.unsplash.com/photo-1615874959474-d609969a1b16?auto=format&fit=crop&w=1200&q=60",
-    keywords: ["AC repair Riyadh", "AC not cooling", "AC technician Riyadh"],
+      "https://images.unsplash.com/photo-1616627893735-0f4a45b9e9c7?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["refrigerator care", "appliance maintenance", "energy saving"],
     description:
-      "Is your AC not cooling properly? From weak airflow to unusual noises, learn the top 5 signs your air conditioner needs professional AC repair in Riyadh. Don't wait—book a quick inspection today!",
+      "Keep your refrigerator running efficiently in Riyadh's climate. Simple maintenance steps that extend appliance life and reduce electricity bills throughout the year.",
   },
   {
     id: 3,
-    title: "How to Choose the Best AC Services in Riyadh",
+    title: "Solving Common Washing Machine Problems: Expert Solutions",
     date: "October 2025",
-    author: "AC Services Riyadh",
+    author: "Riyadh Appliance Services",
     image:
-      "https://images.unsplash.com/photo-1616628188460-5b6f4c72e6cb?auto=format&fit=crop&w=1200&q=60",
-    keywords: ["best AC services Riyadh", "AC maintenance company", "AC experts Riyadh"],
+      "https://images.unsplash.com/photo-1599058917212-d7500896e56d?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["washer troubleshooting", "appliance repair", "professional service"],
     description:
-      "Choosing the right AC service company in Riyadh can be tricky. Learn what to look for—experienced technicians, quick service, and transparent pricing—from the experts at AC Services Riyadh.",
+      "Expert guide to fixing common washing machine issues. From drainage problems to spin cycle failures, learn how professional technicians diagnose and repair your appliance.",
+  },
+  {
+    id: 4,
+    title: "Choosing the Right Refrigerator for Riyadh's Climate",
+    date: "October 2025",
+    author: "Riyadh Appliance Services",
+    image:
+      "https://images.unsplash.com/photo-1588854337221-cbfa4f0e7a45?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["refrigerator selection", "climate considerations", "appliance guide"],
+    description:
+      "Guide to selecting durable refrigerators for hot climates. Compare top brands and learn maintenance practices that ensure optimal cooling performance in Saudi Arabia.",
+  },
+  {
+    id: 5,
+    title: "Benefits of Regular Washing Machine Servicing",
+    date: "October 2025",
+    author: "Riyadh Appliance Services",
+    image:
+      "https://images.unsplash.com/photo-1577972067685-18e8c84a6c85?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["preventive maintenance", "appliance care", "service benefits"],
+    description:
+      "Why annual washing machine service saves money long-term. Prevent unexpected breakdowns and maintain peak performance with regular professional maintenance.",
+  },
+  {
+    id: 6,
+    title: "Smart Ways to Reduce Your Refrigerator Energy Consumption",
+    date: "October 2025",
+    author: "Riyadh Appliance Services",
+    image:
+      "https://images.unsplash.com/photo-1624454158405-1bb09a177fa0?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["energy efficiency", "cost savings", "appliance tips"],
+    description:
+      "Practical tips to lower electricity costs with efficient refrigerator use. Perfect strategies for managing energy consumption in warm climates like Riyadh.",
+  },
+  {
+    id: 7,
+    title: "24/7 Emergency Appliance Repair Services in Riyadh",
+    date: "October 2025",
+    author: "Riyadh Appliance Services",
+    image:
+      "https://images.unsplash.com/photo-1626785774573-502adf0c09a5?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["emergency repair", "24/7 service", "quick response"],
+    description:
+      "Round-the-clock emergency repair services for washing machines and refrigerators. Fast, reliable, and affordable solutions available throughout Riyadh.",
+  },
+  {
+    id: 8,
+    title: "Troubleshooting Guide: When Your Refrigerator Stops Cooling",
+    date: "October 2025",
+    author: "Riyadh Appliance Services",
+    image:
+      "https://images.unsplash.com/photo-1598209391060-261066105f66?auto=format&fit=crop&w=1200&q=60",
+    keywords: ["refrigerator problems", "cooling issues", "troubleshooting guide"],
+    description:
+      "Step-by-step troubleshooting when your refrigerator loses cooling. Simple checks you can perform before calling for professional repair service.",
   },
 ];
 
@@ -73,7 +128,7 @@ const BlogSection = () => {
             <div className="overflow-hidden relative">
               <img
                 src={blog.image}
-                alt={`Image illustrating ${blog.title}`}
+                alt={blog.title}
                 loading="lazy"
                 className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                 itemProp="image"
@@ -123,9 +178,10 @@ const BlogSection = () => {
               </div>
 
               <a
-                href="#"
+                href={`#blog-${blog.id}`}
                 className="mt-4 inline-block text-xs sm:text-sm font-medium text-[#14b8a6] hover:text-[#0d9488] transition"
                 itemProp="url"
+                aria-label={`Read more about ${blog.title}`}
               >
                 {t("blog.readMore")} →
               </a>

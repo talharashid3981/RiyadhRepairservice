@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import breadcumb_bg from "../assets/images/breadcumb-bg.jpg";
 import { ArrowRight } from "lucide-react";
 import { BsTools } from "react-icons/bs";
-import { FaTools, FaFan, FaSnowflake } from "react-icons/fa";
+import { FaTools, FaSnowflake } from "react-icons/fa";
 
 import ContactQuote from "../components/ContactQuote.jsx";
 import DarkBlue_bg from "../components/DarkBlue_bg.jsx";
@@ -27,24 +27,24 @@ const Services = () => {
       icon: (
         <FaTools className="text-4xl text-[#14b8a6] group-hover:scale-110 transition-transform duration-300" />
       ),
-      title: t("services.cards.washing.title"),
-      description: t("services.cards.washing.description"),
+      title: "Automatic Washing Machine Repair",
+      description: "Expert repair services for automatic washing machines of all brands. Fast diagnosis and repair with genuine parts and warranty coverage.",
     },
     {
       id: "02",
       icon: (
-        <FaFan className="text-4xl text-[#14b8a6] group-hover:scale-110 transition-transform duration-300" />
+        <FaTools className="text-4xl text-[#14b8a6] group-hover:scale-110 transition-transform duration-300" />
       ),
-      title: t("services.cards.ac.title"),
-      description: t("services.cards.ac.description"),
+      title: "Semi-Automatic Washing Machine Repair",
+      description: "Professional repair and maintenance services for semi-automatic washing machines. Quick turnaround and affordable pricing.",
     },
     {
       id: "03",
       icon: (
         <FaSnowflake className="text-4xl text-[#14b8a6] group-hover:scale-110 transition-transform duration-300" />
       ),
-      title: t("services.cards.fridge.title"),
-      description: t("services.cards.fridge.description"),
+      title: "Refrigerator Repair Services",
+      description: "Complete refrigerator repair solutions including cooling issues, compressor problems, and electrical faults. All brands serviced.",
     },
   ];
 
@@ -65,15 +65,15 @@ const Services = () => {
         >
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 text-center">
-            <h1 className="text-[42px] md:text-[52px] font-bold mb-2  drop-shadow-lg">
-              {t("services.header.title")}
+            <h1 className="text-[42px] md:text-[52px] font-bold mb-2 drop-shadow-lg">
+              Our Services
             </h1>
             <div className="flex items-center justify-center gap-2 text-[18px] text-gray-200">
               <NavLink to="/" className="hover:text-[#99f6e4] transition-colors">
-                {t("services.header.home")}
+                Home
               </NavLink>
               <ArrowRight className="w-4 h-4 text-[#ccfbf1]" />
-              <span className="text-[#99f6e4]">{t("services.header.current")}</span>
+              <span className="text-[#99f6e4]">Services</span>
             </div>
           </div>
         </div>
@@ -83,15 +83,15 @@ const Services = () => {
       <section className="max-w-7xl mx-auto px-6 py-20 text-center">
         <div className="flex items-center justify-center gap-2 text-[#14b8a6] text-xl font-semibold mb-4">
           <BsTools className="text-2xl" />
-          <span>{t("services.section.title")}</span>
+          <span>What We Offer</span>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-          {t("services.section.subtitle")}
+          Washing Machine & Refrigerator Repair Services
         </h1>
 
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-14">
-          {t("services.section.description")}
+          We provide expert washing machine and refrigerator repair services in Riyadh. Our experienced technicians ensure reliability, efficiency, and complete customer satisfaction with every service call.
         </p>
 
         {/* Services Grid */}
@@ -128,18 +128,18 @@ const Services = () => {
             className="inline-block text-sm uppercase tracking-[5px] font-semibold px-5 py-2 rounded-full bg-[#99f6e4]/20"
             style={{ color: "#14b8a6" }}
           >
-            {t("services.gallery.badge")}
+            Our Work
           </h3>
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 mb-4 leading-tight">
-            {t("services.gallery.title")}{" "}
+            Service{" "}
             <span className="text-[#14b8a6]">
-              {t("services.gallery.highlight")}
+              Gallery
             </span>
           </h2>
 
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-            {t("services.gallery.description")}
+            Explore our completed projects and see the quality of our workmanship. We take pride in every repair and maintenance service we provide.
           </p>
         </div>
 
@@ -160,7 +160,7 @@ const Services = () => {
               {/* Overlay */}
               <div className="absolute inset-0 bg-[#14b8a6]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                 <span className="text-white text-xl font-semibold">
-                  {t("services.gallery.view")}
+                  View
                 </span>
               </div>
             </div>
@@ -194,15 +194,15 @@ const Services = () => {
         <div className="relative z-10 mt-20">
           <div className="text-center max-w-3xl mx-auto px-4">
             <span className="text-sm md:text-base font-semibold text-white bg-[#14b8a6] px-6 py-2 rounded-full uppercase tracking-widest inline-block shadow-md mb-6">
-              {t("pricingPlans.header.badge")}
+              Service Packages
             </span>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-              {t("pricingPlans.header.title")}
+              Choose Your Plan
             </h2>
 
             <p className="text-base md:text-lg text-[#ccfbf1]">
-              {t("pricingPlans.header.subtitle")}
+              Select the perfect maintenance package for your needs.
             </p>
           </div>
 
@@ -214,12 +214,12 @@ const Services = () => {
           {/* Footer Text */}
           <div className="text-center mt-16">
             <p className="text-white">
-              {t("pricingPlans.footer.text")}{" "}
+              Need a custom service plan?{" "}
               <a
                 href="#contact"
                 className="text-[#99f6e4] font-semibold hover:text-[#ccfbf1] transition-colors"
               >
-                {t("pricingPlans.footer.linkText")}
+                Contact us
               </a>
             </p>
           </div>

@@ -28,10 +28,10 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between px-4 sm:px-5 py-2 sm:py-3">
+      <div className="max-w-full mx-7 flex items-center justify-between px-4 sm:px-5 py-2 sm:py-3">
         <NavLink
           to="/"
-          className="flex items-center gap-3 group transition-all duration-300"
+          className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 flex-shrink-0"
         >
           {/* Logo Image */}
           <div className="flex-shrink-0">
@@ -43,15 +43,15 @@ const Navbar = () => {
           </div>
 
           {/* Logo Text */}
-          <div className=" flex flex-col justify-center">
-            <h1 className="text-lg sm:text-[24px] leading-[1.1] font-extrabold text-[#14b8a6] tracking-wide group-hover:text-[#0d9488] transition-colors">
+          <div className="flex flex-col justify-center min-w-0">
+            <h1 className="text-base sm:text-lg md:text-[24px] leading-[1.1] font-extrabold text-[#14b8a6] tracking-wide group-hover:text-[#0d9488] transition-colors whitespace-nowrap">
               RIYADH
             </h1>
-            <h2 className="text-sm sm:text-[20px] leading-[1.2] font-bold text-black">
+            <h2 className="text-sm sm:text-base md:text-[20px] leading-[1.2] font-bold text-black whitespace-nowrap">
               REPAIR SERVICES
             </h2>
-            <h3 className="text-[16px] sm:text-[14px] font-[600] leading-[1.2] text-gray-500 italic ">
-              Don’t Replace – Repair with Experts
+            <h3 className="text-[10px] sm:text-xs md:text-[14px] font-[600] leading-[1.2] text-gray-500 italic whitespace-nowrap">
+              Don't Replace – Repair with Experts
             </h3>
           </div>
         </NavLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `transition-all duration-300 ${
+                  `transition-all duration-300 whitespace-nowrap ${
                     isActive
                       ? "text-[#14b8a6] after:w-full"
                       : "hover:text-[#14b8a6]"
@@ -79,10 +79,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3 sm:gap-5">
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 flex-shrink-0">
           <a
             href="tel:+966598001569"
-            className="hidden lg:flex items-center gap-2 text-[#0C1236] font-semibold text-sm"
+            className="hidden lg:flex items-center gap-2 text-[#0C1236] font-semibold text-sm whitespace-nowrap"
           >
             <div className="bg-[#14b8a6] text-white p-2 rounded-full">
               <FiPhone className="text-base lg:text-lg" />
@@ -92,7 +92,7 @@ const Navbar = () => {
 
           <div
             onClick={() => changeLang(i18n.language === "en" ? "ar" : "en")}
-            className="relative flex items-center w-16 sm:w-18 h-6 sm:h-7 bg-gray-200 rounded-full cursor-pointer transition-all duration-300"
+            className="relative flex items-center w-14 sm:w-16 lg:w-18 h-6 sm:h-7 bg-gray-200 rounded-full cursor-pointer transition-all duration-300 flex-shrink-0"
           >
             <span className="absolute left-2 sm:left-3 text-[10px] sm:text-xs font-semibold text-gray-700 select-none">
               EN
@@ -104,15 +104,15 @@ const Navbar = () => {
               className={`absolute w-6 h-6 sm:w-7 sm:h-7 bg-[#14b8a6] rounded-full shadow-md flex items-center justify-center text-white transition-all duration-300 ${
                 i18n.language === "en"
                   ? "translate-x-0"
-                  : "translate-x-10 sm:translate-x-11"
+                  : "translate-x-8 sm:translate-x-9 lg:translate-x-11"
               }`}
             >
-              <FiGlobe className="text-sm sm:text-lg" />
+              <FiGlobe className="text-sm sm:text-base lg:text-lg" />
             </div>
           </div>
 
           <button
-            className="md:hidden text-[#14b8a6] text-2xl"
+            className="md:hidden text-[#14b8a6] text-2xl flex-shrink-0"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
