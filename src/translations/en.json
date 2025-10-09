@@ -248,35 +248,45 @@
   },
   "services": {
     "header": {
-      "title": "Services",
+      "title": "Our Services",
       "home": "Home",
       "current": "Services"
     },
     "section": {
-      "title": "What We Offer",
-      "subtitle": "Professional Appliance Services",
-      "description": "Expert washing machine and refrigerator repair in Riyadh. Experienced technicians ensure reliability and customer satisfaction."
+      "badge": "What We Offer",
+      "title": "Washing Machine & Refrigerator",
+      "subtitle": "Repair Services",
+      "description": "We provide expert washing machine and refrigerator repair services in Riyadh. Our experienced technicians ensure reliability, efficiency, and complete customer satisfaction with every service call."
     },
-    "cards": {
-      "washing": {
-        "title": "Washing Machine Repair",
-        "description": "Complete repair and maintenance services in Riyadh. Fast, reliable, affordable solutions for all brands."
+    "cards": [
+      {
+        "title": "Automatic Washing Machine Repair",
+        "description": "Expert repair services for automatic washing machines of all brands. Fast diagnosis and repair with genuine parts and warranty coverage."
       },
-      "ac": {
-        "title": "Refrigerator Repair",
-        "description": "Expert refrigerator services for efficient operation. Professional diagnosis and repair for all brands."
+      {
+        "title": "Semi-Automatic Washing Machine Repair",
+        "description": "Professional repair and maintenance services for semi-automatic washing machines. Quick turnaround and affordable pricing."
       },
-      "fridge": {
-        "title": "Maintenance Plans",
-        "description": "Regular maintenance prevents breakdowns and extends appliance life. Affordable monthly plans available."
+      {
+        "title": "Refrigerator Repair Services",
+        "description": "Complete refrigerator repair solutions including cooling issues, compressor problems, and electrical faults. All brands serviced."
       }
-    },
+    ],
     "gallery": {
       "badge": "Our Work",
       "title": "Service",
       "highlight": "Gallery",
-      "description": "See our quality workmanship. We take pride in every repair and maintenance service.",
+      "description": "Explore our completed projects and see the quality of our workmanship. We take pride in every repair and maintenance service we provide.",
       "view": "View"
+    },
+    "pricing": {
+      "badge": "Service Packages",
+      "title": "Choose Your Plan",
+      "description": "Select the perfect maintenance package for your needs.",
+      "footer": {
+        "text": "Need a custom service plan?",
+        "linkText": "Contact us"
+      }
     }
   },
   "projectsData": {
@@ -326,86 +336,175 @@
       "about": "About"
     },
     "whyChooseUs": {
-      "badge": "Why Us?",
-      "heading": "Why Choose Our Services?",
-      "description": "Years of experience in appliance repair. We continuously improve to meet customer needs.",
+      "badge": "Why Choose Us?",
+      "heading": "Why Choose Our Appliance Repair Services?",
+      "description": "With years of experience in appliance repair and maintenance, we continuously improve our services to meet the evolving needs of our customers. Trust us for all your washing machine and refrigerator repair needs in Riyadh.",
       "features": {
-        "certifiedWorkers": "Certified technicians",
-        "fastQualityService": "Fast, reliable service",
-        "bestPrices": "Competitive pricing",
-        "wonAwards": "Award-winning service"
+        "certifiedWorkers": "Certified Technicians",
+        "fastQualityService": "Fast & Quality Service",
+        "bestPrices": "Competitive Pricing",
+        "wonAwards": "Award-Winning Service"
       },
-      "button": "Schedule Service"
+      "button": "Schedule Service Now"
     }
   },
   "contact": {
     "header": {
-      "title": "Contact",
+      "title": "Contact Us",
       "home": "Home",
       "current": "Contact"
     },
     "getInTouch": "Get In Touch",
     "contactInfo": "Contact Information",
     "location": {
-      "title": "Riyadh, Saudi Arabia"
+      "title": "Our Location",
+      "address": "Riyadh, Saudi Arabia"
     },
     "phone": {
-      "title": "Phone",
-      "number": "+966 557 236 549"
+      "title": "Call Us",
+      "number": "+966 598 001 569"
     },
     "email": {
-      "title": "Email",
+      "title": "Email Us",
       "address": "contact@riyadhrepairingservices.com"
     }
   },
   "footer": {
     "subscribe": {
-      "title": "Subscribe for updates and special offers",
-      "placeholder": "Enter your email",
-      "button": "Subscribe"
+      "title": "Subscribe for service updates and special offers",
+      "placeholder": "info@example.com",
+      "button": "Subscribe",
+      "successMessage": "Successfully subscribed!",
+      "errorMessage": "Please enter a valid email address"
     },
     "company": {
-      "title": "Company"
+      "title": "Company",
+      "items": {
+        "home": "Home",
+        "services": "Our Services",
+        "about": "About Us",
+        "contact": "Contact Us"
+      }
     },
     "ourServices": {
-      "title": "Services",
+      "title": "Our Services",
       "items": {
         "refrigerator": "Refrigerator Repair",
-        "washing": "Washing Machine",
-        "dishwasher": "Dishwasher Service",
-        "dryer": "Dryer Repair",
-        "installation": "Installation",
+        "washing": "Automatic Washing Machine",
+        "semiAutomatic": "Semi-Automatic Washing Machine",
+        "installation": "Installation Service",
         "maintenance": "Maintenance Plans"
       }
     },
     "ourBlogs": {
-      "title": "Resources",
+      "title": "Our Blogs",
       "items": {
-        "careTips": "Care Tips",
+        "careTips": "Appliance Care Tips",
         "maintenanceGuide": "Maintenance Guide",
-        "energyEfficiency": "Energy Saving",
-        "viewAll": "All Articles"
+        "energyEfficiency": "Energy Efficiency",
+        "viewAll": "View All Blogs"
       }
     },
     "contactUs": {
-      "title": "Contact",
-      "location": "Rakar Service Center, Riyadh, Saudi Arabia",
-      "phone": "+966 557 236 549",
+      "title": "Contact Us",
+      "location": "Rakar Service Center, Riyadh, KSA",
+      "phone": "+966 598 001 569",
       "email": "contact@riyadhrepairingservices.com"
     },
-    "tagline": "Professional Repair Solutions",
+    "tagline": "Don't Replace — Repair with Experts",
     "copyright": "© 2024 Rakar Appliance Services. All Rights Reserved.",
-    "terms": "Terms",
-    "privacy": "Privacy"
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
   },
+
+ 
+  
   "blog": {
     "header": {
-      "title": "Expert Tips & Guides",
-      "subtitle": "Appliance maintenance advice from",
-      "company": "Riyadh Appliance Services"
+      "title": "Latest Appliance Repair Tips & Guides",
+      "subtitle": "Explore expert insights, maintenance tips, and repair solutions from",
+      "company": "Riyadh Repair Services"
     },
     "readMore": "Read More",
     "date": "October 2025",
-    "author": "Riyadh Appliance Services"
+    "author": "Riyadh Appliance Services",
+    "blogs": [
+      {
+        "id": 1,
+        "title": "7 Warning Signs Your Washing Machine Needs Professional Repair",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Discover the early warning signs of washing machine problems. Learn about unusual noises, water leaks, and other symptoms that require professional attention to prevent costly damage.",
+        "keywords": ["washing machine repair", "appliance maintenance", "Riyadh services"],
+        "image": "https://images.unsplash.com/photo-1581578731548-207f3b6ccab0?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 2,
+        "title": "Essential Refrigerator Maintenance Tips for Saudi Homes",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Keep your refrigerator running efficiently in Riyadh's climate. Simple maintenance steps that extend appliance life and reduce electricity bills throughout the year.",
+        "keywords": ["refrigerator care", "appliance maintenance", "energy saving"],
+        "image": "https://images.unsplash.com/photo-1616627893735-0f4a45b9e9c7?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 3,
+        "title": "Solving Common Washing Machine Problems: Expert Solutions",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Expert guide to fixing common washing machine issues. From drainage problems to spin cycle failures, learn how professional technicians diagnose and repair your appliance.",
+        "keywords": ["washer troubleshooting", "appliance repair", "professional service"],
+        "image": "https://images.unsplash.com/photo-1599058917212-d7500896e56d?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 4,
+        "title": "Choosing the Right Refrigerator for Riyadh's Climate",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Guide to selecting durable refrigerators for hot climates. Compare top brands and learn maintenance practices that ensure optimal cooling performance in Saudi Arabia.",
+        "keywords": ["refrigerator selection", "climate considerations", "appliance guide"],
+        "image": "https://images.unsplash.com/photo-1588854337221-cbfa4f0e7a45?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 5,
+        "title": "Benefits of Regular Washing Machine Servicing",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Why annual washing machine service saves money long-term. Prevent unexpected breakdowns and maintain peak performance with regular professional maintenance.",
+        "keywords": ["preventive maintenance", "appliance care", "service benefits"],
+        "image": "https://images.unsplash.com/photo-1577972067685-18e8c84a6c85?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 6,
+        "title": "Smart Ways to Reduce Your Refrigerator Energy Consumption",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Practical tips to lower electricity costs with efficient refrigerator use. Perfect strategies for managing energy consumption in warm climates like Riyadh.",
+        "keywords": ["energy efficiency", "cost savings", "appliance tips"],
+        "image": "https://images.unsplash.com/photo-1624454158405-1bb09a177fa0?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 7,
+        "title": "24/7 Emergency Appliance Repair Services in Riyadh",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Round-the-clock emergency repair services for washing machines and refrigerators. Fast, reliable, and affordable solutions available throughout Riyadh.",
+        "keywords": ["emergency repair", "24/7 service", "quick response"],
+        "image": "https://images.unsplash.com/photo-1626785774573-502adf0c09a5?auto=format&fit=crop&w=1200&q=60"
+      },
+      {
+        "id": 8,
+        "title": "Troubleshooting Guide: When Your Refrigerator Stops Cooling",
+        "date": "October 2025",
+        "author": "Riyadh Appliance Services",
+        "description": "Step-by-step troubleshooting when your refrigerator loses cooling. Simple checks you can perform before calling for professional repair service.",
+        "keywords": ["refrigerator problems", "cooling issues", "troubleshooting guide"],
+        "image": "https://images.unsplash.com/photo-1598209391060-261066105f66?auto=format&fit=crop&w=1200&q=60"
+      }
+    ]
   }
+
+
+
+
 }

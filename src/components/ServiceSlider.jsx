@@ -6,17 +6,17 @@ import "swiper/css/navigation";
 import { FiTool, FiWind, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { TbAirConditioning } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-import service_box_1 from "../assets/images/service_box_1.jpg";
-import service_box_2 from "../assets/images/service_box_2.jpg";
+// import service_box_1 from "../assets/images/service_box_1.jpg";
+// import service_box_2 from "../assets/images/service_box_2.jpg";
 import fridge_installation from "../assets/images/fridge_installation.jpg";
 import Fridge_Repair_1 from "../assets/images/Fridge_Repair_1.jpg"
 import emergency_services from "../assets/images/emergency_services.png"
 import washing_machine_2 from "../assets/images/washing_machine_2.jpg"
 import maintenance_services_1 from "../assets/images/maintenance_services_1.jpeg"
 import frdge2 from "../assets/images/frdge2.jpg"
-import service_box_4 from "../assets/images/service_box_4.jpg";
-import service_box_5 from "../assets/images/service_box_5.jpg";
-import service_box_6 from "../assets/images/service_box_6.jpg";
+// import service_box_4 from "../assets/images/service_box_4.jpg";
+// import service_box_5 from "../assets/images/service_box_5.jpg";
+// import service_box_6 from "../assets/images/service_box_6.jpg";
 
 const ServiceSlider = () => {
   const { t } = useTranslation();

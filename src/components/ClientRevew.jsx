@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Testi_Sec from "../assets/images/testi_sec.jpg";
+import slider_3 from "../assets/images/slider_3.png"
 
 const ClientReview = () => {
   const { t } = useTranslation();
@@ -152,7 +153,9 @@ const ClientReview = () => {
 
         {/* Avatar Stack */}
         <div className="absolute -right-20 z-90 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-3">
+        
           {testimonials.map((t, index) => (
+            
             <button
               key={index}
               onClick={() => setCurrent(index)}
@@ -175,10 +178,12 @@ const ClientReview = () => {
       {/* Right side - Image */}
       <div className="relative h-full lg:min-h-screen">
         <img
-          src={Testi_Sec}
+          src={slider_3}
           alt="Appliance Repair Technician"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover "
         />
+        <div className="absolute inset-0 bg-black/40" />
+
         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0d2e]/20 to-[#0a0d2e]"></div>
       </div>
     </div>

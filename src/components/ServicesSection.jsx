@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import title_icon2 from "../assets/images/title_icon2.png";
-import about_3 from "../assets/images/about_3.jpg";
+// import about_3 from "../assets/images/about_3.jpg";
 import Trusted_Appliance_Repair from "../assets/images/Trusted_Appliance_Repair.png"
 
 const ServicesSection = () => {
@@ -64,32 +64,34 @@ const ServicesSection = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex sm:flex-row items-start sm:items-center gap-5 flex-wrap pt-3">
-              <Link
-                to="/about"
-                className="bg-slate-900 text-white flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-full hover:bg-slate-800 transition text-sm sm:text-base"
-              >
-                {t("home.secondSection.buttons.findMore")} <FaArrowRightLong />
-              </Link>
-              <a
-                href="tel:+966598001569"
-                className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold"
-              >
-                <div className="flex gap-2 sm:gap-3 items-center">
-                  <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
-                    <FiPhone />
-                  </div>
-                  <div>
-                    <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
-                      {t("home.secondSection.buttons.contact")}
-                    </div>
-                    <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6]">
-                      +966598001569
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+            <div className="flex flex-wrap xl:flex-nowrap items-center gap-4 xl:gap-8 pt-3">
+  <Link
+    to="/about"
+    className="bg-slate-900 text-white flex items-center gap-2 sm:gap-3 px-5 py-3 rounded-full hover:bg-slate-800 transition text-sm sm:text-base whitespace-nowrap"
+  >
+    {t("home.secondSection.buttons.findMore")} <FaArrowRightLong />
+  </Link>
+
+  <a
+    href="tel:+966598001569"
+    className="flex items-center gap-3 text-[#14b8a6] cursor-pointer font-bold whitespace-nowrap"
+  >
+    <div className="flex gap-2 sm:gap-3 items-center">
+      <div className="text-white bg-[#14b8a6] p-3 rounded-full text-xl sm:text-[26px] flex items-center justify-center">
+        <FiPhone />
+      </div>
+      <div className="leading-tight">
+        <div className="text-xs sm:text-sm text-[#14b8a6] font-semibold">
+          {t("home.secondSection.buttons.contact")}
+        </div>
+        <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6]">
+          +966598001569
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
           </div>
 
           <div className="order-2 lg:order-2 p-3 sm:p-5 overflow-hidden w-full h-full">

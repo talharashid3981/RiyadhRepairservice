@@ -8,6 +8,8 @@ import Contact from './pages/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import Blog from './pages/Blog.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx' // ✅ Added
+import FloatingSocialButtons from './components/FloatingSocialButtons.jsx';
+
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
       <BrowserRouter>
         <ScrollToTop /> {/* ✅ This will reset scroll position on route change */}
         <Navbar />
+           <FloatingSocialButtons />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/services' element={<Services />} />

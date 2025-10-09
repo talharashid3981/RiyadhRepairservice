@@ -46,7 +46,11 @@ const Contact = () => {
       </section>
 
       {/* ===== Contact Info Section ===== */}
-      <section className="bg-gray-50 py-16 px-4 sm:px-8">
+      <section
+        className="bg-gray-50 py-16 px-4 sm:px-8"
+        itemScope
+        itemType="https://schema.org/Organization"
+      >
         <div className="max-w-6xl mx-auto text-center">
           {/* Section Header */}
           <div className="mb-12">
@@ -64,17 +68,19 @@ const Contact = () => {
           </div>
 
           {/* Contact Cards */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-            itemScope
-            itemType="https://schema.org/Organization"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Location */}
             <div
-              className="bg-white border border-gray-200 rounded-2xl p-8 flex items-center gap-6 hover:shadow-lg transition-all duration-300"
+              className="bg-white border border-gray-200 rounded-2xl p-8 flex items-center gap-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
               itemProp="address"
               itemScope
               itemType="https://schema.org/PostalAddress"
+              onClick={() =>
+                window.open(
+                  "https://maps.app.goo.gl/6FgEyFnvMN1KQhZX9?g_st=aw",
+                  "_blank"
+                )
+              }
             >
               <div className="w-16 h-16 bg-[#14b8a6] rounded-full flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-8 h-8 text-white" />
@@ -83,17 +89,15 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {t("contact.location.title")}
                 </h3>
-                <p
-                  className="text-gray-600 text-sm"
-                  itemProp="streetAddress"
-                >
+                <p className="text-gray-600 text-sm" itemProp="streetAddress">
                   {t("contact.location.address")}
                 </p>
               </div>
             </div>
 
             {/* Phone */}
-            <div
+            <a
+              href={`tel:${t("contact.phone.number")}`}
               className="bg-white border border-gray-200 rounded-2xl p-8 flex items-center gap-6 hover:shadow-lg transition-all duration-300"
               itemProp="telephone"
             >
@@ -104,17 +108,13 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {t("contact.phone.title")}
                 </h3>
-                <a
-                  href={`tel:${t("contact.phone.number")}`}
-                  className="text-gray-600 hover:text-[#14b8a6] transition-colors text-sm"
-                >
-                  {t("contact.phone.number")}
-                </a>
+                <p className="text-gray-600 text-sm">{t("contact.phone.number")}</p>
               </div>
-            </div>
+            </a>
 
             {/* Email */}
-            <div
+            <a
+              href={`mailto:${t("contact.email.address")}`}
               className="bg-white border border-gray-200 rounded-2xl p-8 flex items-center gap-6 hover:shadow-lg transition-all duration-300"
               itemProp="email"
             >
@@ -125,19 +125,16 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
                   {t("contact.email.title")}
                 </h3>
-                <a
-                  href={`mailto:${t("contact.email.address")}`}
-                  className="text-gray-600 hover:text-[#14b8a6] transition-colors text-sm break-all"
-                >
+                <p className="text-gray-600 text-sm break-all">
                   {t("contact.email.address")}
-                </a>
+                </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ===== Contact Form or Quote Section ===== */}
+      {/* ===== Contact Form / Quote Section ===== */}
       <section>
         <ContactQuote />
       </section>

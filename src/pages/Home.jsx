@@ -8,17 +8,22 @@ import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import video_2 from "../assets/images/video_2.jpg";
 import pattern_bg_6 from "../assets/images/pattern_bg_6.jpg";
 import title_icon2 from "../assets/images/title_icon2.png";
-import about_3 from "../assets/images/about_3.jpg";
+import frdge2 from "../assets/images/frdge2.jpg"
+import cold_storage from "../assets/images/cold_storage.jpeg"
+import industrial_equipment from "../assets/images/industrial_equipment.jpeg" 
 import counter_card_2 from "../assets/images/counter_card_2.png";
 import counter_card_3 from "../assets/images/counter_card_3.png";
 import counter_card_4 from "../assets/images/counter_card_4.png";
 import counter_card_5 from "../assets/images/counter_card_5.png";
-import project_3_1 from "../assets/images/project_3_1.jpg";
-import project_3_2 from "../assets/images/project_3_2.jpg";
-import project_3_3 from "../assets/images/project_3_3.jpg";
-import fridge_installation from "../assets/images/fridge_installation.jpg"
-import commercial_laundry from "../assets/images/commercial_laundry.jpg"
+// import about_3 from "../assets/images/about_3.jpg";
+// import project_3_1 from "../assets/images/project_3_1.jpg";
+// import project_3_2 from "../assets/images/project_3_2.jpg";
+// import project_3_3 from "../assets/images/project_3_3.jpg";
 // import Washing_Machine_Repair_1 from "../assets/images/Washing-Machine-Repair-1.jpg";
+import fridge_installation from "../assets/images/fridge_installation.jpg"
+import refrigerator_services from "../assets/images/refrigerator_services.png"
+import commercial_laundry from "../assets/images/commercial_laundry.jpg"
+import home_appliance_repair from "../assets/images/home_appliance_repair.png"
 import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.jpg";
 import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_1.jpg"
 import ServiceSlider from "../components/ServiceSlider";
@@ -55,13 +60,13 @@ const Home = () => {
     residential: t("projectsData.residential", { returnObjects: true }).map(
       (service, index) => ({
         ...service,
-        image: [project_3_2, project_3_3, project_3_3][index],
+        image: [home_appliance_repair, refrigerator_services, frdge2][index],
       })
     ),
     industrial: t("projectsData.industrial", { returnObjects: true }).map(
       (service, index) => ({
         ...service,
-        image: [project_3_1, project_3_2][index],
+        image: [industrial_equipment, cold_storage][index],
       })
     ),
   };
@@ -81,7 +86,7 @@ const Home = () => {
         }}
         className="h-auto w-full py-8 sm:py-12 lg:py-16"
       >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 gap-8 lg:gap-12">
+       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-8 lg:gap-12">
           <div className="w-full md:w-1/2 space-y-4 sm:space-y-5">
             <div className="flex items-center gap-3">
               <img
@@ -129,23 +134,23 @@ const Home = () => {
                 {t("home.aboutSection.buttons.findMore")} <FaArrowRightLong />
               </Link>
               <a
-                href="tel:+966598001569"
-                className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold"
-              >
-                <div className="flex gap-2 sm:gap-3 items-center">
-                  <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
-                    <FiPhone />
-                  </div>
-                  <div>
-                    <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
-                      {t("home.aboutSection.buttons.contact")}
-                    </div>
-                    <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6]">
-                      +966598001569
-                    </div>
-                  </div>
-                </div>
-              </a>
+  href="tel:+966598001569"
+  className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold hover:scale-105 transition-transform"
+>
+  <div className="flex gap-2 sm:gap-3 items-center">
+    <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
+      <FiPhone />
+    </div>
+    <div>
+      <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
+        {t("home.aboutSection.buttons.contact")}
+      </div>
+      <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6] transition-colors">
+        +966 598 001 569
+      </div>
+    </div>
+  </div>
+</a>
             </div>
           </div>
 
@@ -308,6 +313,8 @@ const Home = () => {
         }}
         className="relative h-auto w-full flex flex-col justify-between items-center text-center px-6 pt-20"
       >
+          <div className="absolute inset-0 bg-black/60" />
+
         <div className="relative z-10 flex flex-col items-center">
           <button
             onClick={() => setIsOpen(true)}
@@ -339,7 +346,7 @@ const Home = () => {
         <a href="#" className="my-5 text-bold text-white hover:text-[#14b8a6]">
           {t("home.videoSection.downloadCatalog")}
         </a>
-        <div className="relative z-10 w-full max-w-6xl bg-[#101840] mt-20 rounded-t-lg overflow-hidden">
+        <div className="relative z-10 w-full max-w-7xl mx-auto bg-[#101840] mt-20 rounded-t-lg overflow-hidden">
           <div className="grid grid-cols-2 md:grid-cols-4 py-5">
             <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
               <img

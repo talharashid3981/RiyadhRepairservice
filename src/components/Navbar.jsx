@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-full mx-7 flex items-center justify-between px-4 sm:px-5 py-2 sm:py-3">
+     <div className="max-w-[1920px] mx-auto px-4 sm:px-5 lg:px-10 xl:px-16 2xl:px-20 py-2 sm:py-3 flex items-center justify-between">
         <NavLink
           to="/"
           className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 flex-shrink-0"
@@ -104,7 +104,7 @@ const Navbar = () => {
               className={`absolute w-6 h-6 sm:w-7 sm:h-7 bg-[#14b8a6] rounded-full shadow-md flex items-center justify-center text-white transition-all duration-300 ${
                 i18n.language === "en"
                   ? "translate-x-0"
-                  : "translate-x-8 sm:translate-x-9 lg:translate-x-11"
+                  : "translate-x- sm:translate-x-9 lg:translate-x-11"
               }`}
             >
               <FiGlobe className="text-sm sm:text-base lg:text-lg" />
