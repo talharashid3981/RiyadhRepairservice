@@ -119,12 +119,12 @@ const ACRepairSlider = () => {
                   <FaArrowRightLong />
                 </Link>
 
-                <img
+                {/* <img
                   src={hero_arrow2}
                   className="absolute bottom-[15px] right-48 w-16 h-14 sm:w-20 sm:h-16 lg:w-24 lg:h-20 hidden xl:block"
                   alt="Arrow decorative graphic"
                   loading="lazy"
-                />
+                /> */}
               </div>
             </div>
 
@@ -174,3 +174,187 @@ const ACRepairSlider = () => {
 };
 
 export default ACRepairSlider;
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { Wrench, Snowflake, Settings } from "lucide-react";
+// import { useTranslation } from "react-i18next";
+// import { Link } from "react-router-dom";
+// import { FaArrowRightLong } from "react-icons/fa6";
+
+// import washing_machine_repear_bannerimg from "../assets/images/washing_machine_repear_bannerimg.jpg";
+// import Refrigerator_banner from "../assets/images/Refrigerator_banner.jpg";
+// import slider_3 from "../assets/images/slider_3.png";
+// import hero_arrow2 from "../assets/images/hero_arrow2.png";
+
+// const ACRepairSlider = () => {
+//   const { t, i18n } = useTranslation();
+//   const [currentSlide, setCurrentSlide] = useState(0);
+//   const [isAnimating, setIsAnimating] = useState(false);
+
+//   const slides = [
+//     {
+//       icon: <Wrench className="w-5 h-5 sm:w-6 sm:h-6" />,
+//       welcomeText: t("acRepairSlider.slides.0.welcomeText"),
+//       title: t("acRepairSlider.slides.0.title"),
+//       highlightText: t("acRepairSlider.slides.0.highlightText"),
+//       titleEnd: t("acRepairSlider.slides.0.titleEnd"),
+//       description: t("acRepairSlider.slides.0.description"),
+//       image: washing_machine_repear_bannerimg,
+//       alt: t("acRepairSlider.slides.0.title"),
+//     },
+//     {
+//       icon: <Snowflake className="w-5 h-5 sm:w-6 sm:h-6" />,
+//       welcomeText: t("acRepairSlider.slides.1.welcomeText"),
+//       title: t("acRepairSlider.slides.1.title"),
+//       highlightText: t("acRepairSlider.slides.1.highlightText"),
+//       titleEnd: t("acRepairSlider.slides.1.titleEnd"),
+//       description: t("acRepairSlider.slides.1.description"),
+//       image: Refrigerator_banner,
+//       alt: t("acRepairSlider.slides.1.title"),
+//     },
+//     {
+//       icon: <Settings className="w-5 h-5 sm:w-6 sm:h-6" />,
+//       welcomeText: t("acRepairSlider.slides.2.welcomeText"),
+//       title: t("acRepairSlider.slides.2.title"),
+//       highlightText: t("acRepairSlider.slides.2.highlightText"),
+//       titleEnd: t("acRepairSlider.slides.2.titleEnd"),
+//       description: t("acRepairSlider.slides.2.description"),
+//       image: slider_3,
+//       alt: t("acRepairSlider.slides.2.title"),
+//     },
+//   ];
+
+//   const nextSlide = () => {
+//     setIsAnimating(true);
+//     setCurrentSlide((prev) => (prev + 1) % slides.length);
+//     setTimeout(() => setIsAnimating(false), 600);
+//   };
+
+//   useEffect(() => {
+//     const interval = setInterval(nextSlide, 6000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const isRTL = i18n.dir() === "rtl"; // Detect Arabic layout direction
+
+//   return (
+//     <section
+//       className="relative w-full min-h-[550px] sm:min-h-[600px] lg:min-h-[650px] overflow-hidden rounded-b-[40px] bg-gray-50"
+//       style={{
+//         backgroundImage: "radial-gradient(#e5e7eb 1px, transparent 1px)",
+//         backgroundSize: "20px 20px",
+//       }}
+//       aria-label={t("acRepairSlider.slides.0.description")}
+//     >
+//       {/* Slides */}
+//       {slides.map((slide, index) => (
+//         <article
+//           key={index}
+//           className={`absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] flex flex-col justify-center ${
+//             index === currentSlide
+//               ? "opacity-100 translate-x-0 scale-100"
+//               : isRTL
+//               ? "opacity-0 -translate-x-10 scale-95"
+//               : "opacity-0 translate-x-10 scale-95"
+//           }`}
+//         >
+//           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-6 sm:px-10 lg:px-16 py-12 sm:py-16">
+//             {/* LEFT TEXT */}
+//             <div className="relative text-center lg:text-left flex-1">
+//               <div className="flex items-center justify-center lg:justify-start gap-3 mb-5">
+//                 <div className="w-12 h-12 bg-gradient-to-br from-[#14b8a6] to-[#0d9488] rounded-lg flex items-center justify-center text-white shadow-md">
+//                   {slide.icon}
+//                 </div>
+//                 <span className="text-sm text-blue-900 uppercase tracking-wide font-semibold border-b-2 border-[#14b8a6] pb-1">
+//                   {slide.welcomeText}
+//                 </span>
+//               </div>
+
+//               <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-blue-950 leading-tight mb-5">
+//                 {slide.title}{" "}
+//                 <span className="text-[#14b8a6]">{slide.highlightText}</span>{" "}
+//                 {slide.titleEnd}
+//               </h2>
+
+//               <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+//                 {slide.description}
+//               </p>
+
+//               {/* Buttons */}
+//               <div className="relative flex flex-wrap justify-center lg:justify-start gap-4">
+//                 <Link
+//                   to="/services"
+//                   className="px-6 sm:px-8 py-3 bg-blue-950 text-white rounded-full font-semibold hover:bg-blue-900 transition-transform duration-300 flex items-center gap-2 hover:scale-[1.03]"
+//                 >
+//                   {t("acRepairSlider.buttons.allServices")}
+//                   <FaArrowRightLong />
+//                 </Link>
+
+//                 <Link
+//                   to="/contact"
+//                   className="px-6 sm:px-8 py-3 bg-[#14b8a6] text-white rounded-full font-semibold hover:bg-[#0f9a8a] transition-transform duration-300 flex items-center gap-2 hover:scale-[1.03]"
+//                 >
+//                   {t("acRepairSlider.buttons.contactUs")}
+//                   <FaArrowRightLong />
+//                 </Link>
+
+//                 {/* Arrow Image - responsive + language aware */}
+//                 <img
+//                   src={hero_arrow2}
+//                   className={`absolute ${
+//                     isRTL ? "left-[70%]" : "right-[70%]"
+//                   } top-[-40px] sm:top-[-50px] w-14 sm:w-16 lg:w-20 opacity-80 hidden md:block`}
+//                   alt="Decorative Arrow"
+//                   loading="lazy"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT IMAGE */}
+//             <div className="flex-1 flex justify-center lg:justify-end mt-10 lg:mt-0">
+//               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px]">
+//                 <img
+//                   src={slide.image}
+//                   alt={slide.alt}
+//                   className="w-full h-full object-cover rounded-b-[120px] shadow-2xl"
+//                   loading="lazy"
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         </article>
+//       ))}
+
+//       {/* NEXT BUTTON */}
+//       <div className="absolute bottom-[50%] right-4 z-30">
+//         <button
+//           onClick={nextSlide}
+//           className="w-12 h-12 lg:w-14 lg:h-14 bg-[#101840cc] text-white rounded-full flex items-center justify-center hover:bg-[#101840] transition-all duration-300 hover:scale-110 shadow-lg"
+//           aria-label="Next Slide"
+//         >
+//           <FaArrowRightLong className="w-5 h-5 lg:w-6 lg:h-6" />
+//         </button>
+//       </div>
+
+//       {/* PAGINATION */}
+//       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-30">
+//         {slides.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => !isAnimating && setCurrentSlide(index)}
+//             className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${
+//               index === currentSlide
+//                 ? "bg-[#14b8a6] w-6 sm:w-8"
+//                 : "bg-gray-300 hover:bg-gray-400 w-2 sm:w-3"
+//             }`}
+//             aria-label={`Go to slide ${index + 1}`}
+//           />
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ACRepairSlider;

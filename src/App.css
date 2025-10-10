@@ -1,0 +1,141 @@
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+}
+
+
+html {
+  overflow-y: overlay; /* 👈 Key line */
+}
+
+/* Transparent scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(20, 184, 166, 0.8); /* semi-transparent thumb */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(13, 148, 136, 0.9);
+}
+
+/* ========================================
+   PREVENT FONT RENDERING SHIFT
+   ======================================== */
+
+/* Ensure fonts load properly */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========================================
+   FIX FLOATING SOCIAL BUTTONS POSITION
+   ======================================== */
+
+/* Ensure floating buttons stay fixed and don't shift */
+[class*="fixed"] {
+  position: fixed !important;
+}
+
+/* Specific fix for floating social buttons */
+.fixed.bottom-6.right-6 {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 999 !important;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Smooth hover without layout shift */
+.fixed-contact-btn:hover,
+.fixed.bottom-6.right-6 button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .fixed.bottom-6.right-6 {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
+
+
+
+/* Reserve space for fixed navbar */
+body {
+  padding-top: 0;
+}
+
+/* Adjust first section to account for navbar */
+#home {
+  padding-top: 50px; /* Height of navbar on mobile */
+}
+
+@media (min-width: 640px) {
+  #home {
+    padding-top: 0px; /* Height of navbar on desktop */
+  }
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+/* Smooth page transitions */
+.page-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}

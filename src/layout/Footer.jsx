@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { MapPin, Phone, Mail } from "lucide-react";
-import DarkBlue_bg from "./DarkBlue_bg";
+import DarkBlue_bg from "../components/DarkBlue_bg";
 import logo from "../assets/images/footer_logo.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiCheckCircle, FiPhone } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
@@ -8,24 +8,19 @@ import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import video_2 from "../assets/images/video_2.jpg";
 import pattern_bg_6 from "../assets/images/pattern_bg_6.jpg";
 import title_icon2 from "../assets/images/title_icon2.png";
-import frdge2 from "../assets/images/frdge2.jpg"
-import cold_storage from "../assets/images/cold_storage.jpeg"
-import industrial_equipment from "../assets/images/industrial_equipment.jpeg" 
+import frdge2 from "../assets/images/frdge2.jpg";
+import cold_storage from "../assets/images/cold_storage.jpeg";
+import industrial_equipment from "../assets/images/industrial_equipment.jpeg";
 import counter_card_2 from "../assets/images/counter_card_2.png";
 import counter_card_3 from "../assets/images/counter_card_3.png";
 import counter_card_4 from "../assets/images/counter_card_4.png";
 import counter_card_5 from "../assets/images/counter_card_5.png";
-// import about_3 from "../assets/images/about_3.jpg";
-// import project_3_1 from "../assets/images/project_3_1.jpg";
-// import project_3_2 from "../assets/images/project_3_2.jpg";
-// import project_3_3 from "../assets/images/project_3_3.jpg";
-// import Washing_Machine_Repair_1 from "../assets/images/Washing-Machine-Repair-1.jpg";
-import fridge_installation from "../assets/images/fridge_installation.jpg"
-import refrigerator_services from "../assets/images/refrigerator_services.png"
-import commercial_laundry from "../assets/images/commercial_laundry.jpg"
-import home_appliance_repair from "../assets/images/home_appliance_repair.png"
+import fridge_installation from "../assets/images/fridge_installation.jpg";
+import refrigerator_services from "../assets/images/refrigerator_services.png";
+import commercial_laundry from "../assets/images/commercial_laundry.jpg";
+import home_appliance_repair from "../assets/images/home_appliance_repair.png";
 import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.jpg";
-import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_1.jpg"
+import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_1.jpg";
 import ServiceSlider from "../components/ServiceSlider";
 import ContactQuote from "../components/ContactQuote";
 import ClientRevew from "../components/ClientRevew";
@@ -35,20 +30,20 @@ import ServicesSection from "../components/ServicesSection";
 
 const Home = () => {
   const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState("commercial");
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  // Handle initial load
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
   const firstSectionFeatures = [
     t("home.aboutSection.features.quality"),
     t("home.aboutSection.features.licensed"),
     t("home.aboutSection.features.pricing"),
   ];
-
-  const secondSectionFeatures = [
-    t("home.secondSection.features.quality"),
-    t("home.secondSection.features.licensed"),
-    t("home.secondSection.features.pricing"),
-  ];
-
-  const [selectedCategory, setSelectedCategory] = useState("commercial");
 
   const servicesData = {
     commercial: t("projectsData.commercial", { returnObjects: true }).map(
@@ -71,12 +66,22 @@ const Home = () => {
     ),
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  // Close video modal on ESC key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
 
   return (
-    <div className="bg-[#E1E4E5] mt-11 sm:mt-15" id="home">
+    <div className={`bg-[#E1E4E5] ${loading ? 'loading' : ''} overflow-hidden`} id="home">
       <ACRepairSlider />
 
+      {/* ABOUT SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -86,7 +91,7 @@ const Home = () => {
         }}
         className="h-auto w-full py-8 sm:py-12 lg:py-16"
       >
-       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-8 lg:gap-12">
+        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-8 lg:gap-12">
           <div className="w-full md:w-1/2 space-y-4 sm:space-y-5">
             <div className="flex items-center gap-3">
               <img
@@ -134,23 +139,23 @@ const Home = () => {
                 {t("home.aboutSection.buttons.findMore")} <FaArrowRightLong />
               </Link>
               <a
-  href="tel:+966598001569"
-  className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold hover:scale-105 transition-transform"
->
-  <div className="flex gap-2 sm:gap-3 items-center">
-    <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
-      <FiPhone />
-    </div>
-    <div>
-      <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
-        {t("home.aboutSection.buttons.contact")}
-      </div>
-      <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6] transition-colors">
-        +966 598 001 569
-      </div>
-    </div>
-  </div>
-</a>
+                href="tel:+966598001569"
+                className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold hover:scale-105 transition-transform"
+              >
+                <div className="flex gap-2 sm:gap-3 items-center">
+                  <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
+                    <FiPhone />
+                  </div>
+                  <div>
+                    <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
+                      {t("home.aboutSection.buttons.contact")}
+                    </div>
+                    <div className="text-black text-sm sm:text-base font-bold hover:text-[#14b8a6] transition-colors">
+                      +966 598 001 569
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -161,14 +166,17 @@ const Home = () => {
                 src={washing_machine_repear_1}
                 alt="Technician repairing washing machine"
                 className="w-full h-auto object-cover rounded-3xl"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </section>
 
+      {/* SERVICES SECTION */}
       <ServicesSection />
 
+      {/* PROJECTS SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_6})`,
@@ -207,6 +215,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* CASE STUDIES SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -272,6 +281,7 @@ const Home = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <svg
                   className="absolute bottom-0 left-0 w-full"
@@ -304,6 +314,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* VIDEO SECTION */}
       <section
         style={{
           backgroundImage: `url("${video_2}")`,
@@ -313,12 +324,13 @@ const Home = () => {
         }}
         className="relative h-auto w-full flex flex-col justify-between items-center text-center px-6 pt-20"
       >
-          <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 flex flex-col items-center">
           <button
             onClick={() => setIsOpen(true)}
             className="relative mb-15 mt-20 w-16 h-16 flex items-center justify-center rounded-full bg-white text-[#14b8a6] hover:bg-[#14b8a6] hover:text-white cursor-pointer duration-500"
+            aria-label="Play video"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -346,6 +358,8 @@ const Home = () => {
         <a href="#" className="my-5 text-bold text-white hover:text-[#14b8a6]">
           {t("home.videoSection.downloadCatalog")}
         </a>
+        
+        {/* Stats Section */}
         <div className="relative z-10 w-full max-w-7xl mx-auto bg-[#101840] mt-20 rounded-t-lg overflow-hidden">
           <div className="grid grid-cols-2 md:grid-cols-4 py-5">
             <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
@@ -363,11 +377,11 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            {/* Stat 2 */}
+            
             <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
               <img
                 src={counter_card_2}
-                alt="Projects Icon"
+                alt="Clients Icon"
                 className="w-13 h-13"
               />
               <div className="flex flex-col items-start pl-4">
@@ -379,11 +393,11 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            {/* Stat 3 */}
+            
             <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
               <img
                 src={counter_card_3}
-                alt="Projects Icon"
+                alt="Team Icon"
                 className="w-13 h-13"
               />
               <div className="flex flex-col items-start pl-4">
@@ -395,11 +409,11 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            {/* Stat 4 */}
+            
             <div className="flex flex-row items-center justify-center px-4">
               <img
                 src={counter_card_4}
-                alt="Projects Icon"
+                alt="Awards Icon"
                 className="w-13 h-13"
               />
               <div className="flex flex-col items-start pl-4">
@@ -414,19 +428,26 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Modal */}
+        {/* Video Modal */}
         {isOpen && (
-          <div className="fixed inset-0 bg-[#1a191798] flex items-center justify-center z-50">
-            <div className="relative w-[90%] sm:w-[70%] lg:w-[50%]">
+          <div 
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
+            onClick={() => setIsOpen(false)}
+          >
+            <div 
+              className="relative w-full max-w-4xl"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
-                className="absolute -top-6 -right-6 text-white text-3xl cursor-pointer"
+                className="absolute -top-10 right-0 text-white text-3xl hover:text-[#14b8a6] transition-colors"
                 onClick={() => setIsOpen(false)}
+                aria-label="Close video"
               >
                 ✕
               </button>
-              <div className="aspect-video">
+              <div className="aspect-video bg-black rounded-lg overflow-hidden">
                 <iframe
-                  className="w-full h-full rounded-lg"
+                  className="w-full h-full"
                   src="https://www.youtube.com/embed/DyDfgMOUjCI?autoplay=1"
                   title="YouTube video"
                   allow="autoplay; encrypted-media"
@@ -438,14 +459,17 @@ const Home = () => {
         )}
       </section>
 
+      {/* CONTACT SECTION */}
       <section>
         <ContactQuote />
       </section>
 
+      {/* CLIENT REVIEW SECTION */}
       <section>
         <ClientRevew />
       </section>
 
+      {/* PRICING SECTION */}
       <section className="relative bg-[#E1E4E5] py-20">
         <div className="text-center max-w-2xl mx-auto px-4">
           <span className="text-sm md:text-base font-semibold text-white bg-[#14b8a6] px-5 py-2 rounded-full uppercase tracking-widest inline-block shadow-md mb-4">
@@ -460,12 +484,12 @@ const Home = () => {
         </div>
 
         <PricingPlans />
+        
         <div className="text-center mt-16">
           <p className="text-gray-600">
             {t("pricingPlans.footer.text")}{" "}
             <NavLink
-              to={"/contact"}
-              href="#contact"
+              to="/contact"
               className="text-[#14b8a6] font-semibold hover:underline"
             >
               {t("pricingPlans.footer.linkText")}

@@ -18,6 +18,17 @@ const Navbar = () => {
     i18n.changeLanguage(savedLang);
   }, [i18n]);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuOpen && !e.target.closest('nav')) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [menuOpen]);
+
   const navLinks = [
     { name: t("nav.home"), path: "/" },
     { name: t("nav.services"), path: "/services" },
@@ -27,8 +38,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-     <div className="max-w-[1920px] mx-auto px-4 sm:px-5 lg:px-10 xl:px-16 2xl:px-20 py-2 sm:py-3 flex items-center justify-between">
+    <nav className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-5 lg:px-10 xl:px-12 2xl:px-20 py-2 sm:py-3 flex items-center justify-between">
         <NavLink
           to="/"
           className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 flex-shrink-0"
@@ -51,7 +62,7 @@ const Navbar = () => {
               REPAIR SERVICES
             </h2>
             <h3 className="text-[10px] sm:text-xs md:text-[14px] font-[600] leading-[1.2] text-gray-500 italic whitespace-nowrap">
-              Don't Replace – Repair with Experts
+              Don't Replace — Repair with Experts
             </h3>
           </div>
         </NavLink>
@@ -104,7 +115,7 @@ const Navbar = () => {
               className={`absolute w-6 h-6 sm:w-7 sm:h-7 bg-[#14b8a6] rounded-full shadow-md flex items-center justify-center text-white transition-all duration-300 ${
                 i18n.language === "en"
                   ? "translate-x-0"
-                  : "translate-x- sm:translate-x-9 lg:translate-x-11"
+                  : "translate-x-8 sm:translate-x-9 lg:translate-x-11"
               }`}
             >
               <FiGlobe className="text-sm sm:text-base lg:text-lg" />
@@ -112,49 +123,56 @@ const Navbar = () => {
           </div>
 
           <button
-            className="md:hidden text-[#14b8a6] text-2xl flex-shrink-0"
-            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-[#14b8a6] text-2xl flex-shrink-0 z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(!menuOpen);
+            }}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden bg-white shadow-lg border-t border-gray-100 animate-slideDown">
-          <ul className="flex flex-col items-center gap-4 py-5 text-[#0C1236] text-base font-medium">
-            {navLinks.map((link, index) => (
-              <li key={index} className="w-full text-center">
-                <NavLink
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `block py-2 transition-colors ${
-                      isActive
-                        ? "text-[#14b8a6] font-semibold bg-gray-50"
-                        : "hover:text-[#14b8a6] hover:bg-gray-50"
-                    }`
-                  }
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.name}
-                </NavLink>
-              </li>
-            ))}
-            <li className="w-full px-4 pt-3 border-t border-gray-100">
-              <a
-                href="tel:+966598001569"
-                className="flex items-center justify-center gap-2 text-[#0C1236] font-semibold py-2"
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-white shadow-lg border-t border-gray-100 transition-all duration-300 ease-in-out overflow-hidden ${
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-4 py-5 text-[#0C1236] text-base font-medium">
+          {navLinks.map((link, index) => (
+            <li key={index} className="w-full text-center">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `block py-2 transition-colors ${
+                    isActive
+                      ? "text-[#14b8a6] font-semibold bg-gray-50"
+                      : "hover:text-[#14b8a6] hover:bg-gray-50"
+                  }`
+                }
+                onClick={() => setMenuOpen(false)}
               >
-                <div className="bg-[#14b8a6] text-white p-2 rounded-full">
-                  <FiPhone className="text-lg" />
-                </div>
-                <span>+966598001569</span>
-              </a>
+                {link.name}
+              </NavLink>
             </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li className="w-full px-4 pt-3 border-t border-gray-100">
+            <a
+              href="tel:+966598001569"
+              className="flex items-center justify-center gap-2 text-[#0C1236] font-semibold py-2"
+            >
+              <div className="bg-[#14b8a6] text-white p-2 rounded-full">
+                <FiPhone className="text-lg" />
+              </div>
+              <span>+966598001569</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
