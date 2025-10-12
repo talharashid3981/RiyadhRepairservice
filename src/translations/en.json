@@ -419,6 +419,7 @@
 
  
   
+  
   "blog": {
     "header": {
       "title": "Latest Appliance Repair Tips & Guides",
@@ -436,7 +437,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Discover the early warning signs of washing machine problems. Learn about unusual noises, water leaks, and other symptoms that require professional attention to prevent costly damage.",
         "keywords": ["washing machine repair", "appliance maintenance", "Riyadh services"],
-        "image": "https://images.unsplash.com/photo-1581578731548-207f3b6ccab0?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_1"
       },
       {
         "id": 2,
@@ -445,7 +446,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Keep your refrigerator running efficiently in Riyadh's climate. Simple maintenance steps that extend appliance life and reduce electricity bills throughout the year.",
         "keywords": ["refrigerator care", "appliance maintenance", "energy saving"],
-        "image": "https://images.unsplash.com/photo-1616627893735-0f4a45b9e9c7?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_2"
       },
       {
         "id": 3,
@@ -454,7 +455,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Expert guide to fixing common washing machine issues. From drainage problems to spin cycle failures, learn how professional technicians diagnose and repair your appliance.",
         "keywords": ["washer troubleshooting", "appliance repair", "professional service"],
-        "image": "https://images.unsplash.com/photo-1599058917212-d7500896e56d?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_3"
       },
       {
         "id": 4,
@@ -463,7 +464,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Guide to selecting durable refrigerators for hot climates. Compare top brands and learn maintenance practices that ensure optimal cooling performance in Saudi Arabia.",
         "keywords": ["refrigerator selection", "climate considerations", "appliance guide"],
-        "image": "https://images.unsplash.com/photo-1588854337221-cbfa4f0e7a45?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_4"
       },
       {
         "id": 5,
@@ -472,7 +473,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Why annual washing machine service saves money long-term. Prevent unexpected breakdowns and maintain peak performance with regular professional maintenance.",
         "keywords": ["preventive maintenance", "appliance care", "service benefits"],
-        "image": "https://images.unsplash.com/photo-1577972067685-18e8c84a6c85?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_5"
       },
       {
         "id": 6,
@@ -481,7 +482,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Practical tips to lower electricity costs with efficient refrigerator use. Perfect strategies for managing energy consumption in warm climates like Riyadh.",
         "keywords": ["energy efficiency", "cost savings", "appliance tips"],
-        "image": "https://images.unsplash.com/photo-1624454158405-1bb09a177fa0?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_6"
       },
       {
         "id": 7,
@@ -490,7 +491,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Round-the-clock emergency repair services for washing machines and refrigerators. Fast, reliable, and affordable solutions available throughout Riyadh.",
         "keywords": ["emergency repair", "24/7 service", "quick response"],
-        "image": "https://images.unsplash.com/photo-1626785774573-502adf0c09a5?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_7"
       },
       {
         "id": 8,
@@ -499,7 +500,7 @@
         "author": "Riyadh Appliance Services",
         "description": "Step-by-step troubleshooting when your refrigerator loses cooling. Simple checks you can perform before calling for professional repair service.",
         "keywords": ["refrigerator problems", "cooling issues", "troubleshooting guide"],
-        "image": "https://images.unsplash.com/photo-1598209391060-261066105f66?auto=format&fit=crop&w=1200&q=60"
+        "image": "blog_8"
       }
     ]
   }

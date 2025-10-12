@@ -2,25 +2,47 @@ import React from "react";
 import { CalendarDays, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/SEO";
+import blog_1 from "../assets/images/blog_1.png"
+import blog_2 from "../assets/images/blog_2.png"
+import blog_3 from "../assets/images/blog_3.png"
+import blog_4 from "../assets/images/blog_4.png"
+import blog_5 from "../assets/images/blog_5.png"
+import blog_6 from "../assets/images/blog_6.png"
+import blog_7 from "../assets/images/blog_7.png"
+import blog_8 from "../assets/images/blog_8.png"
 
 const Blog = () => {
   const { t } = useTranslation();
-   const blogSchema = {
+  
+  const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Appliance Repair Tips & Guides - Riyadh Repair Blog",
     "url": "https://riyadhrepairingservice.com/blog",
     "description": "Expert tips and guides on appliance repair and maintenance"
   };
+  
   // Fetch blogs dynamically from translations
   const blogs = t("blog.blogs", { returnObjects: true }) || [];
+
+  // Map imported images to blog posts
+  const imageMap = {
+    "blog_1": blog_1,
+    "blog_2": blog_2,
+    "blog_3": blog_3,
+    "blog_4": blog_4,
+    "blog_5": blog_5,
+    "blog_6": blog_6,
+    "blog_7": blog_7,
+    "blog_8": blog_8
+  };
 
   return (
     <section
       className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-12 xl:px-24 mt-16 sm:mt-20"
       aria-labelledby="blog-heading"
     >
-       <SEO
+      <SEO
         title="Appliance Repair Tips & Guides | Riyadh Repair Blog"
         description="Expert appliance repair tips, maintenance guides, and troubleshooting advice. Learn how to care for your washing machine, refrigerator, and AC."
         keywords="appliance repair tips, washing machine maintenance, refrigerator care, AC repair guide, appliance troubleshooting"
@@ -59,7 +81,7 @@ const Blog = () => {
             {/* Image */}
             <div className="overflow-hidden relative">
               <img
-                src={blog.image}
+                src={imageMap[blog.image] || blog.image}
                 alt={blog.title}
                 loading="lazy"
                 className="w-full h-56 sm:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
