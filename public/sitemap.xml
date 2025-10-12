@@ -1,85 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- HOME PAGE -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- WASHING MACHINE REPAIR -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/washing-machine-repair</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/washing-machine-repair" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/washing-machine-repair" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/washing-machine-repair" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
+  <!-- REFRIGERATOR REPAIR -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/refrigerator-repair</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/refrigerator-repair" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/refrigerator-repair" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/refrigerator-repair" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
 
+  <!-- CONTACT US -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/contact</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/contact" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
+  <!-- ABOUT US -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/about</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/about" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
+  <!-- SERVICES -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/services</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/services" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
+  <!-- PRICING -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/pricing</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/pricing" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/pricing" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-
+  <!-- BLOG -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/blog</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/blog" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
-
 
 </urlset>

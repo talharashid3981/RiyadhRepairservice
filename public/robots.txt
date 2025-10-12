@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /ar/
-Allow: /en/
 Allow: /assets/
 Allow: /images/
 
@@ -15,13 +13,11 @@ Disallow: /*?*filter=
 
 User-agent: Googlebot
 Allow: /
-Allow: /ar/
 Crawl-delay: 1
 Request-rate: 1/1s
 
 User-agent: Bingbot
 Allow: /
-Allow: /ar/
 Crawl-delay: 2
 Request-rate: 1/1s
 
@@ -43,5 +39,5 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
+# Only ONE sitemap needed!
 Sitemap: https://www.riyadhrepairingservice.com/sitemap.xml
-Sitemap: https://www.riyadhrepairingservice.com/sitemap-ar.xml
