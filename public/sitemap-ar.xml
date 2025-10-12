@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/" />
@@ -14,38 +14,34 @@
   </url>
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/washing-machine-repair</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/washing-machine-repair</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/washing-machine-repair" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/washing-machine-repair" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/washing-machine-repair" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/refrigerator-repair</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/refrigerator-repair</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/refrigerator-repair" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/refrigerator-repair" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/refrigerator-repair" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-
   <url>
-    <loc>https://www.riyadhrepairingservice.com/contact</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/contact</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.riyadhrepairingservice.com/contact" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/about</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/about</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/about" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/about" />
     <lastmod>2025-10-12</lastmod>
@@ -54,7 +50,7 @@
   </url>
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/services</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/services</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/services" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/services" />
     <lastmod>2025-10-12</lastmod>
@@ -63,7 +59,7 @@
   </url>
 
   <url>
-    <loc>https://www.riyadhrepairingservice.com/pricing</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/pricing</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/pricing" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/pricing" />
     <lastmod>2025-10-12</lastmod>
@@ -71,15 +67,13 @@
     <priority>0.85</priority>
   </url>
 
-
   <url>
-    <loc>https://www.riyadhrepairingservice.com/blog</loc>
+    <loc>https://www.riyadhrepairingservice.com/ar/blog</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.riyadhrepairingservice.com/ar/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.riyadhrepairingservice.com/blog" />
     <lastmod>2025-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
   </url>
-
 
 </urlset>
