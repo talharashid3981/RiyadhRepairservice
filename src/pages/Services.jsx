@@ -5,17 +5,11 @@ import breadcumb_bg from "../assets/images/breadcumb-bg.jpg";
 import { ArrowRight } from "lucide-react";
 import { BsTools } from "react-icons/bs";
 import { FaTools, FaSnowflake } from "react-icons/fa";
-
 import ContactQuote from "../components/ContactQuote.jsx";
 import DarkBlue_bg from "../components/DarkBlue_bg.jsx";
 import PricingPlans from "../components/PricingPlans.jsx";
 
-// Gallery Images
-import imagesgallery1 from "../assets/images/imagesgallery1.jpeg";
-import imagesgallery2 from "../assets/images/imagesgallery2.jpg";
-import imagesgallery3 from "../assets/images/imagesgallery3.jpg";
-import imagesgallery4 from "../assets/images/imagesgallery4.png";
-import about_3 from "../assets/images/about_3.jpg";
+
 
 
 // Gallery Images (Updated with Home Page Images)
@@ -28,6 +22,7 @@ import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_
 import industrial_equipment from "../assets/images/industrial_equipment.jpeg";
 import cold_storage from "../assets/images/cold_storage.jpeg";
 import frdge2 from "../assets/images/frdge2.jpg";
+import SEO from "../components/SEO.jsx";
 
 
 const Services = () => {
@@ -35,6 +30,28 @@ const Services = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const isRTL = i18n.language === 'ar';
 
+
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://riyadhrepairingservice.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://riyadhrepairingservice.com/services"
+      }
+    ]
+  };
+
+
+  
   const services = [
     {
       id: "01",
@@ -75,7 +92,17 @@ const Services = () => {
 ];
 
   return (
-    <div className="bg-[#E1E4E5]" dir={isRTL ? 'rtl' : 'ltr'}>
+    <div className="bg-[#E1E4E5]" >
+
+        <SEO
+        title="Appliance Repair Services Riyadh | Washing Machine, AC, Refrigerator Repair"
+        description="Complete appliance repair services in Riyadh including washing machine, refrigerator, AC, dishwasher, and oven repair. Expert technicians, same-day service, warranty guaranteed."
+        keywords="washing machine repair, refrigerator repair, AC repair Riyadh, dishwasher repair, oven repair, appliance maintenance Riyadh"
+        canonical="https://riyadhrepairingservice.com/services"
+        ogTitle="All Appliance Repair Services in Riyadh"
+        ogDescription="Washing machine, refrigerator, AC, dishwasher & oven repair services in Riyadh"
+        schema={servicesSchema}
+      />
       {/* Banner */}
       <section>
         <div

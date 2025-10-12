@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import ACRepairSlider from "../components/ACRepairSlider";
+import SEO from "../components/SEO";
 import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import video_2 from "../assets/images/video_2.jpg";
 import pattern_bg_6 from "../assets/images/pattern_bg_6.jpg";
@@ -32,13 +33,26 @@ const Home = () => {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("commercial");
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
 
-  // Handle initial load
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Riyadh Appliance Repair Services",
+    "image": "https://riyadhrepairingservice.com/assets/images/footer_logo.png",
+    "description": "24/7 Professional appliance repair services in Riyadh",
+    "telephone": "+966598001569",
+    "email": "riyadhrepairingservice@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Riyadh",
+      "addressCountry": "SA"
+    },
+    "openingHours": "Mo-Su 09:00-16:00",
+    "url": "https://riyadhrepairingservice.com/"
+  };
 
+
+  
   const firstSectionFeatures = [
     t("home.aboutSection.features.quality"),
     t("home.aboutSection.features.licensed"),
@@ -49,7 +63,11 @@ const Home = () => {
     commercial: t("projectsData.commercial", { returnObjects: true }).map(
       (service, index) => ({
         ...service,
-        image: [commercial_laundry, Commercial_Refrigeraion_1, fridge_installation][index],
+        image: [
+          commercial_laundry,
+          Commercial_Refrigeraion_1,
+          fridge_installation,
+        ][index],
       })
     ),
     residential: t("projectsData.residential", { returnObjects: true }).map(
@@ -66,7 +84,6 @@ const Home = () => {
     ),
   };
 
-  // Close video modal on ESC key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isOpen) {
@@ -78,10 +95,27 @@ const Home = () => {
   }, [isOpen]);
 
   return (
-    <div className={`bg-[#E1E4E5] ${loading ? 'loading' : ''} overflow-hidden`} id="home">
+    <div
+      className={`bg-[#E1E4E5]  overflow-hidden`}
+      id="home"
+    >
+      <SEO
+        title="Riyadh Appliance Repair Services | Washing Machine & Refrigerator Repair | 24/7 Expert Service"
+        description="Professional washing machine and refrigerator repair services in Riyadh. Expert technicians, affordable rates, same-day service available. Call +966598001569 for fast repairs!"
+        keywords="washing machine repair Riyadh, refrigerator repair Riyadh, appliance repair Saudi Arabia, AC repair Riyadh, dishwasher repair, oven repair"
+        canonical="https://riyadhrepairingservice.com/"
+        ogTitle="Riyadh Appliance Repair Services | Expert Technicians 24/7"
+        ogDescription="Professional appliance repair in Riyadh with same-day service and affordable prices. Available 24/7!"
+        langAlternates={[
+          { lang: "ar", url: "https://riyadhrepairingservice.com/ar/" },
+          { lang: "en", url: "https://riyadhrepairingservice.com/" },
+          { lang: "x-default", url: "https://riyadhrepairingservice.com/" }
+        ]}
+        schema={homeSchema}
+      />
+
       <ACRepairSlider />
 
-      {/* ABOUT SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -89,15 +123,18 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="h-auto w-full py-8 sm:py-12 lg:py-16"
+        className="h-auto w-full py-8 sm:py-12 lg:py-"
+        aria-labelledby="about-heading"
       >
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-8 lg:gap-12">
           <div className="w-full md:w-1/2 space-y-4 sm:space-y-5">
             <div className="flex items-center gap-3">
               <img
                 src={title_icon2}
-                alt="About Icon"
+                alt="Riyadh Appliance Repair Services Icon"
                 className="w-6 h-6 sm:w-8 sm:h-8"
+                width="32"
+                height="32"
               />
               <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-[22px]">
                 {t("home.aboutSection.title")}
@@ -105,6 +142,7 @@ const Home = () => {
             </div>
 
             <h1
+              id="about-heading"
               className="text-2xl sm:text-3xl lg:text-[44px] font-bold leading-tight sm:leading-[40px] lg:leading-[55px] text-slate-900"
               style={{
                 color: "rgb(16, 24, 64)",
@@ -119,13 +157,16 @@ const Home = () => {
               {t("home.aboutSection.description")}
             </p>
 
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-2 sm:space-y-3" role="list">
               {firstSectionFeatures.map((item, index) => (
                 <li
                   key={index}
                   className="flex items-center gap-2 sm:gap-3 text-black"
                 >
-                  <FiCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#14b8a6] flex-shrink-0" />
+                  <FiCheckCircle
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#14b8a6] flex-shrink-0"
+                    aria-hidden="true"
+                  />
                   <span className="text-sm sm:text-base font-bold">{item}</span>
                 </li>
               ))}
@@ -135,16 +176,19 @@ const Home = () => {
               <Link
                 to="/about"
                 className="bg-slate-900 text-white flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-full hover:bg-slate-800 transition text-sm sm:text-base"
+                aria-label="Learn more about our appliance repair services"
               >
-                {t("home.aboutSection.buttons.findMore")} <FaArrowRightLong />
+                {t("home.aboutSection.buttons.findMore")}{" "}
+                <FaArrowRightLong aria-hidden="true" />
               </Link>
               <a
                 href="tel:+966598001569"
                 className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold hover:scale-105 transition-transform"
+                aria-label="Call Riyadh Appliance Repair Services at +966598001569"
               >
                 <div className="flex gap-2 sm:gap-3 items-center">
                   <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
-                    <FiPhone />
+                    <FiPhone aria-hidden="true" />
                   </div>
                   <div>
                     <div className="text-xs sm:text-[14px] text-[#14b8a6] font-[600]">
@@ -159,24 +203,24 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Image with proper SEO attributes */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <div className="rounded-3xl sm:rounded-[50px] p-3 sm:p-5 overflow-hidden w-full">
               <img
                 src={washing_machine_repear_1}
-                alt="Technician repairing washing machine"
+                alt="Professional technician repairing washing machine in Riyadh - Expert appliance repair service"
                 className="w-full h-auto object-cover rounded-3xl"
                 loading="lazy"
+                width="600"
+                height="400"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
       <ServicesSection />
 
-      {/* PROJECTS SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_6})`,
@@ -185,27 +229,35 @@ const Home = () => {
           backgroundPosition: "center",
         }}
         className="h-auto w-full py-8 sm:py-12 lg:py-16 px-5 sm:px-6 lg:px-15"
+        aria-labelledby="services-heading"
       >
         <div className="flex items-center gap-3">
           <img
             src={title_icon2}
-            alt="About Icon"
+            alt="Services Icon"
             className="w-6 h-6 sm:w-8 sm:h-8 brightness-0 invert"
+            width="32"
+            height="32"
           />
           <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-[22px]">
             {t("home.servicesSection.title")}
           </span>
         </div>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:items-center sm:justify-between text-white mt-5">
-          <h1 className="text-[40px] font-[700] leading-[45px]">
+          <h2
+            id="services-heading"
+            className="text-[40px] font-[700] leading-[45px]"
+          >
             {t("home.servicesSection.heading")}
-          </h1>
+          </h2>
           <div className="flex sm:justify-end">
             <Link
               to="/services"
               className="flex gap-4 items-center bg-[#14b8a6] rounded-3xl px-5 py-3 hover:bg-[#0f9a8a] transition"
+              aria-label="View all appliance repair services"
             >
-              {t("home.servicesSection.viewAll")} <FaArrowRightLong />
+              {t("home.servicesSection.viewAll")}{" "}
+              <FaArrowRightLong aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -215,7 +267,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CASE STUDIES SECTION */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -224,13 +275,16 @@ const Home = () => {
           backgroundPosition: "center",
         }}
         className="h-auto w-full py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12"
+        aria-labelledby="projects-heading"
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 text-black">
           <div className="flex items-center gap-3">
             <img
               src={title_icon2}
-              alt="About Icon"
+              alt="Projects Icon"
               className="w-6 h-6 sm:w-8 sm:h-8 brightness-0"
+              width="32"
+              height="32"
             />
             <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-2xl">
               {t("home.projectsSection.title")}
@@ -238,24 +292,32 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Heading + Buttons Row */}
         <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4 sm:gap-6 mb-6">
-          {/* Heading Section */}
           <div className="text-center mt-4 lg:text-left">
-            <h1 className="text-2xl sm:text-4xl font-extrabold text-black">
+            <h2
+              id="projects-heading"
+              className="text-2xl sm:text-4xl font-extrabold text-black"
+            >
               {t("home.projectsSection.heading")}
-            </h1>
-            <h2 className="text-xl sm:text-3xl font-semibold text-gray-800">
-              {t("home.projectsSection.headingLine2")}
             </h2>
+            <p className="text-xl sm:text-3xl font-semibold text-gray-800">
+              {t("home.projectsSection.headingLine2")}
+            </p>
           </div>
 
           {/* Category Buttons Section */}
-          <div className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4">
+          <div
+            className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4"
+            role="tablist"
+            aria-label="Service categories"
+          >
             {["commercial", "residential", "industrial"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
+                role="tab"
+                aria-selected={selectedCategory === cat}
+                aria-controls={`${cat}-services`}
                 className={`px-4 py-2 rounded-md font-medium border transition-colors ${
                   selectedCategory === cat
                     ? "bg-[#14b8a6] text-white border-[#14b8a6]"
@@ -268,26 +330,36 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Service Cards */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          id={`${selectedCategory}-services`}
+          role="tabpanel"
+          aria-labelledby="projects-heading"
+        >
           {servicesData[selectedCategory].map((service, index) => (
-            <div
+            <article
               key={index}
               className="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300"
+              itemScope
+              itemType="https://schema.org/Service"
             >
               {/* Image */}
               <div className="relative h-56 sm:h-60 overflow-hidden rounded-t-3xl">
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} - Professional appliance repair service in Riyadh`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  width="400"
+                  height="300"
+                  itemProp="image"
                 />
                 <svg
                   className="absolute bottom-0 left-0 w-full"
                   viewBox="0 0 1440 120"
                   preserveAspectRatio="none"
                   style={{ height: "35px" }}
+                  aria-hidden="true"
                 >
                   <path
                     d="M0,0 Q360,130 750,60 T1440,0 L1440,120 L0,120 Z"
@@ -298,23 +370,33 @@ const Home = () => {
 
               {/* Content */}
               <div className="px-5 pb-8 pt-4 text-center flex flex-col justify-between h-auto sm:h-64">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                <h3
+                  className="text-xl sm:text-2xl font-bold text-gray-900 mb-2"
+                  itemProp="name"
+                >
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
+                <p
+                  className="text-gray-600 text-sm sm:text-base mb-4"
+                  itemProp="description"
+                >
                   {service.description}
                 </p>
-                <button className="bg-[#14b8a6] mx-auto cursor-pointer text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 inline-flex items-center gap-2 hover:bg-[#0f9a8a] shadow-md">
+                <button
+                  className="bg-[#14b8a6] mx-auto cursor-pointer text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 inline-flex items-center gap-2 hover:bg-[#0f9a8a] shadow-md"
+                  aria-label={`Learn more about ${service.title}`}
+                >
                   {t("home.projectsSection.exploreCaseStudy")}
-                  <span className="text-lg">→</span>
+                  <span className="text-lg" aria-hidden="true">
+                    →
+                  </span>
                 </button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* VIDEO SECTION */}
       <section
         style={{
           backgroundImage: `url("${video_2}")`,
@@ -323,29 +405,40 @@ const Home = () => {
           backgroundPosition: "center",
         }}
         className="relative h-auto w-full flex flex-col justify-between items-center text-center px-6 pt-20"
+        aria-labelledby="video-heading"
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
 
         <div className="relative z-10 flex flex-col items-center">
           <button
             onClick={() => setIsOpen(true)}
             className="relative mb-15 mt-20 w-16 h-16 flex items-center justify-center rounded-full bg-white text-[#14b8a6] hover:bg-[#14b8a6] hover:text-white cursor-pointer duration-500"
-            aria-label="Play video"
+            aria-label="Play video about our appliance repair services"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-10"
               fill="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path d="M8 5v14l11-7z" />
             </svg>
 
-            <span className="absolute inset-1 rounded-full border border-white animate-ping"></span>
-            <span className="absolute inset-0 rounded-full border-2 border-white animate-ping"></span>
+            <span
+              className="absolute inset-1 rounded-full border border-white animate-ping"
+              aria-hidden="true"
+            ></span>
+            <span
+              className="absolute inset-0 rounded-full border-2 border-white animate-ping"
+              aria-hidden="true"
+            ></span>
           </button>
 
-          <h2 className="max-w-[700px] mx-auto text-white text-3xl sm:text-4xl md:text-[38px] font-bold leading-tight">
+          <h2
+            id="video-heading"
+            className="max-w-[700px] mx-auto text-white text-3xl sm:text-4xl md:text-[38px] font-bold leading-tight"
+          >
             <span className="text-[#14b8a6]">
               {t("home.videoSection.heading1")}
             </span>{" "}
@@ -355,18 +448,31 @@ const Home = () => {
             {t("home.videoSection.description")}
           </p>
         </div>
-        <a href="#" className="my-5 text-bold text-white hover:text-[#14b8a6]">
+        <a
+          href="#"
+          className="my-5 text-bold text-white hover:text-[#14b8a6]"
+          aria-label="Download service catalog PDF"
+        >
           {t("home.videoSection.downloadCatalog")}
         </a>
-        
-        {/* Stats Section */}
+
+        {/* Stats Section with proper semantic markup */}
         <div className="relative z-10 w-full max-w-7xl mx-auto bg-[#101840] mt-20 rounded-t-lg overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-4 py-5">
-            <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 py-5"
+            role="list"
+            aria-label="Company statistics"
+          >
+            <div
+              className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700"
+              role="listitem"
+            >
               <img
                 src={counter_card_5}
-                alt="Projects Icon"
+                alt="Completed Projects"
                 className="w-13 h-13"
+                width="52"
+                height="52"
               />
               <div className="flex flex-col items-start pl-4">
                 <h3 className="text-white text-3xl md:text-4xl font-bold">
@@ -377,12 +483,17 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            
-            <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
+
+            <div
+              className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700"
+              role="listitem"
+            >
               <img
                 src={counter_card_2}
-                alt="Clients Icon"
+                alt="Happy Clients"
                 className="w-13 h-13"
+                width="52"
+                height="52"
               />
               <div className="flex flex-col items-start pl-4">
                 <h3 className="text-white text-3xl md:text-4xl font-bold">
@@ -393,12 +504,17 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            
-            <div className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700">
+
+            <div
+              className="flex flex-row items-center justify-center px-4 border-b md:border-b-0 md:border-r-2 border-gray-700"
+              role="listitem"
+            >
               <img
                 src={counter_card_3}
-                alt="Team Icon"
+                alt="Expert Team Members"
                 className="w-13 h-13"
+                width="52"
+                height="52"
               />
               <div className="flex flex-col items-start pl-4">
                 <h3 className="text-white text-3xl md:text-4xl font-bold">
@@ -409,12 +525,17 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            
-            <div className="flex flex-row items-center justify-center px-4">
+
+            <div
+              className="flex flex-row items-center justify-center px-4"
+              role="listitem"
+            >
               <img
                 src={counter_card_4}
-                alt="Awards Icon"
+                alt="Awards Won"
                 className="w-13 h-13"
+                width="52"
+                height="52"
               />
               <div className="flex flex-col items-start pl-4">
                 <h3 className="text-white text-3xl md:text-4xl font-bold">
@@ -428,20 +549,23 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Video Modal */}
+        {/* Video Modal with proper accessibility */}
         {isOpen && (
-          <div 
+          <div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
             onClick={() => setIsOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="video-modal-title"
           >
-            <div 
+            <div
               className="relative w-full max-w-4xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 className="absolute -top-10 right-0 text-white text-3xl hover:text-[#14b8a6] transition-colors"
                 onClick={() => setIsOpen(false)}
-                aria-label="Close video"
+                aria-label="Close video modal"
               >
                 ✕
               </button>
@@ -449,7 +573,7 @@ const Home = () => {
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/DyDfgMOUjCI?autoplay=1"
-                  title="YouTube video"
+                  title="Riyadh Appliance Repair Services - Company Overview Video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
@@ -459,23 +583,26 @@ const Home = () => {
         )}
       </section>
 
-      {/* CONTACT SECTION */}
-      <section>
+      <section aria-labelledby="contact-heading">
         <ContactQuote />
       </section>
 
-      {/* CLIENT REVIEW SECTION */}
-      <section>
+      <section aria-labelledby="reviews-heading">
         <ClientRevew />
       </section>
 
-      {/* PRICING SECTION */}
-      <section className="relative bg-[#E1E4E5] py-20">
+      <section
+        className="relative bg-[#E1E4E5] py-20"
+        aria-labelledby="pricing-heading"
+      >
         <div className="text-center max-w-2xl mx-auto px-4">
           <span className="text-sm md:text-base font-semibold text-white bg-[#14b8a6] px-5 py-2 rounded-full uppercase tracking-widest inline-block shadow-md mb-4">
             {t("pricingPlans.header.badge")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 my-4">
+          <h2
+            id="pricing-heading"
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 my-4"
+          >
             {t("pricingPlans.header.title")}
           </h2>
           <p className="text-base md:text-lg text-gray-600">
@@ -484,13 +611,14 @@ const Home = () => {
         </div>
 
         <PricingPlans />
-        
+
         <div className="text-center mt-16">
           <p className="text-gray-600">
             {t("pricingPlans.footer.text")}{" "}
             <NavLink
               to="/contact"
               className="text-[#14b8a6] font-semibold hover:underline"
+              aria-label="Contact us for custom pricing"
             >
               {t("pricingPlans.footer.linkText")}
             </NavLink>

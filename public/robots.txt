@@ -1,0 +1,26 @@
+# Robots.txt for Riyadh Appliance Repair Services
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Allow crawling of CSS, JS, and images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://riyadhrepairingservice.com/sitemap.xml
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1

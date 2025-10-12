@@ -38,7 +38,7 @@ const FloatingSocialButtons = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: 'Email',
-      href: 'mailto:contact@riyadhrepairingservices.com',
+      href: 'riyadhrepairingservice@gmail.com',
       bg: 'bg-red-500 hover:bg-red-600',
     },
     {

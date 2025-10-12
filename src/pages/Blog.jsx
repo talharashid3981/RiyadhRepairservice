@@ -1,10 +1,17 @@
 import React from "react";
 import { CalendarDays, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 
 const Blog = () => {
   const { t } = useTranslation();
-
+   const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Appliance Repair Tips & Guides - Riyadh Repair Blog",
+    "url": "https://riyadhrepairingservice.com/blog",
+    "description": "Expert tips and guides on appliance repair and maintenance"
+  };
   // Fetch blogs dynamically from translations
   const blogs = t("blog.blogs", { returnObjects: true }) || [];
 
@@ -13,6 +20,16 @@ const Blog = () => {
       className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-12 xl:px-24 mt-16 sm:mt-20"
       aria-labelledby="blog-heading"
     >
+       <SEO
+        title="Appliance Repair Tips & Guides | Riyadh Repair Blog"
+        description="Expert appliance repair tips, maintenance guides, and troubleshooting advice. Learn how to care for your washing machine, refrigerator, and AC."
+        keywords="appliance repair tips, washing machine maintenance, refrigerator care, AC repair guide, appliance troubleshooting"
+        canonical="https://riyadhrepairingservice.com/blog"
+        ogTitle="Appliance Repair Tips & Guides - Expert Blog"
+        ogDescription="Learn expert tips and maintenance guides for your appliances"
+        schema={blogSchema}
+      />
+      
       {/* Header */}
       <header className="max-w-7xl mx-auto text-center mb-14">
         <h2

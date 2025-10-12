@@ -4,12 +4,30 @@ import { NavLink } from "react-router-dom";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 import ContactQuote from "../components/ContactQuote";
 import { useTranslation } from "react-i18next";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   const { t } = useTranslation();
+   const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Riyadh Appliance Repair Services",
+    "url": "https://riyadhrepairingservice.com/contact",
+    "telephone": "+966598001569",
+    "email": "riyadhrepairingservice@gmail.com"
+  };
 
   return (
     <div>
+       <SEO
+        title="Contact Riyadh Appliance Repair Services | 24/7 Support | +966598001569"
+        description="Contact Riyadh Appliance Repair Services for immediate help. Call +966598001569 for 24/7 emergency support. Same-day service available. Expert technicians ready to help."
+        keywords="contact repair service, book appointment, emergency repair, customer support, phone number, service area Riyadh"
+        canonical="https://riyadhrepairingservice.com/contact"
+        ogTitle="Contact Us - Riyadh Appliance Repair Services"
+        ogDescription="Get in touch with our expert repair team. Available 24/7!"
+        schema={contactSchema}
+      />
       {/* ===== Hero Section ===== */}
       <section>
         <div

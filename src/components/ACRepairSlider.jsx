@@ -61,7 +61,7 @@ const ACRepairSlider = () => {
 
   return (
     <section
-      className="relative lg:mt-20 w-full h-[650px] sm:min-h-[700px] md:h-[400px] lg:min-h-[600px] overflow-hidden rounded-b-[30px] sm:rounded-b-[40px] lg:rounded-b-[50px]"
+      className="relative lg:mt-12 w-full h-[650px] sm:min-h-[700px] md:h-[400px] lg:min-h-[600px] overflow-hidden rounded-b-[30px] sm:rounded-b-[40px] lg:rounded-b-[50px]"
       style={{
         backgroundImage: "radial-gradient(#e5e7eb 1px, transparent 1px)",
         backgroundSize: "20px 20px",
@@ -155,7 +155,7 @@ const ACRepairSlider = () => {
       </div>
 
       {/* --- PAGINATION --- */}
-      <div className="absolute bottom-6 sm:bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
+      <div className="absolute bottom-6 sm:bottom-8 lg:bottom-5 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}

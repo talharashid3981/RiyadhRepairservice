@@ -27,10 +27,10 @@ const ContactQuote = () => {
 
     emailjs
       .send(
-        "service_46i194v",
-        "template_drbrr05",
+        "service_i1oazjr",
+        "template_b9sjnyq",
         formData,
-        "1QgmRM5GmPIm8hxUV"
+        "q8behf8VnsTMDRY9r"
       )
       .then(() => {
         alert(t("contactQuote.form.successMessage"));
@@ -59,7 +59,7 @@ const ContactQuote = () => {
       </div>
 
       <div className="relative w-full h-full flex justify-center px-4">
-        <div className="w-full max-w-6xl border-8 sm:border-[20px] lg:border-[40px] border-white mb-5 rounded-b-2xl sm:rounded-b-3xl">
+        <div className="w-full max-w-7xl mx-auto border-8 sm:border-[20px] lg:border-[40px] border-white mb-5 rounded-b-2xl sm:rounded-b-3xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
             {/* LEFT SECTION */}
             <div className="bg-[#101840] backdrop-blur-md text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[500px] sm:min-h-[600px] shadow-xl">
@@ -108,7 +108,7 @@ const ContactQuote = () => {
 
                   {/* Email */}
                   <a
-                    href="mailto:contact@riyadhrepairingservices.com"
+                    href="mailto:riyadhrepairingservice@gmail.com"
                     className="flex items-center gap-3 group"
                   >
                     <div className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[#14b8a6] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#14b8a6] transition">
@@ -119,7 +119,7 @@ const ContactQuote = () => {
                         {t("contactQuote.quickContact.emailUs")}
                       </p>
                       <p className="text-sm sm:text-base font-semibold break-all group-hover:text-[#14b8a6] transition">
-                        contact@riyadhrepairingservices.com
+                        riyadhrepairingservice@gmail.com
                       </p>
                     </div>
                   </a>

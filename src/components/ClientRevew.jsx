@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import Testi_Sec from "../assets/images/testi_sec.jpg";
 import slider_3 from "../assets/images/slider_3.png"
 
 const ClientReview = () => {

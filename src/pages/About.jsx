@@ -11,12 +11,43 @@ import counter_card_3 from "../assets/images/counter_card_3.png";
 import counter_card_4 from "../assets/images/counter_card_4.png";
 import choose_feature_2 from "../assets/images/choose_feature_2.png";
 import ImageSlider from "../components/ImageSlider";
+import SEO from "../components/SEO";
 
 const About = () => {
   const { t } = useTranslation();
+   const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Riyadh Appliance Repair Services",
+    "url": "https://riyadhrepairingservice.com/",
+    "logo": "https://riyadhrepairingservice.com/assets/images/footer_logo.png",
+    "description": "Trusted appliance repair service in Riyadh with 10+ years experience",
+    "foundingDate": "2014",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Professional Team"
+      }
+    ],
+    "areaServed": "Riyadh, Saudi Arabia",
+    "sameAs": [
+      "https://www.facebook.com/riyadhrepairservices",
+      "https://www.instagram.com/riyadhrepairservices",
+      "https://twitter.com/riyadhrepairs"
+    ]
+  };
 
   return (
     <div className="bg-[#E1E4E5]">
+       <SEO
+        title="About Riyadh Appliance Repair Services | Expert Technicians Since 2014"
+        description="Learn about Riyadh Appliance Repair Services. 10+ years experience, certified technicians, 100% customer satisfaction. Trusted repair experts in Riyadh."
+        keywords="about appliance repair, experienced technicians Riyadh, certified repair service, professional repair company"
+        canonical="https://riyadhrepairingservice.com/about"
+        ogTitle="About Riyadh Appliance Repair Services - Trusted Experts"
+        ogDescription="Professional appliance repair service in Riyadh with 10+ years experience"
+        schema={aboutSchema}
+      />
       {/* ===== Banner ===== */}
       <section>
         <div

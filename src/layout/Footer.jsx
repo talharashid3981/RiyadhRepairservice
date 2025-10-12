@@ -10,46 +10,47 @@ import DarkBlue_bg from "../components/DarkBlue_bg";
 import logo from "../assets/images/footer_logo.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const Footer = () => {
   const { t } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setStatus('error');
-      setTimeout(() => setStatus(''), 3000);
+      setStatus("error");
+      setTimeout(() => setStatus(""), 3000);
       return;
     }
 
     // Send email using EmailJS
-    emailjs.send(
-      'service_46i194v', // Your EmailJS service ID
-      'template_drbrr05', // Your EmailJS template ID
-      {
-        to_email: 'contact@riyadhrepairingservices.com',
-        from_email: email,
-        subject: 'New Newsletter Subscription',
-        message: `New subscriber: ${email}`
-      },
-      '1QgmRM5GmPIm8hxUV' // Your EmailJS public key
-    )
-    .then(() => {
-      setStatus('success');
-      setEmail('');
-      setTimeout(() => setStatus(''), 3000);
-    })
-    .catch((error) => {
-      console.error('Subscription Error:', error);
-      setStatus('error');
-      setTimeout(() => setStatus(''), 3000);
-    });
+    emailjs
+      .send(
+        "service_i1oazjr", // Your EmailJS service ID
+        "template_b9sjnyq", // Your EmailJS template ID
+        {
+          to_email: "riyadhrepairingservice@gmail.com",
+          from_email: email,
+          subject: "New Newsletter Subscription",
+          message: `New subscriber: ${email}`,
+        },
+        "q8behf8VnsTMDRY9r" // Your EmailJS public key
+      )
+      .then(() => {
+        setStatus("success");
+        setEmail("");
+        setTimeout(() => setStatus(""), 3000);
+      })
+      .catch((error) => {
+        console.error("Subscription Error:", error);
+        setStatus("error");
+        setTimeout(() => setStatus(""), 3000);
+      });
   };
 
   return (
@@ -63,7 +64,10 @@ const Footer = () => {
         <p className="mb-3 sm:mb-4 text-gray-200 font-medium text-base sm:text-lg">
           {t("footer.subscribe.title")}
         </p>
-        <form onSubmit={handleSubscribe} className="flex justify-center flex-wrap gap-2 max-w-md mx-auto">
+        <form
+          onSubmit={handleSubscribe}
+          className="flex justify-center flex-wrap gap-2 max-w-md mx-auto"
+        >
           <input
             type="email"
             value={email}
@@ -72,18 +76,22 @@ const Footer = () => {
             className="px-3 sm:px-4 py-2 flex-1 min-w-[200px] rounded-l bg-white focus:outline-none text-black text-sm sm:text-base"
             required
           />
-          <button 
+          <button
             type="submit"
             className="bg-[#14b8a6] hover:bg-[#0f9a8a] px-4 sm:px-6 py-2 rounded-r text-white font-semibold text-sm sm:text-base transition-colors"
           >
             {t("footer.subscribe.button")}
           </button>
         </form>
-        {status === 'success' && (
-          <p className="mt-2 text-green-400 text-sm">{t("footer.subscribe.successMessage")}</p>
+        {status === "success" && (
+          <p className="mt-2 text-green-400 text-sm">
+            {t("footer.subscribe.successMessage")}
+          </p>
         )}
-        {status === 'error' && (
-          <p className="mt-2 text-red-400 text-sm">{t("footer.subscribe.errorMessage")}</p>
+        {status === "error" && (
+          <p className="mt-2 text-red-400 text-sm">
+            {t("footer.subscribe.errorMessage")}
+          </p>
         )}
       </div>
 
@@ -128,17 +136,26 @@ const Footer = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.company.items.services")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/about"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.company.items.about")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/contact"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.company.items.contact")}
               </NavLink>
             </li>
@@ -152,27 +169,42 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2">
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.ourServices.items.refrigerator")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.ourServices.items.washing")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.ourServices.items.semiAutomatic")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.ourServices.items.installation")}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className="hover:text-[#14b8a6] transition-colors">
+              <NavLink
+                to="/services"
+                className="hover:text-[#14b8a6] transition-colors"
+              >
                 {t("footer.ourServices.items.maintenance")}
               </NavLink>
             </li>
@@ -229,7 +261,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-2">
               <Phone className="w-5 h-5 text-[#14b8a6] flex-shrink-0" />
-              <a 
+              <a
                 href="tel:+966598001569"
                 className="hover:text-[#14b8a6] transition-colors text-sm sm:text-base"
               >
@@ -239,7 +271,7 @@ const Footer = () => {
             <li className="flex items-start sm:items-center justify-center sm:justify-start gap-2">
               <Mail className="w-5 h-5 text-[#14b8a6] flex-shrink-0 mt-1 sm:mt-0" />
               <a
-                href="mailto:contact@riyadhrepairingservices.com"
+                href="mailto:riyadhrepairingservice@gmail.com"
                 className="hover:text-[#14b8a6] transition-colors text-sm sm:text-base break-all"
               >
                 {t("footer.contactUs.email")}
@@ -252,7 +284,7 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20 py-4 text-gray-400 text-xs space-y-3 sm:space-y-0 gap-4 max-w-[1600px] mx-auto">
         <p className="text-center sm:text-left">
-          {t("footer.copyright")}
+          © {new Date().getFullYear()} Riyadh Repair Services. All rights reserved.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
