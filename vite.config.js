@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss()],
+  base: './', // ✅ This line ensures favicon and assets load correctly after build
+  plugins: [react(), tailwindcss()],
 })

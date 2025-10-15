@@ -44,7 +44,7 @@ html {
 
 /* Transparent scrollbar */
 ::-webkit-scrollbar {
-  width: 6xpx;
+  width: 8px;
   background-color: transparent;
 }
 

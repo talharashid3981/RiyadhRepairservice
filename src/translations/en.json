@@ -1,10 +1,163 @@
 {
-  "nav": {
+ "nav": {
     "home": "Home",
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "blog": "Blog"
+    "blog": "Blog",
+    "refrigerator_repair": "Refrigerator Repair",
+    "washing_machine_repair": "Washing Machine Repair"
+  },
+
+  "refrigerator": {
+    "banner": {
+      "title": "Refrigerator Repair Services",
+      "home": "Home",
+      "current": "Refrigerator Repair"
+    },
+    "section": {
+      "badge": "Our Refrigerator Services",
+      "title": "Professional Refrigerator Repair Solutions",
+      "description": "Expert refrigerator repair and maintenance for all brands. Keep your fridge running efficiently with our professional technicians."
+    },
+    "services": {
+      "cooling": {
+        "title": "Cooling System Repair",
+        "desc": "Expert repair for refrigerator cooling systems, compressors, and thermostat issues. We ensure your fridge maintains optimal temperature."
+      },
+      "iceMaker": {
+        "title": "Ice Maker & Water Line",
+        "desc": "Professional repair and installation of ice makers and water dispensers. Fix leaks and ensure proper functionality."
+      },
+      "electrical": {
+        "title": "Electrical & Control Issues",
+        "desc": "Diagnose and repair electrical problems, control panels, and sensor failures. All repairs come with warranty."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Refrigerator Repair Services",
+      "description": "We provide reliable, professional, and affordable refrigerator repair solutions with guaranteed satisfaction.",
+      "features": {
+        "warranty": "Complete Warranty",
+        "warrantyDesc": "All repairs are backed by comprehensive warranty coverage for your peace of mind.",
+        "genuine": "Genuine Parts",
+        "genuineDesc": "We use only original manufacturer parts to ensure durability and performance.",
+        "expert": "Expert Technicians",
+        "expertDesc": "Certified professionals with years of experience in refrigerator repair.",
+        "fast": "Fast Service",
+        "fastDesc": "Same-day service available for urgent repairs in Riyadh."
+      }
+    },
+    "quickApply": {
+      "title": "Get Your Refrigerator Fixed Today",
+      "description": "Contact us via WhatsApp for instant support or visit our contact page to book your service appointment.",
+      "whatsapp": "Chat on WhatsApp",
+      "contact": "Contact Us"
+    },
+    "gallery": {
+      "badge": "Our Work",
+      "title": "Refrigerator Service",
+      "highlight": "Gallery",
+      "description": "View our recent refrigerator repair and maintenance projects completed for satisfied customers.",
+      "view": "View"
+    },
+    "pricing": {
+      "badge": "Service Packages",
+      "title": "Choose Your Refrigerator Plan",
+      "description": "Select the perfect maintenance package for your refrigerator.",
+      "footer": {
+        "text": "Need a custom service plan?",
+        "linkText": "Contact us on WhatsApp"
+      }
+    },
+    "whatsapp": {
+      "message": "Hello! I need refrigerator repair service. Please provide quotation and availability."
+    }
+  },
+  "washing": {
+    "banner": {
+      "title": "Washing Machine Repair Services",
+      "home": "Home",
+      "current": "Washing Machine Repair"
+    },
+    "section": {
+      "badge": "Our Washing Machine Services",
+      "title": "Professional Washing Machine Repair Solutions",
+      "description": "Expert washing machine repair and maintenance for all brands and models. Keep your appliance running smoothly with professional service."
+    },
+    "services": {
+      "automatic": {
+        "title": "Automatic Washing Machine Repair",
+        "desc": "Expert repair for automatic washing machines of all brands. Fast diagnosis and repair with genuine parts and warranty coverage."
+      },
+      "semiAutomatic": {
+        "title": "Semi-Automatic Washing Machine Repair",
+        "desc": "Professional repair and maintenance for semi-automatic washing machines. Quick turnaround and affordable pricing."
+      },
+      "drumMotor": {
+        "title": "Drum & Motor Issues",
+        "desc": "Repair drum problems, motor failures, and bearing issues. Complete solution for washing machine mechanical problems."
+      }
+    },
+    "problems": {
+      "title": "Common Washing Machine Problems We Fix",
+      "description": "We diagnose and repair all common washing machine issues. Here are some problems we handle daily.",
+      "notSpinning": {
+        "title": "Machine Not Spinning",
+        "desc": "Clothes remain soaking wet after wash cycle. Often caused by belt or motor issues. We fix it quickly."
+      },
+      "waterLeak": {
+        "title": "Water Leaking",
+        "desc": "Water leaks during or after washing. Caused by damaged hose or seal issues. Professional repair required."
+      },
+      "noise": {
+        "title": "Unusual Noises",
+        "desc": "Grinding, squeaking, or rattling sounds during operation. Usually indicates bearing or drum problems."
+      },
+      "notStarting": {
+        "title": "Machine Won't Start",
+        "desc": "Power issues or control panel failures. Our technicians diagnose and fix electrical problems."
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Washing Machine Repair",
+      "description": "We deliver fast, reliable, and affordable washing machine repair with expert technicians.",
+      "features": {
+        "warranty": "Complete Warranty",
+        "warrantyDesc": "All repairs come with warranty coverage. If problems persist, we fix it free.",
+        "genuine": "Genuine Parts",
+        "genuineDesc": "Only original parts used to maintain your machine's performance and durability.",
+        "expert": "Expert Technicians",
+        "expertDesc": "Experienced professionals certified to repair all washing machine brands.",
+        "fast": "Same-Day Service",
+        "fastDesc": "Emergency repairs available. We come and fix your machine the same day."
+      }
+    },
+    "quickApply": {
+      "title": "Book Your Washing Machine Service",
+      "description": "Get instant support on WhatsApp or contact us to schedule your repair appointment today.",
+      "whatsapp": "Chat on WhatsApp",
+      "contact": "Contact Us"
+    },
+    "gallery": {
+      "badge": "Our Work",
+      "title": "Washing Machine Service",
+      "highlight": "Gallery",
+      "description": "View our completed washing machine repair and maintenance projects from satisfied customers.",
+      "view": "View"
+    },
+    "pricing": {
+      "badge": "Service Packages",
+      "title": "Choose Your Washing Machine Plan",
+      "description": "Select the perfect maintenance package for your washing machine.",
+      "footer": {
+        "text": "Need a custom service plan?",
+        "linkText": "Contact us on WhatsApp"
+      }
+    },
+    "whatsapp": {
+      "message": "Hello! I need washing machine repair service. Please provide quotation and availability."
+    }
   },
   "home": {
     "aboutSection": {
@@ -418,8 +571,6 @@
   },
 
  
-  
-  
   "blog": {
     "header": {
       "title": "Latest Appliance Repair Tips & Guides",
@@ -436,7 +587,11 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Discover the early warning signs of washing machine problems. Learn about unusual noises, water leaks, and other symptoms that require professional attention to prevent costly damage.",
-        "keywords": ["washing machine repair", "appliance maintenance", "Riyadh services"],
+        "keywords": [
+          "washing machine repair",
+          "appliance maintenance",
+          "Riyadh services"
+        ],
         "image": "blog_1"
       },
       {
@@ -445,7 +600,11 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Keep your refrigerator running efficiently in Riyadh's climate. Simple maintenance steps that extend appliance life and reduce electricity bills throughout the year.",
-        "keywords": ["refrigerator care", "appliance maintenance", "energy saving"],
+        "keywords": [
+          "refrigerator care",
+          "appliance maintenance",
+          "energy saving"
+        ],
         "image": "blog_2"
       },
       {
@@ -454,7 +613,11 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Expert guide to fixing common washing machine issues. From drainage problems to spin cycle failures, learn how professional technicians diagnose and repair your appliance.",
-        "keywords": ["washer troubleshooting", "appliance repair", "professional service"],
+        "keywords": [
+          "washer troubleshooting",
+          "appliance repair",
+          "professional service"
+        ],
         "image": "blog_3"
       },
       {
@@ -463,7 +626,11 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Guide to selecting durable refrigerators for hot climates. Compare top brands and learn maintenance practices that ensure optimal cooling performance in Saudi Arabia.",
-        "keywords": ["refrigerator selection", "climate considerations", "appliance guide"],
+        "keywords": [
+          "refrigerator selection",
+          "climate considerations",
+          "appliance guide"
+        ],
         "image": "blog_4"
       },
       {
@@ -472,7 +639,11 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Why annual washing machine service saves money long-term. Prevent unexpected breakdowns and maintain peak performance with regular professional maintenance.",
-        "keywords": ["preventive maintenance", "appliance care", "service benefits"],
+        "keywords": [
+          "preventive maintenance",
+          "appliance care",
+          "service benefits"
+        ],
         "image": "blog_5"
       },
       {
@@ -499,13 +670,42 @@
         "date": "October 2025",
         "author": "Riyadh Appliance Services",
         "description": "Step-by-step troubleshooting when your refrigerator loses cooling. Simple checks you can perform before calling for professional repair service.",
-        "keywords": ["refrigerator problems", "cooling issues", "troubleshooting guide"],
+        "keywords": [
+          "refrigerator problems",
+          "cooling issues",
+          "troubleshooting guide"
+        ],
         "image": "blog_8"
       }
-    ]
+    ],
+    "detail": {
+      "backButton": "Back to Blog",
+      "relatedBlogs": "Related Articles",
+      "viewAll": "View All Articles",
+      "cta": {
+        "title": "Need Professional Help?",
+        "description": "Contact our expert technicians for fast and reliable appliance repair services in Riyadh. Available 24/7 with same-day service options.",
+        "button": "Contact Us",
+        "callButton": "Call Now: +966 598 001 569"
+      },
+      "defaultContent": {
+        "paragraph1": "This comprehensive guide provides detailed information about appliance repair and maintenance. Our expert technicians have compiled years of hands-on experience to bring you the most effective tips, solutions, and preventive measures for keeping your appliances in optimal condition.",
+        "paragraph2": "Whether you're dealing with a refrigerator issue, washing machine problems, or AC malfunctions, understanding the basics of maintenance and troubleshooting can save you time and money. Regular maintenance not only extends the life of your appliances but also ensures they operate at peak efficiency.",
+        "paragraph3": "For professional assistance with your appliances, don't hesitate to contact our team of certified technicians. We're available 24/7 to help you with any repair needs, offering same-day service and competitive pricing across Riyadh."
+      }
+    },
+    "notFound": {
+      "title": "Blog Not Found",
+      "description": "The blog post you're looking for doesn't exist or has been removed.",
+      "backButton": "Back to Blog"
+    }
+  },
+  "notFound": {
+    "heading": "Oops! Page Not Found",
+    "message": "The page you're looking for doesn't exist or might have been moved. Let's get you back on track.",
+    "backHome": "Back to Home",
+    "refresh": "Refresh Page",
+    "helpText": "Need help? Visit these pages:"
   }
-
-
-
 
 }

@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
 
   <!-- HOME PAGE -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.riyadhrepairingservice.com/favicon-96x96.png</image:loc>
+      <image:caption>Riyadh Appliance Repair Services Favicon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.riyadhrepairingservice.com/logo.png</image:loc>
+      <image:caption>Riyadh Appliance Repair Services Logo</image:caption>
+    </image:image>
   </url>
 
-  <!-- WASHING MACHINE REPAIR -->
+  <!-- SERVICES MAIN PAGE -->
   <url>
-    <loc>https://www.riyadhrepairingservice.com/washing-machine-repair</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <loc>https://www.riyadhrepairingservice.com/services</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <!-- REFRIGERATOR REPAIR -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/refrigerator-repair</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
+  <!-- WASHING MACHINE REPAIR -->
+  <url>
+    <loc>https://www.riyadhrepairingservice.com/washing-machine-repair</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 
   <!-- CONTACT US -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/contact</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -37,33 +55,33 @@
   <!-- ABOUT US -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/about</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-  </url>
-
-  <!-- SERVICES -->
-  <url>
-    <loc>https://www.riyadhrepairingservice.com/services</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- PRICING -->
-  <url>
-    <loc>https://www.riyadhrepairingservice.com/pricing</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
   </url>
 
   <!-- BLOG -->
   <url>
     <loc>https://www.riyadhrepairingservice.com/blog</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- PRIVACY POLICY -->
+  <url>
+    <loc>https://www.riyadhrepairingservice.com/privacy</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- TERMS OF SERVICE -->
+  <url>
+    <loc>https://www.riyadhrepairingservice.com/terms</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
   </url>
 
 </urlset>

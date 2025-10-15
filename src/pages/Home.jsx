@@ -16,11 +16,11 @@ import counter_card_2 from "../assets/images/counter_card_2.png";
 import counter_card_3 from "../assets/images/counter_card_3.png";
 import counter_card_4 from "../assets/images/counter_card_4.png";
 import counter_card_5 from "../assets/images/counter_card_5.png";
-import fridge_installation from "../assets/images/fridge_installation.jpg";
-import refrigerator_services from "../assets/images/refrigerator_services.png";
+import fridge_installation from "../assets/images/fridge_installation.webp";
+import refrigerator_services from "../assets/images/refrigerator_services.webp";
 import commercial_laundry from "../assets/images/commercial_laundry.jpg";
-import home_appliance_repair from "../assets/images/home_appliance_repair.png";
-import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.jpg";
+import home_appliance_repair from "../assets/images/home_appliance_repair.webp";
+import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.webp";
 import Commercial_Refrigeraion_1 from "../assets/images/Commercial_Refrigeraion_1.jpg";
 import ServiceSlider from "../components/ServiceSlider";
 import ContactQuote from "../components/ContactQuote";
@@ -51,8 +51,6 @@ const Home = () => {
     "url": "https://riyadhrepairingservice.com/"
   };
 
-
-  
   const firstSectionFeatures = [
     t("home.aboutSection.features.quality"),
     t("home.aboutSection.features.licensed"),
@@ -95,10 +93,7 @@ const Home = () => {
   }, [isOpen]);
 
   return (
-    <div
-      className={`bg-[#E1E4E5]  overflow-hidden`}
-      id="home"
-    >
+    <div className="bg-[#E1E4E5] overflow-hidden" id="home">
       <SEO
         title="Riyadh Appliance Repair Services | Washing Machine & Refrigerator Repair | 24/7 Expert Service"
         description="Professional washing machine and refrigerator repair services in Riyadh. Expert technicians, affordable rates, same-day service available. Call +966598001569 for fast repairs!"
@@ -116,6 +111,7 @@ const Home = () => {
 
       <ACRepairSlider />
 
+      {/* 🔥 FIXED: First Section - Consistent Padding */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -123,10 +119,10 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="h-auto w-full py-8 sm:py-12 lg:py-"
+        className="h-auto w-full py-8 sm:py-12 lg:py-16"
         aria-labelledby="about-heading"
       >
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 gap-8 lg:gap-12">
+        <div className="max-w-[1920px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20 gap-8 lg:gap-12">
           <div className="w-full md:w-1/2 space-y-4 sm:space-y-5">
             <div className="flex items-center gap-3">
               <img
@@ -203,7 +199,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Image with proper SEO attributes */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <div className="rounded-3xl sm:rounded-[50px] p-3 sm:p-5 overflow-hidden w-full">
               <img
@@ -221,6 +216,7 @@ const Home = () => {
 
       <ServicesSection />
 
+      {/* 🔥 FIXED: Services Section - Consistent Padding */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_6})`,
@@ -228,45 +224,48 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="h-auto w-full py-8 sm:py-12 lg:py-16 px-5 sm:px-6 lg:px-15"
+        className="h-auto w-full py-8 sm:py-12 lg:py-16"
         aria-labelledby="services-heading"
       >
-        <div className="flex items-center gap-3">
-          <img
-            src={title_icon2}
-            alt="Services Icon"
-            className="w-6 h-6 sm:w-8 sm:h-8 brightness-0 invert"
-            width="32"
-            height="32"
-          />
-          <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-[22px]">
-            {t("home.servicesSection.title")}
-          </span>
-        </div>
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:items-center sm:justify-between text-white mt-5">
-          <h2
-            id="services-heading"
-            className="text-[40px] font-[700] leading-[45px]"
-          >
-            {t("home.servicesSection.heading")}
-          </h2>
-          <div className="flex sm:justify-end">
-            <Link
-              to="/services"
-              className="flex gap-4 items-center bg-[#14b8a6] rounded-3xl px-5 py-3 hover:bg-[#0f9a8a] transition"
-              aria-label="View all appliance repair services"
-            >
-              {t("home.servicesSection.viewAll")}{" "}
-              <FaArrowRightLong aria-hidden="true" />
-            </Link>
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
+          <div className="flex items-center gap-3">
+            <img
+              src={title_icon2}
+              alt="Services Icon"
+              className="w-6 h-6 sm:w-8 sm:h-8 brightness-0 invert"
+              width="32"
+              height="32"
+            />
+            <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-[22px]">
+              {t("home.servicesSection.title")}
+            </span>
           </div>
-        </div>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:items-center sm:justify-between text-white mt-5">
+            <h2
+              id="services-heading"
+              className="text-[40px] font-[700] leading-[45px]"
+            >
+              {t("home.servicesSection.heading")}
+            </h2>
+            <div className="flex sm:justify-end">
+              <Link
+                to="/services"
+                className="flex gap-4 items-center bg-[#14b8a6] rounded-3xl px-5 py-3 hover:bg-[#0f9a8a] transition"
+                aria-label="View all appliance repair services"
+              >
+                {t("home.servicesSection.viewAll")}{" "}
+                <FaArrowRightLong aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
 
-        <div>
-          <ServiceSlider />
+          <div>
+            <ServiceSlider />
+          </div>
         </div>
       </section>
 
+      {/* 🔥 FIXED: Projects Section - Consistent Padding */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -274,129 +273,129 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        className="h-auto w-full py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12"
+        className="h-auto w-full py-10 sm:py-12 lg:py-16"
         aria-labelledby="projects-heading"
       >
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 text-black">
-          <div className="flex items-center gap-3">
-            <img
-              src={title_icon2}
-              alt="Projects Icon"
-              className="w-6 h-6 sm:w-8 sm:h-8 brightness-0"
-              width="32"
-              height="32"
-            />
-            <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-2xl">
-              {t("home.projectsSection.title")}
-            </span>
-          </div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4 sm:gap-6 mb-6">
-          <div className="text-center mt-4 lg:text-left">
-            <h2
-              id="projects-heading"
-              className="text-2xl sm:text-4xl font-extrabold text-black"
-            >
-              {t("home.projectsSection.heading")}
-            </h2>
-            <p className="text-xl sm:text-3xl font-semibold text-gray-800">
-              {t("home.projectsSection.headingLine2")}
-            </p>
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 text-black">
+            <div className="flex items-center gap-3">
+              <img
+                src={title_icon2}
+                alt="Projects Icon"
+                className="w-6 h-6 sm:w-8 sm:h-8 brightness-0"
+                width="32"
+                height="32"
+              />
+              <span className="text-[#14b8a6] font-bold text-lg sm:text-xl lg:text-2xl">
+                {t("home.projectsSection.title")}
+              </span>
+            </div>
           </div>
 
-          {/* Category Buttons Section */}
-          <div
-            className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4"
-            role="tablist"
-            aria-label="Service categories"
-          >
-            {["commercial", "residential", "industrial"].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                role="tab"
-                aria-selected={selectedCategory === cat}
-                aria-controls={`${cat}-services`}
-                className={`px-4 py-2 rounded-md font-medium border transition-colors ${
-                  selectedCategory === cat
-                    ? "bg-[#14b8a6] text-white border-[#14b8a6]"
-                    : "bg-transparent text-gray-700 border-gray-300 hover:bg-[#14b8a6] hover:text-white"
-                }`}
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4 sm:gap-6 mb-6">
+            <div className="text-center mt-4 lg:text-left">
+              <h2
+                id="projects-heading"
+                className="text-2xl sm:text-4xl font-extrabold text-black"
               >
-                {t(`home.projectsSection.categories.${cat}`)}
-              </button>
+                {t("home.projectsSection.heading")}
+              </h2>
+              <p className="text-xl sm:text-3xl font-semibold text-gray-800">
+                {t("home.projectsSection.headingLine2")}
+              </p>
+            </div>
+
+            <div
+              className="flex flex-wrap justify-center lg:justify-end gap-3 sm:gap-4"
+              role="tablist"
+              aria-label="Service categories"
+            >
+              {["commercial", "residential", "industrial"].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  role="tab"
+                  aria-selected={selectedCategory === cat}
+                  aria-controls={`${cat}-services`}
+                  className={`px-4 py-2 rounded-md font-medium border transition-colors cursor-pointer ${
+                    selectedCategory === cat
+                      ? "bg-[#14b8a6] text-white border-[#14b8a6]"
+                      : "bg-transparent text-gray-700 border-gray-300 hover:bg-[#14b8a6] hover:text-white"
+                  }`}
+                >
+                  {t(`home.projectsSection.categories.${cat}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            id={`${selectedCategory}-services`}
+            role="tabpanel"
+            aria-labelledby="projects-heading"
+          >
+            {servicesData[selectedCategory].map((service, index) => (
+              <article
+                key={index}
+                className="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300"
+                itemScope
+                itemType="https://schema.org/Service"
+              >
+                <div className="relative h-56 sm:h-60 overflow-hidden rounded-t-3xl">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} - Professional appliance repair service in Riyadh`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="300"
+                    itemProp="image"
+                  />
+                  <svg
+                    className="absolute bottom-0 left-0 w-full"
+                    viewBox="0 0 1440 120"
+                    preserveAspectRatio="none"
+                    style={{ height: "35px" }}
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M0,0 Q360,130 750,60 T1440,0 L1440,120 L0,120 Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+
+                <div className="px-5 pb-8 pt-4 text-center flex flex-col justify-between h-auto sm:h-64">
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-gray-900 mb-2"
+                    itemProp="name"
+                  >
+                    {service.title}
+                  </h3>
+                  <p
+                    className="text-gray-600 text-sm sm:text-base mb-4"
+                    itemProp="description"
+                  >
+                    {service.description}
+                  </p>
+                  <button
+                    className="bg-[#14b8a6] mx-auto cursor-pointer text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 inline-flex items-center gap-2 hover:bg-[#0f9a8a] shadow-md"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
+                    {t("home.projectsSection.exploreCaseStudy")}
+                    <span className="text-lg" aria-hidden="true">
+                      →
+                    </span>
+                  </button>
+                </div>
+              </article>
             ))}
           </div>
         </div>
-
-        <div
-          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          id={`${selectedCategory}-services`}
-          role="tabpanel"
-          aria-labelledby="projects-heading"
-        >
-          {servicesData[selectedCategory].map((service, index) => (
-            <article
-              key={index}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300"
-              itemScope
-              itemType="https://schema.org/Service"
-            >
-              {/* Image */}
-              <div className="relative h-56 sm:h-60 overflow-hidden rounded-t-3xl">
-                <img
-                  src={service.image}
-                  alt={`${service.title} - Professional appliance repair service in Riyadh`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width="400"
-                  height="300"
-                  itemProp="image"
-                />
-                <svg
-                  className="absolute bottom-0 left-0 w-full"
-                  viewBox="0 0 1440 120"
-                  preserveAspectRatio="none"
-                  style={{ height: "35px" }}
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M0,0 Q360,130 750,60 T1440,0 L1440,120 L0,120 Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-
-              {/* Content */}
-              <div className="px-5 pb-8 pt-4 text-center flex flex-col justify-between h-auto sm:h-64">
-                <h3
-                  className="text-xl sm:text-2xl font-bold text-gray-900 mb-2"
-                  itemProp="name"
-                >
-                  {service.title}
-                </h3>
-                <p
-                  className="text-gray-600 text-sm sm:text-base mb-4"
-                  itemProp="description"
-                >
-                  {service.description}
-                </p>
-                <button
-                  className="bg-[#14b8a6] mx-auto cursor-pointer text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 inline-flex items-center gap-2 hover:bg-[#0f9a8a] shadow-md"
-                  aria-label={`Learn more about ${service.title}`}
-                >
-                  {t("home.projectsSection.exploreCaseStudy")}
-                  <span className="text-lg" aria-hidden="true">
-                    →
-                  </span>
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
       </section>
 
+      {/* Video Section - Original styling maintained */}
       <section
         style={{
           backgroundImage: `url("${video_2}")`,
@@ -456,7 +455,6 @@ const Home = () => {
           {t("home.videoSection.downloadCatalog")}
         </a>
 
-        {/* Stats Section with proper semantic markup */}
         <div className="relative z-10 w-full max-w-7xl mx-auto bg-[#101840] mt-20 rounded-t-lg overflow-hidden">
           <div
             className="grid grid-cols-2 md:grid-cols-4 py-5"
@@ -549,7 +547,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Video Modal with proper accessibility */}
         {isOpen && (
           <div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"

@@ -2,6 +2,9 @@ import React from "react";
 import { Check, X, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import frdge2 from "../assets/images/frdge2.jpg";
+import washing_machine from "../assets/images/washing_machine_repear_1.webp";
+import fridge_installation from "../assets/images/fridge_installation.webp";
 
 const PricingPlans = () => {
   const { t } = useTranslation();
@@ -70,9 +73,9 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="pt-6 sm:pt-10 pb-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:mt-10 gap-6 sm:gap-8 lg:gap-6">
+    <section className="w-full bg-white">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20 py-10 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
