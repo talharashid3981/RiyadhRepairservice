@@ -706,6 +706,84 @@
     "backHome": "Back to Home",
     "refresh": "Refresh Page",
     "helpText": "Need help? Visit these pages:"
+  },
+  
+  "privacy": {
+    "seo": {
+      "title": "Privacy Policy | Riyadh Appliance Repair Services",
+      "description": "Privacy Policy for Riyadh Appliance Repair Services. Learn how we protect your personal information and data.",
+      "keywords": "privacy policy, data protection, personal information"
+    },
+    "title": "Privacy Policy",
+    "intro": "Riyadh Repair Services respects your privacy and is committed to protecting your personal information. This policy explains how we collect, use, and protect the information you share with us.",
+    "sections": {
+      "infoCollect": {
+        "title": "1. Information We Collect",
+        "content": "We may collect personal details such as your name, phone number, email address, and location for booking and communication purposes. We may also collect non-identifying technical data (e.g., browser type, device information) through cookies and analytics tools."
+      },
+      "howWeUse": {
+        "title": "2. How We Use Your Information",
+        "content": "Your information is used to schedule repairs, provide customer support, send service updates, process payments, and improve our website and services. We may also use your email for marketing if you opt in; you can unsubscribe at any time."
+      },
+      "dataProtection": {
+        "title": "3. Data Protection",
+        "content": "We implement reasonable security measures to protect your data. Access to personal information is restricted to authorized personnel only. However, no system is 100% secure—please take care when sharing sensitive information online."
+      },
+      "cookies": {
+        "title": "4. Cookies & Third-Party Services",
+        "content": "We use cookies and third-party services (e.g., EmailJS, analytics, mapping services) that may collect limited information to provide and improve functionality. These third parties have their own privacy policies — we recommend reviewing them."
+      },
+      "sharing": {
+        "title": "5. Sharing & Disclosure",
+        "content": "We do not sell your personal information. We may share information with trusted service providers who assist in delivering our services (for example, payment processors or technicians). We may also disclose information when required by law."
+      },
+      "yourRights": {
+        "title": "6. Your Rights",
+        "content": "You have the right to access, correct, or request deletion of your personal information. To do so, contact us at the email below. We will respond in accordance with applicable laws."
+      },
+      "children": {
+        "title": "7. Children",
+        "content": "Our services are not intended for children under 13. We do not knowingly collect personal information from children."
+      },
+      "contact": {
+        "title": "8. Contact Us",
+        "content": "If you have questions about this Privacy Policy or want to request access/deletion, contact us at"
+      }
+    },
+    "lastUpdated": "Last updated"
+  },
+  "terms": {
+    "seo": {
+      "title": "Terms & Conditions | Riyadh Appliance Repair Services",
+      "description": "Terms and Conditions for using Riyadh Appliance Repair Services. Read our service terms and policies.",
+      "keywords": "terms of service, conditions, service agreement"
+    },
+    "title": "Terms of Service",
+    "intro": "Welcome to Riyadh Repair Services. By accessing or using our website, you agree to comply with the following terms and conditions. Please read them carefully before using our services.",
+    "sections": {
+      "services": {
+        "title": "1. Services",
+        "content": "We provide appliance repair and maintenance services across Riyadh. All appointments and repairs are subject to availability and technician confirmation."
+      },
+      "payments": {
+        "title": "2. Payments",
+        "content": "All payments must be made as agreed during booking. Prices may vary depending on the type of appliance, issue severity, and required parts."
+      },
+      "warranty": {
+        "title": "3. Warranty",
+        "content": "Some repairs may include a limited warranty period as stated at the time of service. Damages caused by misuse or external factors are not covered."
+      },
+      "liability": {
+        "title": "4. Limitation of Liability",
+        "content": "Riyadh Repair Services will not be liable for indirect, incidental, or consequential damages resulting from the use or inability to use our services."
+      },
+      "changes": {
+        "title": "5. Changes to Terms",
+        "content": "We reserve the right to update these Terms of Service at any time. Any changes will be posted on this page."
+      }
+    },
+    "lastUpdated": "Last updated"
   }
+
 
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { FiCheckCircle, FiPhone } from "react-icons/fi";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import ACRepairSlider from "../components/ACRepairSlider";
-import SEO from "../components/SEO";
 import pattern_bg_5 from "../assets/images/pattern_bg_5.png";
 import video_2 from "../assets/images/video_2.jpg";
 import pattern_bg_6 from "../assets/images/pattern_bg_6.jpg";
@@ -37,18 +37,31 @@ const Home = () => {
   const homeSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Riyadh Appliance Repair Services",
-    "image": "https://riyadhrepairingservice.com/assets/images/footer_logo.png",
-    "description": "24/7 Professional appliance repair services in Riyadh",
+    "name": "Riyadh Repairing Service",
+    "alternateName": "خدمة الرياض للإصلاح",
+    "image": "https://riyadhrepairingservice.com/src/assets/images/footer_logo.png",
+    "description": "24/7 Professional washing machine and refrigerator repair services in Riyadh. Expert technicians, same-day service, affordable rates.",
     "telephone": "+966598001569",
     "email": "riyadhrepairingservice@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Riyadh",
+      "addressRegion": "Riyadh Province",
       "addressCountry": "SA"
     },
-    "openingHours": "Mo-Su 09:00-16:00",
-    "url": "https://riyadhrepairingservice.com/"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "24.7136",
+      "longitude": "46.6753"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$",
+    "url": "https://riyadhrepairingservice.com/",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "245"
+    }
   };
 
   const firstSectionFeatures = [
@@ -94,24 +107,131 @@ const Home = () => {
 
   return (
     <div className="bg-[#E1E4E5] overflow-hidden" id="home">
-      <SEO
-        title="Riyadh Appliance Repair Services | Washing Machine & Refrigerator Repair | 24/7 Expert Service"
-        description="Professional washing machine and refrigerator repair services in Riyadh. Expert technicians, affordable rates, same-day service available. Call +966598001569 for fast repairs!"
-        keywords="washing machine repair Riyadh, refrigerator repair Riyadh, appliance repair Saudi Arabia, AC repair Riyadh, dishwasher repair, oven repair"
-        canonical="https://riyadhrepairingservice.com/"
-        ogTitle="Riyadh Appliance Repair Services | Expert Technicians 24/7"
-        ogDescription="Professional appliance repair in Riyadh with same-day service and affordable prices. Available 24/7!"
-        langAlternates={[
-          { lang: "ar", url: "https://riyadhrepairingservice.com/ar/" },
-          { lang: "en", url: "https://riyadhrepairingservice.com/" },
-          { lang: "x-default", url: "https://riyadhrepairingservice.com/" }
-        ]}
-        schema={homeSchema}
-      />
+      {/* ==================== SEO META TAGS - ENGLISH & ARABIC ==================== */}
+      <Helmet>
+        {/* ===== ENGLISH TITLE ===== */}
+        <title>Washing Machine & Refrigerator Repair in Riyadh | Same-Day Professional Service | Expert Technicians 24/7</title>
+        <meta name="title" content="Washing Machine & Refrigerator Repair in Riyadh | Same-Day Professional Service | Expert Technicians 24/7" />
+        <meta name="description" content="Professional washing machine repair, automatic washing machine repair, and refrigerator repair services in Riyadh. Expert certified technicians, affordable rates, same-day service available. 24/7 emergency repairs. All brands supported including Samsung, LG, Whirlpool, Bosch. Call +966598001569 for fast repairs!" />
+        
+        {/* ===== ARABIC TITLE ===== */}
+        <meta name="title-ar" content="تصليح غسالات وثلاجات في الرياض | خدمة احترافية في نفس اليوم | فنيون خبراء 24/7" />
+        <meta name="description-ar" content="خدمات احترافية في تصليح الغسالات والغسالات الأوتوماتيكية والثلاجات في الرياض. فنيون معتمدون خبراء، أسعار معقولة، خدمة في نفس اليوم متاحة. إصلاحات طوارئ 24/7. جميع العلامات التجارية مدعومة بما في ذلك سامسونج وإل جي وويرلبول وبوش. اتصل برقم +966598001569 للإصلاح السريع!" />
+        
+        {/* ===== KEYWORDS - ENGLISH + ARABIC ===== */}
+        <meta name="keywords" content="washing machine repair riyadh, automatic washing machine repair riyadh, refrigerator repair riyadh, fridge repair riyadh, appliance repair riyadh, washing machine service riyadh, fridge service riyadh, home appliance repair, emergency repair, 24/7 repair service, same day repair, affordable repair, samsung washing machine repair, lg washing machine repair, whirlpool repair, bosch repair, washing machine not spinning, washing machine leaking, refrigerator not cooling, ice maker repair, compressor repair, washing machine technician riyadh, fridge technician riyadh, best appliance repair riyadh, trusted repair service, licensed technicians, certified repair, commercial appliance repair, residential appliance repair, industrial appliance repair, washing machine maintenance, refrigerator maintenance, appliance installation, emergency appliance service, غسالة إصلاح الرياض, غسالة اوتوماتيك الرياض, تصليح ثلاجات الرياض, صيانة غسالات الرياض, صيانة ثلاجات الرياض, تصليح غسالات اوتوماتيك, صيانة اجهزة منزلية الرياض, فني غسالات الرياض, فني ثلاجات الرياض, إصلاح سريع الرياض, خدمة طوارئ الرياض, تصليح غسالات نص اوتوماتيك, الغسالة لا تدور, الغسالة تسرب ماء, الثلاجة لا تبرد, تصليح صانع الثلج, تصليح الضاغط, أفضل تصليح أجهزة الرياض, خدمة موثوقة, فنيون مرخصون, إصلاح معتمد, تصليح أجهزة تجارية, تصليح أجهزة سكنية, تصليح أجهزة صناعية, صيانة الغسالات, صيانة الثلاجات, تركيب الأجهزة, خدمة طوارئ الأجهزة" />
+        
+        {/* ===== CANONICAL URL ===== */}
+        <link rel="canonical" href="https://riyadhrepairingservice.com/" />
+        
+        {/* ===== HREFLANG TAGS ===== */}
+        <link rel="alternate" href="https://riyadhrepairingservice.com/" hreflang="en" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/ar/" hreflang="ar" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/" hreflang="x-default" />
+        
+        {/* ===== OPEN GRAPH - ENGLISH ===== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://riyadhrepairingservice.com/" />
+        <meta property="og:title" content="Riyadh Repairing Service | Expert Washing Machine & Refrigerator Repair 24/7" />
+        <meta property="og:description" content="Professional washing machine and refrigerator repair in Riyadh with same-day service and affordable prices. Available 24/7! Expert technicians for all brands. Call +966598001569" />
+        <meta property="og:image" content="https://riyadhrepairingservice.com/src/assets/images/footer_logo.png" />
+        <meta property="og:site_name" content="Riyadh Repairing Service" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="ar_SA" />
+        
+        {/* ===== OPEN GRAPH - ARABIC ===== */}
+        <meta property="og:title:ar" content="خدمة الرياض للإصلاح | خبراء تصليح الغسالات والثلاجات 24/7" />
+        <meta property="og:description:ar" content="تصليح احترافي للغسالات والثلاجات في الرياض مع خدمة في نفس اليوم وأسعار معقولة. متاح 24/7! فنيون خبراء لجميع العلامات التجارية. اتصل برقم +966598001569" />
+        
+        {/* ===== TWITTER CARD - ENGLISH ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@riyadhrepairs" />
+        <meta name="twitter:title" content="Riyadh Repairing Service | Washing Machine & Refrigerator Repair 24/7" />
+        <meta name="twitter:description" content="Professional appliance repair in Riyadh. Same-day service, affordable rates, expert technicians. Call +966598001569" />
+        <meta name="twitter:image" content="https://riyadhrepairingservice.com/src/assets/images/footer_logo.png" />
+        
+        {/* ===== TWITTER CARD - ARABIC ===== */}
+        <meta name="twitter:title:ar" content="خدمة الرياض للإصلاح | تصليح الغسالات والثلاجات 24/7" />
+        <meta name="twitter:description:ar" content="تصليح أجهزة احترافي في الرياض. خدمة في نفس اليوم، أسعار معقولة، فنيون خبراء. اتصل برقم +966598001569" />
+        
+        {/* ===== ROBOTS & SEO ===== */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="author" content="Riyadh Repairing Service" />
+        
+        {/* ===== GEOGRAPHIC & BUSINESS INFO ===== */}
+        <meta name="geo.region" content="SA-01" />
+        <meta name="geo.placename" content="Riyadh, Saudi Arabia" />
+        <meta name="geo.position" content="24.7136;46.6753" />
+        <meta name="ICBM" content="24.7136, 46.6753" />
+        <meta name="contact" content="riyadhrepairingservice@gmail.com" />
+        <meta name="telephone" content="+966598001569" />
+        
+        {/* ===== SCHEMA MARKUP - LOCAL BUSINESS ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify(homeSchema)}
+        </script>
+        
+        {/* ===== SCHEMA MARKUP - WEBSITE ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Riyadh Repairing Service",
+            "alternateName": "خدمة الرياض للإصلاح",
+            "url": "https://riyadhrepairingservice.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://riyadhrepairingservice.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        
+        {/* ===== SCHEMA MARKUP - ORGANIZATION ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Riyadh Repairing Service",
+            "url": "https://riyadhrepairingservice.com/",
+            "logo": "https://riyadhrepairingservice.com/src/assets/images/footer_logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+966598001569",
+              "contactType": "Customer Service",
+              "areaServed": "SA",
+              "availableLanguage": ["English", "Arabic"]
+            },
+            "sameAs": [
+              "https://www.facebook.com/riyadhrepairservices",
+              "https://www.instagram.com/riyadhrepairservices",
+              "https://twitter.com/riyadhrepairs"
+            ]
+          })}
+        </script>
+        
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://riyadhrepairingservice.com/"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
 
       <ACRepairSlider />
 
-      {/* 🔥 FIXED: First Section - Consistent Padding */}
+      {/* First Section */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -127,7 +247,7 @@ const Home = () => {
             <div className="flex items-center gap-3">
               <img
                 src={title_icon2}
-                alt="Riyadh Appliance Repair Services Icon"
+                alt="Riyadh Repairing Service Icon"
                 className="w-6 h-6 sm:w-8 sm:h-8"
                 width="32"
                 height="32"
@@ -180,7 +300,7 @@ const Home = () => {
               <a
                 href="tel:+966598001569"
                 className="flex items-center gap-2 text-[#14b8a6] cursor-pointer font-bold hover:scale-105 transition-transform"
-                aria-label="Call Riyadh Appliance Repair Services at +966598001569"
+                aria-label="Call Riyadh Repairing Service at +966598001569"
               >
                 <div className="flex gap-2 sm:gap-3 items-center">
                   <div className="text-white bg-[#14b8a6] px-2 py-2 sm:px-3 sm:py-3 rounded-full text-xl sm:text-[28px]">
@@ -203,9 +323,9 @@ const Home = () => {
             <div className="rounded-3xl sm:rounded-[50px] p-3 sm:p-5 overflow-hidden w-full">
               <img
                 src={washing_machine_repear_1}
-                alt="Professional technician repairing washing machine in Riyadh - Expert appliance repair service"
+                alt="Professional technician repairing washing machine in Riyadh - Expert appliance repair service available 24/7"
                 className="w-full h-auto object-cover rounded-3xl"
-                loading="lazy"
+                loading="eager"
                 width="600"
                 height="400"
               />
@@ -216,7 +336,7 @@ const Home = () => {
 
       <ServicesSection />
 
-      {/* 🔥 FIXED: Services Section - Consistent Padding */}
+      {/* Services Section */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_6})`,
@@ -265,7 +385,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Projects Section - Consistent Padding */}
+      {/* Projects Section */}
       <section
         style={{
           backgroundImage: `url(${pattern_bg_5})`,
@@ -395,7 +515,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Video Section - Original styling maintained */}
+      {/* Video Section */}
       <section
         style={{
           backgroundImage: `url("${video_2}")`,
@@ -570,7 +690,7 @@ const Home = () => {
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/DyDfgMOUjCI?autoplay=1"
-                  title="Riyadh Appliance Repair Services - Company Overview Video"
+                  title="Riyadh Repairing Service - Company Overview Video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>

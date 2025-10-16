@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import breadcumb_bg from "../assets/images/breadcumb-bg.jpg";
@@ -8,7 +9,6 @@ import { BsTools } from "react-icons/bs";
 import ContactQuote from "../components/ContactQuote.jsx";
 import DarkBlue_bg from "../components/DarkBlue_bg.jsx";
 import PricingPlans from "../components/PricingPlans.jsx";
-import SEO from "../components/SEO.jsx";
 
 // Gallery Images
 import refrigerator_services from "../assets/images/refrigerator_services.webp";
@@ -25,6 +25,29 @@ const RefrigeratorRepair = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const refridgeratorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Refrigerator Repair",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Riyadh Repairing Service",
+      "telephone": "+966598001569",
+      "email": "riyadhrepairingservice@gmail.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Riyadh"
+    },
+    "description": "Professional refrigerator repair services in Riyadh. We fix cooling problems, ice maker issues, compressor repairs, and all refrigerator problems. Same-day service available.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceRange": "$$",
+      "priceCurrency": "SAR"
+    }
+  };
+
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -74,15 +97,73 @@ const RefrigeratorRepair = () => {
 
   return (
     <div className="bg-[#E1E4E5]">
-      <SEO
-        title="Refrigerator Repair in Riyadh | Professional Cooling Solutions"
-        description="Expert refrigerator repair services in Riyadh. Ice maker repair, compressor issues, cooling problems. Same-day service, warranty guaranteed."
-        keywords="refrigerator repair, fridge repair Riyadh, ice maker repair, cooling system, compressor repair"
-        canonical="https://riyadhrepairingservice.com/refrigerator-repair"
-        ogTitle="Professional Refrigerator Repair Services"
-        ogDescription="Expert cooling solutions and refrigerator maintenance in Riyadh"
-        schema={refridgeratorSchema}
-      />
+      {/* ==================== SEO META TAGS - ENGLISH & ARABIC ==================== */}
+      <Helmet>
+        {/* ===== ENGLISH TITLE ===== */}
+        <title>Refrigerator Repair in Riyadh | Fridge Repair Service | Ice Maker & Compressor Repair | 24/7 Emergency</title>
+        <meta name="title" content="Refrigerator Repair in Riyadh | Fridge Repair Service | Ice Maker & Compressor Repair | 24/7 Emergency" />
+        <meta name="description" content="Professional refrigerator and fridge repair services in Riyadh. Expert technicians fix cooling problems, ice maker issues, compressor repairs, water leakage, freezer not working. Same-day service available, warranty on all repairs. All brands: Samsung, LG, Whirlpool, Bosch, Haier. Call +966598001569 for fast refrigerator repair!" />
+        
+        {/* ===== ARABIC TITLE ===== */}
+        <meta name="title-ar" content="تصليح الثلاجات في الرياض | خدمة تصليح الثلاجات | إصلاح صانع الثلج والضاغط | طوارئ 24/7" />
+        <meta name="description-ar" content="خدمات احترافية في تصليح الثلاجات في الرياض. فنيون خبراء يصلحون مشاكل التبريد وصانع الثلج والضاغط وتسريب الماء والفريزر لا يعمل. خدمة في نفس اليوم متاحة، ضمان على جميع الإصلاحات. جميع العلامات التجارية: سامسونج، إل جي، ويرلبول، بوش، هاير. اتصل برقم +966598001569 لتصليح ثلاجات سريع!" />
+        
+        {/* ===== KEYWORDS - ENGLISH + ARABIC ===== */}
+        <meta name="keywords" content="refrigerator repair riyadh, fridge repair riyadh, refrigerator service riyadh, ice maker repair, compressor repair, refrigerator not cooling, freezer not working, fridge cooling problem, water leakage repair, refrigerator thermostat repair, door seal replacement, samsung refrigerator repair, lg fridge repair, whirlpool refrigerator repair, bosch fridge repair, refrigerator technician riyadh, emergency refrigerator repair, same day fridge repair, refrigerator maintenance, commercial refrigerator repair, refrigerator installation, fridge repair near me, affordable refrigerator repair, best fridge repair riyadh, trusted refrigerator service, certified technicians, warranty repair, تصليح الثلاجات الرياض, تصليح ثلاجة, خدمة الثلاجات الرياض, تصليح صانع الثلج, تصليح الضاغط, الثلاجة لا تبرد, الفريزر لا يعمل, مشكلة تبريد الثلاجة, تصليح تسريب الماء, تصليح ثرموستات الثلاجة, استبدال ختم الباب, تصليح ثلاجات سامسونج, تصليح ثلاجات إل جي, تصليح ثلاجات ويرلبول, تصليح ثلاجات بوش, فني ثلاجات الرياض, إصلاح طوارئ الثلاجات, تصليح ثلاجة في نفس اليوم, صيانة الثلاجات, تصليح ثلاجة تجارية, تركيب الثلاجات, تصليح ثلاجة قريب مني, تصليح ثلاجات معقول, أفضل تصليح ثلاجات الرياض, خدمة ثلاجات موثوقة, فنيون معتمدون, إصلاح بضمان" />
+        
+        {/* ===== CANONICAL URL ===== */}
+        <link rel="canonical" href="https://riyadhrepairingservice.com/refrigerator-repair" />
+        
+        {/* ===== HREFLANG TAGS ===== */}
+        <link rel="alternate" href="https://riyadhrepairingservice.com/refrigerator-repair" hreflang="en" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/ar/refrigerator-repair" hreflang="ar" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/refrigerator-repair" hreflang="x-default" />
+        
+        {/* ===== OPEN GRAPH - ENGLISH ===== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://riyadhrepairingservice.com/refrigerator-repair" />
+        <meta property="og:title" content="Professional Refrigerator Repair Services in Riyadh | Same-Day Service" />
+        <meta property="og:description" content="Expert refrigerator and fridge repair in Riyadh. Cooling problems, ice maker issues, compressor repairs. Available 24/7. Call +966598001569" />
+        <meta property="og:image" content="https://riyadhrepairingservice.com/src/assets/images/refrigerator_services.webp" />
+        <meta property="og:site_name" content="Riyadh Repairing Service" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="ar_SA" />
+        
+        {/* ===== OPEN GRAPH - ARABIC ===== */}
+        <meta property="og:title:ar" content="خدمات احترافية في تصليح الثلاجات في الرياض | خدمة في نفس اليوم" />
+        <meta property="og:description:ar" content="خدمة تصليح ثلاجات احترافية في الرياض. مشاكل التبريد وصانع الثلج والضاغط. متاح 24/7. اتصل برقم +966598001569" />
+        
+        {/* ===== TWITTER CARD - ENGLISH ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Refrigerator Repair in Riyadh | 24/7 Emergency Service" />
+        <meta name="twitter:description" content="Professional fridge repair services. Cooling problems, ice maker, compressor repairs. Same-day service available!" />
+        <meta name="twitter:image" content="https://riyadhrepairingservice.com/src/assets/images/refrigerator_services.webp" />
+        
+        {/* ===== TWITTER CARD - ARABIC ===== */}
+        <meta name="twitter:title:ar" content="تصليح الثلاجات في الرياض | خدمة طوارئ 24/7" />
+        <meta name="twitter:description:ar" content="خدمات تصليح ثلاجات احترافية. مشاكل التبريد وصانع الثلج والضاغط. خدمة في نفس اليوم!" />
+        
+        {/* ===== ROBOTS & SEO ===== */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="author" content="Riyadh Repairing Service" />
+        
+        {/* ===== GEOGRAPHIC & BUSINESS INFO ===== */}
+        <meta name="geo.region" content="SA-01" />
+        <meta name="geo.placename" content="Riyadh" />
+        <meta name="contact" content="riyadhrepairingservice@gmail.com" />
+        <meta name="telephone" content="+966598001569" />
+        
+        {/* ===== SCHEMA MARKUP - SERVICE ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify(refridgeratorSchema)}
+        </script>
+        
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
 
       {/* Banner */}
       <section>
@@ -111,7 +192,7 @@ const RefrigeratorRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Services Section - Consistent Padding */}
+      {/* Services Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto text-center">
@@ -152,7 +233,7 @@ const RefrigeratorRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Why Choose Us Section - Consistent Padding */}
+      {/* Why Choose Us Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto">
@@ -197,7 +278,7 @@ const RefrigeratorRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Quick Apply Section - Consistent Padding */}
+      {/* Quick Apply Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto">
@@ -218,6 +299,7 @@ const RefrigeratorRepair = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-[#14b8a6] hover:bg-[#0d9488] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  aria-label="Contact via WhatsApp for refrigerator repair"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {t("refrigerator.quickApply.whatsapp")}
@@ -225,6 +307,7 @@ const RefrigeratorRepair = () => {
                 <NavLink
                   to="/contact"
                   className="inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  aria-label="Contact us for refrigerator repair service"
                 >
                   {t("refrigerator.quickApply.contact")}
                 </NavLink>
@@ -239,7 +322,7 @@ const RefrigeratorRepair = () => {
         <ContactQuote />
       </section>
 
-      {/* 🔥 FIXED: Gallery Section - Consistent Padding */}
+      {/* Gallery Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="text-center mb-14 relative z-10">
@@ -264,7 +347,8 @@ const RefrigeratorRepair = () => {
               >
                 <img
                   src={src}
-                  alt={`Refrigerator Service ${index + 1}`}
+                  alt={`Professional refrigerator repair service in Riyadh - ${index + 1}`}
+                  loading="lazy"
                   className="w-full rounded-lg shadow-md transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-[#14b8a6]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -276,16 +360,17 @@ const RefrigeratorRepair = () => {
 
           {/* Lightbox Modal */}
           {selectedImage && (
-            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4">
-              <div className="relative">
+            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4" onClick={() => setSelectedImage(null)}>
+              <div className="relative" onClick={(e) => e.stopPropagation()}>
                 <img
                   src={selectedImage}
-                  alt="Selected"
+                  alt="Refrigerator repair service gallery"
                   className="max-h-[80vh] max-w-[90vw] rounded-lg shadow-xl"
                 />
                 <button
                   className="absolute top-4 right-4 bg-[#14b8a6] text-white px-3 py-1 rounded-full font-bold shadow-md hover:bg-[#0f9a8a]"
                   onClick={() => setSelectedImage(null)}
+                  aria-label="Close image"
                 >
                   ✕
                 </button>
@@ -295,7 +380,7 @@ const RefrigeratorRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Pricing Section - Consistent Padding */}
+      {/* Pricing Section */}
       <section className="relative overflow-hidden pb-20">
         <DarkBlue_bg />
         <div className="relative z-10 mt-20">

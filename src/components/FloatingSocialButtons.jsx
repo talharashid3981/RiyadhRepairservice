@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Mail, Phone, X } from 'lucide-react';
+import { PhoneCall, Mail, Phone, X } from 'lucide-react';
 import { FaWhatsapp, FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const FloatingSocialButtons = () => {
@@ -38,7 +38,7 @@ const FloatingSocialButtons = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: 'Email',
-      href: 'riyadhrepairingservice@gmail.com',
+      href: 'mailto:riyadhrepairingservice@gmail.com',
       bg: 'bg-red-500 hover:bg-red-600',
     },
     {
@@ -55,12 +55,10 @@ const FloatingSocialButtons = () => {
     },
   ];
 
-  if (!isMounted) {
-    return null; // Prevent SSR issues
-  }
+  if (!isMounted) return null;
 
   return (
-    <div 
+    <div
       className="floating-social-container"
       style={{
         position: 'fixed',
@@ -75,7 +73,9 @@ const FloatingSocialButtons = () => {
       {/* Social Links */}
       <div
         className={`flex flex-col items-end gap-3 mb-3 transition-all duration-500 ease-in-out ${
-          isOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95 pointer-events-none'
+          isOpen
+            ? 'opacity-100 translate-y-0 scale-100'
+            : 'opacity-0 translate-y-6 scale-95 pointer-events-none'
         }`}
       >
         {socialLinks.map((link, index) => (
@@ -97,7 +97,9 @@ const FloatingSocialButtons = () => {
           >
             <span
               className={`text-sm font-medium transition-all duration-500 ease-in-out ${
-                isOpen ? 'opacity-100 translate-x-0 visible' : 'opacity-0 -translate-x-3 invisible'
+                isOpen
+                  ? 'opacity-100 translate-x-0 visible'
+                  : 'opacity-0 -translate-x-3 invisible'
               }`}
             >
               {link.label}
@@ -126,7 +128,11 @@ const FloatingSocialButtons = () => {
         }}
       >
         <div className="relative z-10">
-          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <PhoneCall className="w-6 h-6" />
+          )}
         </div>
 
         {/* Pulse animation when closed */}

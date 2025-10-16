@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import breadcumb_bg from "../assets/images/breadcumb-bg.jpg";
@@ -8,7 +9,6 @@ import { BsTools } from "react-icons/bs";
 import ContactQuote from "../components/ContactQuote.jsx";
 import DarkBlue_bg from "../components/DarkBlue_bg.jsx";
 import PricingPlans from "../components/PricingPlans.jsx";
-import SEO from "../components/SEO.jsx";
 
 // Gallery Images
 import washing_machine_repear_1 from "../assets/images/washing_machine_repear_1.webp";
@@ -24,6 +24,29 @@ const WashingMachineRepair = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const washingMachineSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Washing Machine Repair",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Riyadh Repairing Service",
+      "telephone": "+966598001569",
+      "email": "riyadhrepairingservice@gmail.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Riyadh"
+    },
+    "description": "Professional washing machine repair services in Riyadh. We repair automatic, semi-automatic, front load, top load washing machines. Expert technicians, same-day service available.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceRange": "$$",
+      "priceCurrency": "SAR"
+    }
+  };
+
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -72,15 +95,73 @@ const WashingMachineRepair = () => {
 
   return (
     <div className="bg-[#E1E4E5]">
-      <SEO
-        title="Washing Machine Repair in Riyadh | Automatic & Semi-Automatic Services"
-        description="Expert washing machine repair in Riyadh. Automatic and semi-automatic repairs. Same-day service, all brands, warranty guaranteed."
-        keywords="washing machine repair, automatic washer, semi-automatic washer, drum repair, motor repair Riyadh"
-        canonical="https://riyadhrepairingservice.com/washing-machine-repair"
-        ogTitle="Professional Washing Machine Repair Services"
-        ogDescription="Expert washing machine repair for all brands and types in Riyadh"
-        schema={washingMachineSchema}
-      />
+      {/* ==================== SEO META TAGS - ENGLISH & ARABIC ==================== */}
+      <Helmet>
+        {/* ===== ENGLISH TITLE ===== */}
+        <title>Washing Machine Repair in Riyadh | Automatic & Semi-Automatic Repair | Front Load & Top Load | 24/7</title>
+        <meta name="title" content="Washing Machine Repair in Riyadh | Automatic & Semi-Automatic Repair | Front Load & Top Load | 24/7" />
+        <meta name="description" content="Professional washing machine repair services in Riyadh. Expert technicians repair automatic washing machines, semi-automatic, front load, top load, drum problems, motor issues, water leakage. Same-day service available, warranty on all repairs. All brands: Samsung, LG, Whirlpool, Bosch, Siemens. Call +966598001569 for fast washing machine repair!" />
+        
+        {/* ===== ARABIC TITLE ===== */}
+        <meta name="title-ar" content="تصليح الغسالات في الرياض | إصلاح أوتوماتيك ونصف أوتوماتيك | تحميل أمامي وعلوي | 24/7" />
+        <meta name="description-ar" content="خدمات احترافية في تصليح الغسالات في الرياض. فنيون خبراء يصلحون الغسالات الأوتوماتيكية ونصف الأوتوماتيكية والتحميل الأمامي والعلوي ومشاكل الأسطوانة والمحرك وتسريب الماء. خدمة في نفس اليوم متاحة، ضمان على جميع الإصلاحات. جميع العلامات التجارية: سامسونج، إل جي، ويرلبول، بوش، سيمنس. اتصل برقم +966598001569 لتصليح غسالات سريع!" />
+        
+        {/* ===== KEYWORDS - ENGLISH + ARABIC ===== */}
+        <meta name="keywords" content="washing machine repair riyadh, automatic washing machine repair, semi-automatic washing machine repair, front load washer repair, top load washer repair, washing machine service riyadh, washing machine not spinning, washing machine leaking water, washing machine making noise, washing machine not starting, drum repair, motor repair, belt replacement, washing machine door lock, control panel repair, samsung washing machine repair, lg washer repair, whirlpool washing machine repair, bosch washer repair, siemens washing machine repair, washing machine technician riyadh, emergency washer repair, same day washing machine repair, washing machine maintenance, commercial washing machine repair, washing machine installation, washer repair near me, affordable washing machine repair, best washer repair riyadh, trusted washing machine service, certified technicians, warranty repair, تصليح الغسالات الرياض, تصليح غسالة اوتوماتيك, تصليح غسالة نص اوتوماتيك, تصليح غسالة تحميل أمامي, تصليح غسالة تحميل علوي, خدمة الغسالات الرياض, الغسالة لا تدور, الغسالة تسرب ماء, الغسالة تصدر أصوات, الغسالة لا تعمل, تصليح أسطوانة الغسالة, تصليح محرك الغسالة, استبدال الحزام, قفل باب الغسالة, تصليح لوحة التحكم, تصليح غسالات سامسونج, تصليح غسالات إل جي, تصليح غسالات ويرلبول, تصليح غسالات بوش, تصليح غسالات سيمنس, فني غسالات الرياض, إصلاح طوارئ الغسالات, تصليح غسالة في نفس اليوم, صيانة الغسالات, تصليح غسالة تجارية, تركيب الغسالات, تصليح غسالة قريب مني, تصليح غسالات معقول, أفضل تصليح غسالات الرياض, خدمة غسالات موثوقة, فنيون معتمدون, إصلاح بضمان" />
+        
+        {/* ===== CANONICAL URL ===== */}
+        <link rel="canonical" href="https://riyadhrepairingservice.com/washing-machine-repair" />
+        
+        {/* ===== HREFLANG TAGS ===== */}
+        <link rel="alternate" href="https://riyadhrepairingservice.com/washing-machine-repair" hreflang="en" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/ar/washing-machine-repair" hreflang="ar" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/washing-machine-repair" hreflang="x-default" />
+        
+        {/* ===== OPEN GRAPH - ENGLISH ===== */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://riyadhrepairingservice.com/washing-machine-repair" />
+        <meta property="og:title" content="Professional Washing Machine Repair Services in Riyadh | Same-Day Service" />
+        <meta property="og:description" content="Expert washing machine repair in Riyadh. Automatic, semi-automatic, front load, top load repairs. Available 24/7. Call +966598001569" />
+        <meta property="og:image" content="https://riyadhrepairingservice.com/src/assets/images/washing_machine_repear_1.webp" />
+        <meta property="og:site_name" content="Riyadh Repairing Service" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="ar_SA" />
+        
+        {/* ===== OPEN GRAPH - ARABIC ===== */}
+        <meta property="og:title:ar" content="خدمات احترافية في تصليح الغسالات في الرياض | خدمة في نفس اليوم" />
+        <meta property="og:description:ar" content="خدمة تصليح غسالات احترافية في الرياض. أوتوماتيك، نصف أوتوماتيك، تحميل أمامي وعلوي. متاح 24/7. اتصل برقم +966598001569" />
+        
+        {/* ===== TWITTER CARD - ENGLISH ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Washing Machine Repair in Riyadh | 24/7 Emergency Service" />
+        <meta name="twitter:description" content="Professional washing machine repair. Automatic, semi-automatic, all brands. Same-day service available!" />
+        <meta name="twitter:image" content="https://riyadhrepairingservice.com/src/assets/images/washing_machine_repear_1.webp" />
+        
+        {/* ===== TWITTER CARD - ARABIC ===== */}
+        <meta name="twitter:title:ar" content="تصليح الغسالات في الرياض | خدمة طوارئ 24/7" />
+        <meta name="twitter:description:ar" content="تصليح غسالات احترافي. أوتوماتيك، نصف أوتوماتيك، جميع العلامات التجارية. خدمة في نفس اليوم!" />
+        
+        {/* ===== ROBOTS & SEO ===== */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="author" content="Riyadh Repairing Service" />
+        
+        {/* ===== GEOGRAPHIC & BUSINESS INFO ===== */}
+        <meta name="geo.region" content="SA-01" />
+        <meta name="geo.placename" content="Riyadh" />
+        <meta name="contact" content="riyadhrepairingservice@gmail.com" />
+        <meta name="telephone" content="+966598001569" />
+        
+        {/* ===== SCHEMA MARKUP - SERVICE ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify(washingMachineSchema)}
+        </script>
+        
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
 
       {/* Banner */}
       <section>
@@ -109,7 +190,7 @@ const WashingMachineRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Services Section - Consistent Padding */}
+      {/* Services Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto text-center">
@@ -150,7 +231,7 @@ const WashingMachineRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Common Problems Section - Consistent Padding */}
+      {/* Common Problems Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto bg-white rounded-3xl p-8 sm:p-12">
@@ -201,7 +282,7 @@ const WashingMachineRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Why Choose Us Section - Consistent Padding */}
+      {/* Why Choose Us Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto">
@@ -246,7 +327,7 @@ const WashingMachineRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Quick Apply Section - Consistent Padding */}
+      {/* Quick Apply Section */}
       <section className="py-20">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="max-w-7xl mx-auto">
@@ -267,6 +348,7 @@ const WashingMachineRepair = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-[#14b8a6] hover:bg-[#0d9488] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
+                  aria-label="Contact via WhatsApp for washing machine repair"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {t("washing.quickApply.whatsapp")}
@@ -274,6 +356,7 @@ const WashingMachineRepair = () => {
                 <NavLink
                   to="/contact"
                   className="inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  aria-label="Contact us for washing machine repair service"
                 >
                   {t("washing.quickApply.contact")}
                 </NavLink>
@@ -288,7 +371,7 @@ const WashingMachineRepair = () => {
         <ContactQuote />
       </section>
 
-      {/* 🔥 FIXED: Gallery Section - Consistent Padding */}
+      {/* Gallery Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
           <div className="text-center mb-14 relative z-10">
@@ -313,7 +396,8 @@ const WashingMachineRepair = () => {
               >
                 <img
                   src={src}
-                  alt={`Washing Machine Service ${index + 1}`}
+                  alt={`Professional washing machine repair service in Riyadh - ${index + 1}`}
+                  loading="lazy"
                   className="w-full rounded-lg shadow-md transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-[#14b8a6]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -325,16 +409,17 @@ const WashingMachineRepair = () => {
 
           {/* Lightbox Modal */}
           {selectedImage && (
-            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4">
-              <div className="relative">
+            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4" onClick={() => setSelectedImage(null)}>
+              <div className="relative" onClick={(e) => e.stopPropagation()}>
                 <img
                   src={selectedImage}
-                  alt="Selected"
+                  alt="Washing machine repair service gallery"
                   className="max-h-[80vh] max-w-[90vw] rounded-lg shadow-xl"
                 />
                 <button
                   className="absolute top-4 right-4 bg-[#14b8a6] text-white px-3 py-1 rounded-full font-bold shadow-md hover:bg-[#0f9a8a]"
                   onClick={() => setSelectedImage(null)}
+                  aria-label="Close image"
                 >
                   ✕
                 </button>
@@ -344,7 +429,7 @@ const WashingMachineRepair = () => {
         </div>
       </section>
 
-      {/* 🔥 FIXED: Pricing Section - Consistent Padding */}
+      {/* Pricing Section */}
       <section className="relative overflow-hidden pb-20">
         <DarkBlue_bg />
         <div className="relative z-10 mt-20">

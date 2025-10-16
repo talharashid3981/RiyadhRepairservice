@@ -1,74 +1,91 @@
+// ==================== TERMS.JSX ====================
 import React from "react";
-import SEO from "../components/SEO";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 const Terms = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-gray-50 min-h-screen py-16 mt-16 sm:mt-20">
-      <SEO
-        title="Terms & Conditions | Riyadh Appliance Repair Services"
-        description="Terms and Conditions for using Riyadh Appliance Repair Services. Read our service terms and policies."
-        keywords="terms of service, conditions, service agreement"
-        canonical="https://riyadhrepairingservice.com/terms"
-      />
+      {/* ==================== SEO META TAGS - ENGLISH & ARABIC ==================== */}
+      <Helmet>
+        {/* ===== ENGLISH TITLE ===== */}
+        <title>Terms & Conditions | Riyadh Repairing Service | Service Agreement</title>
+        <meta name="title" content="Terms & Conditions | Riyadh Repairing Service | Service Agreement" />
+        <meta name="description" content="Read our terms and conditions for using Riyadh Repairing Service. Understand our service policies, payment terms, warranty information, and liability agreements." />
+        
+        {/* ===== ARABIC TITLE ===== */}
+        <meta name="title-ar" content="الشروط والأحكام | خدمة الرياض للإصلاح | اتفاقية الخدمة" />
+        <meta name="description-ar" content="اقرأ الشروط والأحكام الخاصة باستخدام خدمة الرياض للإصلاح. افهم سياسات الخدمة وشروط الدفع ومعلومات الضمان واتفاقيات المسؤولية." />
+        
+        {/* ===== KEYWORDS ===== */}
+        <meta name="keywords" content="terms and conditions, service agreement, terms of service, warranty policy, payment terms, liability, user agreement, service policies, legal terms, الشروط والأحكام, اتفاقية الخدمة, شروط الخدمة, سياسة الضمان, شروط الدفع, المسؤولية, اتفاقية المستخدم, سياسات الخدمة, الشروط القانونية" />
+        
+        {/* ===== CANONICAL URL ===== */}
+        <link rel="canonical" href="https://riyadhrepairingservice.com/terms" />
+        
+        {/* ===== HREFLANG TAGS ===== */}
+        <link rel="alternate" href="https://riyadhrepairingservice.com/terms" hreflang="en" />
+        <link rel="alternate" href="https://riyadhrepairingservice.com/ar/terms" hreflang="ar" />
+        
+        {/* ===== ROBOTS ===== */}
+        <meta name="robots" content="index, follow" />
+        
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:title" content="Terms & Conditions - Riyadh Repairing Service" />
+        <meta property="og:description" content="Our service terms and conditions for appliance repair services." />
+        <meta property="og:url" content="https://riyadhrepairingservice.com/terms" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       
-      {/* 🔥 FIXED: Consistent Padding Container */}
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-20">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 sm:p-10 text-gray-800">
           <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-[#14b8a6]">
-            Terms of Service
+            {t("terms.title")}
           </h1>
           <p className="mb-4 text-base sm:text-lg leading-relaxed">
-            Welcome to Riyadh Repair Services. By accessing or using our website,
-            you agree to comply with the following terms and conditions. Please read
-            them carefully before using our services.
+            {t("terms.intro")}
           </p>
 
           <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-3 text-gray-900">
-            1. Services
+            {t("terms.sections.services.title")}
           </h2>
           <p className="mb-4 leading-relaxed">
-            We provide appliance repair and maintenance services across Riyadh. All
-            appointments and repairs are subject to availability and technician
-            confirmation.
+            {t("terms.sections.services.content")}
           </p>
 
           <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-3 text-gray-900">
-            2. Payments
+            {t("terms.sections.payments.title")}
           </h2>
           <p className="mb-4 leading-relaxed">
-            All payments must be made as agreed during booking. Prices may vary
-            depending on the type of appliance, issue severity, and required parts.
+            {t("terms.sections.payments.content")}
           </p>
 
           <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-3 text-gray-900">
-            3. Warranty
+            {t("terms.sections.warranty.title")}
           </h2>
           <p className="mb-4 leading-relaxed">
-            Some repairs may include a limited warranty period as stated at the time
-            of service. Damages caused by misuse or external factors are not
-            covered.
+            {t("terms.sections.warranty.content")}
           </p>
 
           <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-3 text-gray-900">
-            4. Limitation of Liability
+            {t("terms.sections.liability.title")}
           </h2>
           <p className="mb-4 leading-relaxed">
-            Riyadh Repair Services will not be liable for indirect, incidental, or
-            consequential damages resulting from the use or inability to use our
-            services.
+            {t("terms.sections.liability.content")}
           </p>
 
           <h2 className="text-xl sm:text-2xl font-semibold mt-8 mb-3 text-gray-900">
-            5. Changes to Terms
+            {t("terms.sections.changes.title")}
           </h2>
           <p className="mb-4 leading-relaxed">
-            We reserve the right to update these Terms of Service at any time. Any
-            changes will be posted on this page.
+            {t("terms.sections.changes.content")}
           </p>
 
           <div className="mt-10 pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-500">
-              Last updated: {new Date().toLocaleDateString()}
+              {t("terms.lastUpdated")}: {new Date().toLocaleDateString()}
             </p>
           </div>
         </div>
